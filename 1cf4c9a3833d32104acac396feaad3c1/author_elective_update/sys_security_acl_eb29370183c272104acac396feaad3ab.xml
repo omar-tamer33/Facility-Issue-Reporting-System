@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_1850913_facili_0_facility_issue</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-24 23:49:20</sys_created_on>
+        <sys_id>eb29370183c272104acac396feaad3ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1850913_facili_0_facility_issue</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_security_acl_eb29370183c272104acac396feaad3ab</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-24 23:49:20</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_security_acl_eb29370183c272104acac396feaad3ab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description/><local_or_existing>Existing</local_or_existing><name>x_1850913_facili_0_facility_issue</name><operation display_value="write">write</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>Omar</sys_created_by><sys_created_on>2025-12-24 23:49:20</sys_created_on><sys_id>eb29370183c272104acac396feaad3ab</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1850913_facili_0_facility_issue</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_security_acl_eb29370183c272104acac396feaad3ab</sys_update_name><sys_updated_by>Omar</sys_updated_by><sys_updated_on>2025-12-24 23:49:20</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>54216681</payload_hash>
+        <record_name>x_1850913_facili_0_facility_issue</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-24 23:49:20</sys_created_on>
+        <sys_id>2729370183c272104acac396feaad3b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b52c4620f0000001</sys_recorded_at>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-24 23:49:20</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>e3293701eac272103a47f1045d7f6eb0</update_guid>
+        <update_guid_history>e3293701eac272103a47f1045d7f6eb0:54216681</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-24 23:50:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>4b5b4655aee642908e1619fb9e237810</sys_id>
+        <sys_metadata>eb29370183c272104acac396feaad3ab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1850913_facili_0_facility_issue</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent display_value="x_1850913_facili_0_facility_issue">ddddc1e7837d32104acac396feaad376</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_security_acl_eb29370183c272104acac396feaad3ab</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_eb29370183c272104acac396feaad3ab">2729370183c272104acac396feaad3b1</sys_update_version>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-24 23:50:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

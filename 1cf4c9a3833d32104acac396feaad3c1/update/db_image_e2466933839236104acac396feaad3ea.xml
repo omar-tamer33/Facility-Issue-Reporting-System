@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>1b462dff831236104acac396feaad368</image>
+        <name>upload_testing-green-gear-and-processed-checkmark-17427.svg</name>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-14 12:26:32</sys_created_on>
+        <sys_id>e2466933839236104acac396feaad3ea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>upload_testing-green-gear-and-processed-checkmark-17427.svg</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>db_image_e2466933839236104acac396feaad3ea</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-14 12:26:37</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>testing-green-gear-and-processed-checkmark-17427.svg</file_name>
+        <hash>ebe634814f98593537d58eeee7e94fa43b1ca7d201b15800d9632bcf0d8c0591</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3171</size_bytes>
+        <size_compressed>1214</size_compressed>
+        <state>available</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-14 12:26:35</sys_created_on>
+        <sys_id>1b462dff831236104acac396feaad368</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-01-14 12:26:36</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>e2466933839236104acac396feaad3ea</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="testing-green-gear-and-processed-checkmark-17427.svg" sys_id="1b462dff831236104acac396feaad368">1b462dff831236104acac396feaad368</sys_attachment>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-14 12:26:35</sys_created_on>
+        <sys_id>db462dff831236104acac396feaad368</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>5VfLdts2EF23XzGHK/ucECJeBCBbWdTbZpUvUGRGYkNLPhRtOfn6zgOgLCc5aTfddEMK4HDmztyZS+j2+LyFl4dhf1xVu2l6XC4Wp9NJnaw6jNuFaZpmgRaVmCxfhn7/5UeGOqW04KcVPHfjsT/sV5VWuoJTfz/tVpXxbQW7rt/uprx47rvTH4eXVdVAA7gDvItxlsfH9aZbVY9jd+zG5656//vtFo7T1wE3j9N4+NItYX/Ydzcgq5pjLKGZN+7Xx916HNdf3xgiwG6zflzCp6dputj969Dvl/DQT9047/Nq6PG2BI3OP/fDUBzS73p8GgTKt2483MABcfcTxtQ3FUzjen/8fBgfVhX/HNZTd6WVa1qfbLnqFr7fuobjZj10V0ZFDXS5xgr8dvu4nnZwv6o+QGyVMS24pKLVMEDdqKaxctOwgdqolBzUWhm8WjauncJn50U0iSzlFbxFA40y1pCJT3C2s2imlW8SWbXGI6IWN9F5RCvbRHqDbhuQ5zVZx7KwSrcJCUZXbYgE1qqEedVJtZrBIsrEyDSuKSLa480n9BzQNkiAtiRGJTMOgXp8IxIq7x2tWnyE3rS1kpmP5WqUDY5uobHFhF8oqN1r1K6gLtUh6EF8zgkmqUBN1XCCMJRKDCW7nOtmzg6RR3ypxdAOY2lCTDm2XMoEd+AiIk7QqhA0OE+8BETh8Hf+ccwU1Zkv5igTmzG6VxhDShcoM19JSk851xdUlRUlTcRJMg2RzeXKnrOVOM5RxG/phuzooncwRECf0gsbJpJanLtVeMykCkdEUS68JzCZzABEaFs4J1v3Jh3hMMyLks3P8M9dPDPI6VLm6de5pLn5xYL8iefXTu+YVXA48Zq5tOCc0nFeeHKDjqLO7Fp8k7qB2U2Qp5GbyUKeG5qUlh4FVwaFOspjDiUF/RN49gKejHnII0DNUIZY6KLiEVU8QcZGporMhTZiqjAx04VXosqCjN4bVikDCqQNz4IFmguf4cjoD4Jf5ugOLAKwASIqn0OMVgX0kBqwWAVj6BcFD+iqoWywClhHTd8WZS0X1bXpR4LmvhO0MPcnqw5VodFZQQOchy7gQApLMo/8RPjaZI5k+IUioktnhiiMzynas1ictSJptuf+jcHmF7JibIrAy/zMMkjzI0TUpdKvtBCTFUGgARIJnDWTAtMwGMQmElWLRknAPN8DvFJw5CTxx8M7ZhiZsUiQR5dGv/lQfYMPrGIYxsi8etFchBNxj5QV4dHUlnW+fwSTlMNq6Bbr4MlL/vVR3HkxMGXl6EnbsPsc7xz5W/VPDhP6PzlMjNtPVzq900m/0026/nfnCnhYT2P/cqVJNYCv11C9gbeqxsPT/r5aXJ4hbOL5whrNBwEWSJ6X/OkzokJRVrnjaM7YmhvP8iJq7o7oWJ4b3Bz4I0dHiKhik9WZm80o44O0rqcOdS3pAo9WQM3RrDLZhLpXLLK9WIj5QGqE0oFxSSewdRx1tkZRcDx6iRJAODiaOBW25dgOfRjDhyWLhwgKRgZkTV8iOliQsQd5TsYO/gSHXlE5fOT+xM80Chpm43EGcFhI0tGnFPOisv/bXrtdbOmC/x3e/w0wN2fUYwwAAA==</data>
+        <length>1608</length>
+        <position>1</position>
+        <sys_attachment display_value="testing-green-gear-and-processed-checkmark-17427.svg" sys_id="1b462dff831236104acac396feaad368">1b462dff831236104acac396feaad368</sys_attachment>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-14 12:26:35</sys_created_on>
+        <sys_id>9f462dff831236104acac396feaad368</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Article page">7dfbf897f382b21069c114f2d0a2ac00</macroponent>
+        <name>Show Delete Comment Alert</name>
+        <preset/>
+        <required_translations>[
+    {
+        "message": "Comment deleted."
+    }
+]</required_translations>
+        <script><![CDATA[async function handler({
+    api,
+    helpers
+}) {
+    api.emit("NOW_UXF_PAGE#ADD_NOTIFICATIONS", {
+        items: [{
+            id: "deleteCommentAlert",
+            status: "info",
+            icon: "info-circle-outline",
+            content: await helpers.translate("Comment deleted."),
+            action: {
+                type: "dismiss"
+            }
+        }],
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-31 09:49:03</sys_created_on>
+        <sys_id>79fbb8977782b210b8a0bd1daefc94f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Show Delete Comment Alert</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_client_script_79fbb8977782b210b8a0bd1daefc94f9</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-31 09:49:03</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.welcome-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  padding: 40px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  margin-top:100px;
+}
+
+.welcome-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.welcome-content p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin-bottom: 20px;
+}
+
+.btn-report {
+  display: inline-block;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-report:hover {
+  background: #f1f5f9;
+  text-decoration: none;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>employee_banner</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Employee banner</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+data.userName = gs.getUserDisplayName();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 12:36:29</sys_created_on>
+        <sys_id>a9ebeeaf834276104acac396feaad324</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Employee banner</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_widget_a9ebeeaf834276104acac396feaad324</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-03 17:34:39</sys_updated_on>
+        <template><![CDATA[<div class="welcome-banner">
+  <div class="welcome-content">
+    <h1>Welcome, {{::data.userName}}!</h1>
+    <p>Report and track facility issues quickly and easily</p>
+
+    <a class="btn-report" href="?id=report_issue">
+      + Report New Issue
+    </a>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a9ebeeaf834276104acac396feaad324</id>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 12:36:29</sys_created_on>
+        <sys_id>adebeeaf834276104acac396feaad328</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 12:36:29</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="109e33558382f2104acac396feaad39c" label="Technician Profile" max_length="40" name="x_1850913_facili_0_technician_profile" type="collection">
+        <element label="Building" max_length="32" name="building" reference="cmdb_ci_building_facility" type="reference"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Group" mandatory="true" max_length="32" name="group" reference="sys_user_group" type="reference"/>
+        <element default="true" label="Availability Status" max_length="255" name="availability_status" type="boolean"/>
+        <element label="Assigned Task" max_length="32" name="assigned_task" reference="x_1850913_facili_0_facility_issue" type="reference"/>
+        <element default="0" hint="Enter a value between 0 and 10." label="Skill Rate" mandatory="true" max_length="38" name="skill_rate" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="number" read_only="true" type="string" use_dynamic_default="true"/>
+        <element label="User" mandatory="true" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="assigned_task"/>
+        </index>
+        <index name="index2">
+            <element name="building"/>
+        </index>
+        <index name="index3">
+            <element name="group"/>
+        </index>
+        <index name="index4">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index5">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

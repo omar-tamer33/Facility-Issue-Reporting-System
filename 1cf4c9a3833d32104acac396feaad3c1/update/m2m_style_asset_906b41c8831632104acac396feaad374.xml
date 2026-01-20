@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_style_asset">
+    <m2m_style_asset action="INSERT_OR_UPDATE">
+        <asset display_value="Open Sans">68f8ed5853546010b846ddeeff7b127c</asset>
+        <properties>{
+  "font-style": "normal",
+  "font-weight": "400"
+}</properties>
+        <style display_value="Typography">546b01c8831632104acac396feaad3e5</style>
+        <sys_class_name>m2m_style_asset</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-02 18:51:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>906b41c8831632104acac396feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>m2m_style_asset_906b41c8831632104acac396feaad374</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-02 18:51:46</sys_updated_on>
+    </m2m_style_asset>
+</record_update>

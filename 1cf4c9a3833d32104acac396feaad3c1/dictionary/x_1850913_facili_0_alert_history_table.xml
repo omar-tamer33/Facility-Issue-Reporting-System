@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="954f5def83fd32104acac396feaad339" label="Alert History " max_length="40" name="x_1850913_facili_0_alert_history_table" type="collection">
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Time" max_length="40" name="time" type="string"/>
+        <element choice="1" default="Pendding" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In Progress" sequence="0" value="in_progress"/>
+                <element inactive_on_update="false" label="Incomplete" sequence="2" value="incomplete"/>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="completed"/>
+            </choice>
+        </element>
+        <element label="Closed Time" max_length="255" name="closed_time" type="glide_date_time"/>
+        <element label="Reported Via" max_length="40" name="reported_via" type="string"/>
+        <element label="Issue Category" max_length="40" name="name" type="string"/>
+        <element label="Issue No." max_length="40" name="issue_no" type="string"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>7b87b8d183deb2104acac396feaad3c8</image>
+        <name>upload_user-login-5867.svg</name>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 14:37:33</sys_created_on>
+        <sys_id>e787bc9d839eb2104acac396feaad3ce</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>upload_user-login-5867.svg</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>db_image_e787bc9d839eb2104acac396feaad3ce</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-06 14:37:37</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>user-login-5867.svg</file_name>
+        <hash>4537201bd9fde2966302898effcfe31a34f42a55962332d6823f0306c4af0fc6</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>5862</size_bytes>
+        <size_compressed>1078</size_compressed>
+        <state>available</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 14:37:33</sys_created_on>
+        <sys_id>7b87b8d183deb2104acac396feaad3c8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-01-06 14:37:34</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>e787bc9d839eb2104acac396feaad3ce</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="user-login-5867.svg" sys_id="7b87b8d183deb2104acac396feaad3c8">7b87b8d183deb2104acac396feaad3c8</sys_attachment>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 14:37:33</sys_created_on>
+        <sys_id>3f87b8d183deb2104acac396feaad3c8</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>7VdLb9s4ED7v/oqBTgkQ03wORSfuYXvxZU8FelcV1dbWsQ1JsZP8+h2SomO5bZq2aGsgQRJSHA35Teb1UVftdg53N8tVO80WXbeZjMe73Y7tFFs387HknI9JI4sqk7tlvfr0JUXhnBuHtxlsq6at16tpJpjIYFdfd4tpJg1msKjq+aLrF9u62v2zvptmHDiQBIKUcCbtpiirabZpqrZqtlX25u+rObTd/ZKEbdesP1UTWK1X1SXE1ShgTIDvBddFuyiaprg/UiQDq7LYTODDbdcNpP+t69UEbuquavbysFrWNE1A0OEf6+UyHeifR83tMpryUDXrS1iT3XVHmOIyg64pVu3HdXMzzcLjsuiqM8E0R+NUGgXC56JzaMtiWZ1Jlgvwwzl54K+rsm7KZQUleUybDMr7ODdxeoZ7xG9xTzP/cKbkhXB4Ibk6/z5PAdwUXVPfnQnwWRHGc8jG/v/fFN0CrqfZv6AUQ61A50zkFkoYWZZbS7ojoZkk0QjJqe5xGWaEFobywWsL70Bb5hRIZFyqfkFYzr8RzEiRIIcGPMDeJGkYCu1N0syg8ybl4WzFrLBpEce2Fx7K8mSICNg50zY9RztIJIVMOEPUhxPLAmkvBNKf/e4s+GISHJk3zZr17er6ODe0Y1IjoGVKwjakRggI90nB0frIONQUdME4qRzPi8ct/Qa+fzfc2U9biPqzHvo1CPsgWO6DMAPhmKJiII8KhiZ4VPlnRbk7Cr/DQFlmlaValU6H4gze1n2YdB+mpB+VeVQQYZdJi145hegtGBmzI2fO5mA4c1z1Zg5s9iUtZbAaNQt4UoUms/UJtLdUMy2pn1AZ0jlU3cHEPGD3qxkozvqO4HV5euH36LSI4/se7AUX8gHJKWRoMRId+TBHDGRHZUe9/NQ8ZMxF//drGI98kYM2TJhn85094juEz+iwf4hah0roOYgojIo1gh4aEPgurKlEDNXRM+gOQ71Era/RXgnplLhj9KiI6ay33iyH6EnaFzqRo9QuGTKw6uSq6Mdz5CdasREs59Y3FmvcbybEiP0ahhSG3F9LfBhmIMOl7tuMqH6WEeUhI8ohIyrPiDoaRj2APkaMYhpNMnNodOBE7c1GEQQ9J+aJE9U3OHE/HabUs1gx4r3kgj7gRVRMaBd50Tj6AnGRFynOwp2Yi37xhyA6pik/KQsx9BvJbJ4/VVVEeWkVhll/RAlph+o1/M87sIIJtUcYwJ1cNv6Jiz56/xiwdK0W4inHv/fBMcLFFhG1hqFoB67fAuUzOkkdiqgrYPgrIHmfYkziHnGI/xoSCgn5QnjPcLo8+Zow1Nif/PY6rolFcv1Xi4LuZf7DKCAM4E4uAH+E69H7B3234AafLgrtv4zVjxQFRgyiZuJdpCBLlRCH+C83JlfjuR/a7fzN//xTfpXmFgAA</data>
+        <length>1424</length>
+        <position>1</position>
+        <sys_attachment display_value="user-login-5867.svg" sys_id="7b87b8d183deb2104acac396feaad3c8">7b87b8d183deb2104acac396feaad3c8</sys_attachment>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 14:37:33</sys_created_on>
+        <sys_id>ff87b8d183deb2104acac396feaad3c8</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>chrome_toolbar</name>
+        <page display_value="technician workspace">97405d138346b2104acac396feaad310</page>
+        <required_translations>[ {
+  "message" : "Facility List ",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Home",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Technician Performance ",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "maintenance",
+  "code" : "",
+  "comment" : ""
+} ]</required_translations>
+        <route/>
+        <suffix>chrome_toolbar</suffix>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 20:52:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>6e7d02d9835af2104acac396feaad3ca</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_page_property_6e7d02d9835af2104acac396feaad3ca</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-14 13:25:06</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_1850913_facili_0.97405d138346b2104acac396feaad310.root.global.chrome_toolbar</unique_name>
+        <value>[
+    {
+        "id": "home",
+        "label": {
+            "translatable": true,
+            "message": "Home"
+        },
+        "icon": "home-fill",
+        "routeInfo": {
+            "route": "home"
+        },
+        "group": "top",
+        "order": 100,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "facility-list-of-issues",
+        "label": {
+            "translatable": true,
+            "message": "Facility List "
+        },
+        "icon": "list-fill",
+        "routeInfo": {
+            "route": "facility-list-of-issues"
+        },
+        "group": "top",
+        "order": 100,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "technician-performance-overview",
+        "label": {
+            "translatable": true,
+            "message": "Technician Performance "
+        },
+        "icon": "activity-fill",
+        "routeInfo": {
+            "route": "technician-performance-overview"
+        },
+        "group": "top",
+        "order": 200,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "maintenance",
+        "label": {
+            "translatable": true,
+            "message": "maintenance"
+        },
+        "icon": "hand-gear-fill",
+        "routeInfo": {
+            "route": "maintenance"
+        },
+        "group": "top",
+        "order": 300,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    }
+]</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=6e7d02d9835af2104acac396feaad3ca"/>
+</record_update>

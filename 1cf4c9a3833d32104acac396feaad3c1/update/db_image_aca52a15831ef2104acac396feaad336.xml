@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>f8a5aad983daf2104acac396feaad332</image>
+        <name>upload_double-arrow-up-14221.svg</name>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 22:38:29</sys_created_on>
+        <sys_id>aca52a15831ef2104acac396feaad336</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>upload_double-arrow-up-14221.svg</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>db_image_aca52a15831ef2104acac396feaad336</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-06 22:38:30</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>double-arrow-up-14221.svg</file_name>
+        <hash>42f7fdf985f9a67919e862d4f5bd519a1bb1b6ad22c84db75e22b280383a9895</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>1490</size_bytes>
+        <size_compressed>492</size_compressed>
+        <state>available</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 22:38:30</sys_created_on>
+        <sys_id>f8a5aad983daf2104acac396feaad332</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2026-01-06 22:38:31</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>aca52a15831ef2104acac396feaad336</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="double-arrow-up-14221.svg" sys_id="f8a5aad983daf2104acac396feaad332">f8a5aad983daf2104acac396feaad332</sys_attachment>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 22:38:30</sys_created_on>
+        <sys_id>bca5aad983daf2104acac396feaad332</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>5VTbcpswEH1uv2JHT/ZMERLiJmzy0L62H6FgBZTI4BGycfL1XcD2JE7aaSedvmRGrLSHsxftHFj3hxqOW9v2JWm83xVhOAwDHQTtXB1GjLEQGWSmFEdr2oe3iFxKGU5vCRy0603XloRTTmAwG9+UJEpSAo02deNPzsHo4Wt3LAkDBojAhGKdot+pSpdk53Sv3UGTm8/rGnr/aBHsvesedAFt1+oVzF4w1SiAXYCN6hvlnHq8ImKDulK7Am733r9A7zvTFrA1XrsLPnnW4FYAx+R3xtpzwvEcuL2dW3nSrltBh30bjzX5ioB3qu3vOrctyXS0yusFpzFLEynOlqfwGlpCXymrFxHNOYxmiRP4tN4p38CmJD9AMsgRFxIqHB2nmYwgYDTNYxA0yQUEEWUJxFQmyEAnEzHMNsgoT9OzI6nEBN8hTiCJEcrBQiDEGDzbU7T4RXQux/gL6WqbyexMtID5A3wqeMGbaSdn7mii4voGuaQCh5RJOipkvDinLM6fjeCJ/Ik0+H+RhqtvF1Ekv4gI1/LvRAJb5Z05LjiM38Nkl0CuuiuJ6/bthoSvBBEnOEb+DwXBM8ow4TsEEf1GEO+TQ8xpkk0iiAUV2bP7f1Q1rMN6NPirvvkJ+A10IdIFAAA=</data>
+        <length>644</length>
+        <position>1</position>
+        <sys_attachment display_value="double-arrow-up-14221.svg" sys_id="f8a5aad983daf2104acac396feaad332">f8a5aad983daf2104acac396feaad332</sys_attachment>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 22:38:30</sys_created_on>
+        <sys_id>70a5aad983daf2104acac396feaad333</sys_id>
+    </sys_attachment_doc>
+</record_update>

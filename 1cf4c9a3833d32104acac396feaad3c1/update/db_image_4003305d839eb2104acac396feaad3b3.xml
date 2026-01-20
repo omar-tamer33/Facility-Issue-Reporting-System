@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image/>
+        <name/>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 14:17:38</sys_created_on>
+        <sys_id>4003305d839eb2104acac396feaad3b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>db_image_4003305d839eb2104acac396feaad3b3</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-06 14:17:38</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+</record_update>

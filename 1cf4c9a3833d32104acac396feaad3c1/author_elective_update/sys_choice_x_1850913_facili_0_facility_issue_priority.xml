@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="priority" table="x_1850913_facili_0_facility_issue" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <name>x_1850913_facili_0_facility_issue</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-21 19:57:03</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>priority</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_choice_x_1850913_facili_0_facility_issue_priority</sys_update_name>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-21 19:57:03</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1 - Critical</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_facility_issue</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-21 19:57:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-21 19:57:03</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2 - High</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_facility_issue</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-21 19:57:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-21 19:57:03</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3 - Moderate</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_facility_issue</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-21 19:57:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-21 19:57:03</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 - Low</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_facility_issue</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-21 19:57:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-21 19:57:03</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>5 - Planning</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_facility_issue</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-21 19:57:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-21 19:57:03</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6f8fd923833172104acac396feaad343" label="Maintenance Schedule table" max_length="40" name="x_1850913_facili_0_maintenance_schedule_table" type="collection">
+        <element label="Related Issues" max_length="32" name="related_issues" reference="x_1850913_facili_0_facility_issue" type="reference"/>
+        <element label="Technician" max_length="40" name="technician" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="imp_location" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="location"/>
+        </index>
+        <index name="index2">
+            <element name="related_issues"/>
+        </index>
+    </element>
+</database>

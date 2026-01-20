@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="technician workspace">9b4099138346b2104acac396feaad33a</app_config>
+        <description/>
+        <extension_point/>
+        <fields>table,sysId</fields>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>record</name>
+        <optional_parameters>query,extraParams,views,selectedTab</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>record</route_type>
+        <screen_type display_value="record">633ce02383da72104acac396feaad363</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-13 13:34:27</sys_created_on>
+        <sys_id>fb3ce42383da72104acac396feaad34b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>record</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_app_route_fb3ce42383da72104acac396feaad34b</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-13 13:34:27</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=fb3ce42383da72104acac396feaad34b"/>
+</record_update>

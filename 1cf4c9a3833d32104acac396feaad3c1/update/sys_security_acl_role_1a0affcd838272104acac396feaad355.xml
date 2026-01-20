@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-24 23:54:13</sys_created_on>
+        <sys_id>1a0affcd838272104acac396feaad355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_1850913_facili_0.facility_user</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_security_acl display_value="x_1850913_facili_0_facility_issue.*">ac0a778183c272104acac396feaad3e9</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1a0affcd838272104acac396feaad355</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-24 23:54:13</sys_updated_on>
+        <sys_user_role display_value="x_1850913_facili_0.facility_user" name="x_1850913_facili_0.facility_user">1e31ce0d83c232104acac396feaad37d</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="DELETE">
+        <associated_types/>
+        <bundles/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition/>
+        <da_relay_models/>
+        <data/>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <dispatched_events/>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <form_factors>{
+    "custom_ff_1": {
+        "max-width": 640,
+        "reference": "macroponent"
+    }
+}</form_factors>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings/>
+        <layout>{
+    "default": {
+        "children": null,
+        "items": [],
+        "root": null,
+        "rules": null,
+        "styles": {
+            "flex-direction": "column"
+        },
+        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+        "type": "flex"
+    },
+    "queries": [
+        {
+            "layout": {
+                "items": [],
+                "styles": {
+                    "flex-direction": "column",
+                    "height": "auto",
+                    "min-width": null
+                },
+                "type": "flex"
+            },
+            "queryId": "custom_ff_1"
+        }
+    ],
+    "version": "3.1.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>Critical isseus </name>
+        <output_prop_mapping/>
+        <props>[]</props>
+        <required_translations>[ ]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_persistence_config/>
+        <state_properties/>
+        <style_config>{}</style_config>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 17:24:14</sys_created_on>
+        <sys_id>95bdd99d83d2f2104acac396feaad3aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Critical isseus </sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_macroponent_95bdd99d83d2f2104acac396feaad3aa</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-06 17:24:14</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="DELETE" query="documentkey=95bdd99d83d2f2104acac396feaad3aa"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_ux_macroponent_95bdd99d83d2f2104acac396feaad3aa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent"><sys_ux_macroponent action="INSERT_OR_UPDATE"><associated_types/><bundles/><category>page</category><component_dependencies/><composition/><da_relay_models/><data/><description/><disable_auto_reflow>false</disable_auto_reflow><dispatched_events/><ext_controller_dep/><extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends><extension_point/><form_factors>{
+    "custom_ff_1": {
+        "max-width": 640,
+        "reference": "macroponent"
+    }
+}</form_factors><handled_events/><interactions/><interfaces/><internal_event_mappings/><layout>{
+    "default": {
+        "children": null,
+        "items": [],
+        "root": null,
+        "rules": null,
+        "styles": {
+            "flex-direction": "column"
+        },
+        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+        "type": "flex"
+    },
+    "queries": [
+        {
+            "layout": {
+                "items": [],
+                "styles": {
+                    "flex-direction": "column",
+                    "height": "auto",
+                    "min-width": null
+                },
+                "type": "flex"
+            },
+            "queryId": "custom_ff_1"
+        }
+    ],
+    "version": "3.1.0"
+}</layout><macroponent_dependencies/><name>Critical isseus </name><output_prop_mapping/><props>[]</props><required_translations>[ ]</required_translations><root_component/><root_component_config/><root_component_definition/><schema_version>1.0.0</schema_version><state_persistence_config/><state_properties/><style_config>{}</style_config><sys_class_name>sys_ux_macroponent</sys_class_name><sys_created_by>Sameh</sys_created_by><sys_created_on>2026-01-06 17:24:14</sys_created_on><sys_id>95bdd99d83d2f2104acac396feaad3aa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Critical isseus </sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_ux_macroponent_95bdd99d83d2f2104acac396feaad3aa</sys_update_name><sys_updated_by>Sameh</sys_updated_by><sys_updated_on>2026-01-06 17:24:14</sys_updated_on></sys_ux_macroponent><sys_translated_text action="delete_multiple" query="documentkey=95bdd99d83d2f2104acac396feaad3aa"/></record_update>]]></payload>
+        <payload_hash>1572078259</payload_hash>
+        <record_name>Critical isseus </record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 17:24:14</sys_created_on>
+        <sys_id>95bdd99d83d2f2104acac396feaad3b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b94567db60000001</sys_recorded_at>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-06 17:24:14</sys_updated_on>
+        <type>UX Macroponent Definition</type>
+        <update_guid>55bdd99db5d2f21033cb74e72bb809b0</update_guid>
+        <update_guid_history>55bdd99db5d2f21033cb74e72bb809b0:1572078259</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-06 17:40:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_macroponent">sys_ux_macroponent</sys_db_object>
+        <sys_id>19c3ef0cd5844af489431b8e4bec9001</sys_id>
+        <sys_metadata>95bdd99d83d2f2104acac396feaad3aa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Critical isseus </sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_ux_macroponent_95bdd99d83d2f2104acac396feaad3aa</sys_update_name>
+        <sys_update_version display_value="sys_ux_macroponent_95bdd99d83d2f2104acac396feaad3aa">95bdd99d83d2f2104acac396feaad3b1</sys_update_version>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-06 17:40:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

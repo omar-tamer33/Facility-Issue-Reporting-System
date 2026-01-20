@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="time" label="Time" language="en" table="x_1850913_facili_0_alert_history_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>time</element>
+            <help/>
+            <hint/>
+            <label>Time</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_alert_history_table</name>
+            <plural>Times</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Sameh</sys_created_by>
+            <sys_created_on>2025-12-19 20:51:59</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Time</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_documentation_x_1850913_facili_0_alert_history_table_time_en</sys_update_name>
+            <sys_updated_by>Sameh</sys_updated_by>
+            <sys_updated_on>2025-12-19 20:51:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

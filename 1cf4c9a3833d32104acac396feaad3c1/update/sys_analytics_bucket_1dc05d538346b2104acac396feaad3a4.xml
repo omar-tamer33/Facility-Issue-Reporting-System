@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_analytics_bucket">
+    <sys_analytics_bucket action="INSERT_OR_UPDATE">
+        <analytics_channel display_value="NextExperience">c8ae7e45732130107d804c9885f6a7a5</analytics_channel>
+        <application_name>technician workspace</application_name>
+        <bucket_document_id>97405d138346b2104acac396feaad310</bucket_document_id>
+        <bucket_metadata/>
+        <bucket_metadata_customer_override/>
+        <bucket_table_name>sys_ux_page_registry</bucket_table_name>
+        <bucket_type/>
+        <enable_unauthenticated_user_tracking>false</enable_unauthenticated_user_tracking>
+        <enabled>true</enabled>
+        <internal_name_for_index>x_1850913_facili_0.sys_ux_page_registry.97405d138346b2104acac396feaad310</internal_name_for_index>
+        <sys_class_name>sys_analytics_bucket</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-31 11:19:51</sys_created_on>
+        <sys_id>1dc05d538346b2104acac396feaad3a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>technician workspace</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_analytics_bucket_1dc05d538346b2104acac396feaad3a4</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-31 11:19:51</sys_updated_on>
+    </sys_analytics_bucket>
+</record_update>

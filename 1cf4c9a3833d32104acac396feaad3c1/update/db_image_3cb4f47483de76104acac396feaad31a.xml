@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>7cb470bc839e76104acac396feaad3b2</image>
+        <name>upload_cooling-symbol-3318.svg</name>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-05 01:08:06</sys_created_on>
+        <sys_id>3cb4f47483de76104acac396feaad31a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>upload_cooling-symbol-3318.svg</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>db_image_3cb4f47483de76104acac396feaad31a</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-05 01:08:07</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>cooling-symbol-3318.svg</file_name>
+        <hash>3bf9ffd7cdf51e00a29a367219f9e39a3be4d9ce738b8e42d0bd67b213ddb0e2</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>2057</size_bytes>
+        <size_compressed>874</size_compressed>
+        <state>available</state>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-05 01:08:07</sys_created_on>
+        <sys_id>7cb470bc839e76104acac396feaad3b2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2026-01-05 01:08:13</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>3cb4f47483de76104acac396feaad31a</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/w==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="cooling-symbol-3318.svg" sys_id="7cb470bc839e76104acac396feaad3b2">7cb470bc839e76104acac396feaad3b2</sys_attachment>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-05 01:08:07</sys_created_on>
+        <sys_id>30b470bc839e76104acac396feaad3b3</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>zVXLcttGEDw7XzGFk1QlLPf9oEQf4qv9ETAFE4ghggVAouyvT88uobJkH5xDUrksMIPmPLuXd/PTgZ4fhuO8q7plOW03m/P5LM5GjNNho6WUGyCqAtk+D/3x66+AKqW0yV8remqnuR+Pu0oJVdG5v1+6XaWdr6hr+0O3XIynvj3/OT7vKkmS4KHsRZ7tfGr27a46Te3cTk9t9f6PuwPNy7cBznmZxq/tlo7jsb2lYtU5x5bki+O+mbtmmppvb4AosN03py19flyWV96/xv64pYd+aacXf7aGHo8tKQT/0g/DGpDf6+lxKKV8b6fxlkbU3S/IqW4rWqbmOH8Zp4ddlV+HZmmvlLDSu2TWU3n62XVN874Z2istoiI+rjGBd3enZunofld9ImdEwievRPSW9lRLEVTkR4qGai2kp1oJoxPVRigdMsIahmphfEBSnfDRCakcjBQACSIgWjEA9CImi83USosQALbCWFhOKIlcSgqrHXXkkJuLQAZpgEdex/lM5MgeJ0qRskAMh5DCo1oYwHOZQbFPRs1WcomGnCYip7Yo1JUWjcu/dTbDk8tdRTSDX3kOVayM9dbn0oW2iTNpv6IK6CM7lSabUP0lPCpF9JjnaPNijH2prBRWWmCcVxyXt1CaK52W946C0NEDjck5ILzQWvMjohcdc/vGiIhcF2tPXljH09OoPY8leEMqYpWG96Q0l4l+yp6D42RO8YjAH27LB8vbho4+viHI9+p3xKP+E/FMh89X2sYbFexNvP5nMqKHZpn65ytFfGPk85qqN9Xtqml8PN5Xm9eSiVi0T2QCBrQufOViKspRK1GZKdGuVsfKsNrSBwpB4JaSmfDeCI8AEaxPZL1I6vK+53VFHTP/sCMWOLPPCwfKgs82SxarBDWQnmmOhBAppKkKqUEFbBL8HJhKiRBHmaIg7zPNimwjE88aRkuoFl3IkGnHLAEKirHChYtELIJJ41eDOeelKqTT4DhIE0B7KwLuhiS8Y3mjGSsvCiwCr7PCi2Auo1oFXv8oDzayMljgrCLWSvLoqYj7RdssbWYwqi26Lhr9Ua+586zpIum6aPqV8Ne466XxgRKyBkMmimQ0Wwr1wMJ0XvPh/6YQl26U1Tda2n9ZInebAx/4h3//N2/8LF8JCAAA</data>
+        <length>1152</length>
+        <position>1</position>
+        <sys_attachment display_value="cooling-symbol-3318.svg" sys_id="7cb470bc839e76104acac396feaad3b2">7cb470bc839e76104acac396feaad3b2</sys_attachment>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-05 01:08:07</sys_created_on>
+        <sys_id>f0b470bc839e76104acac396feaad3b3</sys_id>
+    </sys_attachment_doc>
+</record_update>

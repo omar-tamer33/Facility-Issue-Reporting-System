@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="fdfbf8977482b2102a5415814e51f911" sys_domain="global" table="sysapproval_approver" version="3" view="custom_portal_approval_x_1850913_facili_0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>0</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-31 09:48:59</sys_created_on>
+            <sys_id>71fbf8975882b210fac1c8c8037e7e11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sysapproval_approver" sys_domain="global" view="7dfbf897b782b2101547d3e310a25e10">fdfbf8977482b2102a5415814e51f911</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-31 09:48:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sysapproval</element>
+            <position>1</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-31 09:48:59</sys_created_on>
+            <sys_id>39fbf897eb82b210af364d9a8c469311</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sysapproval_approver" sys_domain="global" view="7dfbf897b782b2101547d3e310a25e10">fdfbf8977482b2102a5415814e51f911</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-31 09:48:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sysapproval_approver</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-31 09:48:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fdfbf8977482b2102a5415814e51f911</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sysapproval_approver</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_ui_section_fdfbf8977482b2102a5415814e51f911</sys_update_name>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-31 09:48:59</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Custom portal (x_1850913_facili_0)" name="custom_portal_approval_x_1850913_facili_0">7dfbf897b782b2101547d3e310a25e10</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

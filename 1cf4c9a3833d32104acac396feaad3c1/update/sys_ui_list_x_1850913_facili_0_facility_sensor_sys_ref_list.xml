@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_1850913_facili_0_facility_sensor" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_1850913_facili_0_facility_sensor" element="NULL" name="x_1850913_facili_0_facility_sensor" parent="NULL" relationship="NULL" sys_domain="global" view="9ecaa172f13322108bb2efdbde054cc6">d2e27fbd83ceb6104acac396feaad33a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-27 07:17:23</sys_created_on>
+            <sys_id>1ee27fbd83ceb6104acac396feaad3c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-27 07:17:23</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_1850913_facili_0_facility_sensor</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-27 07:17:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d2e27fbd83ceb6104acac396feaad33a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1850913_facili_0_facility_sensor</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_ui_list_x_1850913_facili_0_facility_sensor_sys_ref_list</sys_update_name>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-27 07:17:23</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">9ecaa172f13322108bb2efdbde054cc6</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

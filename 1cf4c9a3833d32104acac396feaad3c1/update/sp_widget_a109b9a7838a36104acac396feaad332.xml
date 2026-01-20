@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $location, $window, spModal) {
+    var c = this;
+    
+    // Initialize form data
+    c.formData = {
+        issueCategory: '',
+        building: '',
+        floor: '',
+        specificLocation: '',
+        affectedDevice: '',
+        shortDescription: '',
+        description: '',
+        priority: 4,
+				attachmentFile: null,
+        attachmentData: null,
+        attachmentPreview: null
+    };
+    
+    // Initialize data
+    c.data.availableFloors = [];
+    c.data.suggestedArticles = [];
+    c.submitting = false;
+	
+     c.viewIssue = function (sysId) {
+        console.log('Navigating to issue:', sysId);
+        $location.search({
+            id: 'issue_details',
+            sys_id: sysId
+        });
+    };
+    
+    // Go to dashboard function
+    c.goToDashboard = function () {
+        console.log('Navigating to dashboard');
+        $location.search({
+            id: 'employee_dashboard'
+        });
+    };
+    // Update available floors based on selected building
+    c.updateFloors = function() {
+        c.formData.floor = ''; // Reset floor selection
+        
+        var floorMap = {
+            'Building A': ['Floor 1', 'Floor 2', 'Floor 3'],
+            'Building B': ['Floor 1', 'Floor 2'],
+            'Building C': ['Floor 1', 'Floor 2', 'Floor 3', 'Floor 4']
+        };
+        
+        c.data.availableFloors = floorMap[c.formData.building] || [];
+    };
+    c.updateLocation = function() {
+        if (c.formData.building && c.formData.floor) {
+            c.formData.specificLocation = c.formData.building + ', ' + c.formData.floor;
+        }
+    };
+    // Select issue type and load KB suggestions
+    c.selectIssueType = function(type) {
+        c.formData.issueCategory = type;
+        
+        // Get the label for the selected type
+        var selectedType = c.data.issueTypes.find(function(t) {
+            return t.value === type;
+        });
+        
+        // Auto-populate short description if empty
+        if (!c.formData.shortDescription && selectedType) {
+            c.formData.shortDescription = selectedType.label + ' Issue';
+        }
+        // Load suggested KB articles
+        c.server.get({
+            action: 'getSuggestions',
+            issueType: type
+        }).then(function(response) {
+            if (response.data && response.data.suggestedArticles) {
+                c.data.suggestedArticles = response.data.suggestedArticles;
+            }
+        });
+    };
+	    // File handling functions
+    c.handleFileSelect = function(files) {
+        if (!files || files.length === 0) {
+            return;
+        }
+        
+        var file = files[0];
+        
+        // Validate file size (10MB max)
+        var maxSize = 10 * 1024 * 1024; // 10MB in bytes
+        if (file.size > maxSize) {
+            spModal.alert('File size exceeds 10MB limit. Please select a smaller file.');
+            return;
+        }
+        
+        // Validate file type
+        var allowedTypes = [
+            'image/jpeg', 'image/jpg', 'image/png', 'image/gif',
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'text/plain'
+        ];
+        
+        if (allowedTypes.indexOf(file.type) === -1) {
+            spModal.alert('File type not supported. Please select an image, PDF, Word document, or text file.');
+            return;
+        }
+        
+        // Store file reference
+        c.formData.attachmentFile = file;
+        
+        // Read file as base64
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            c.formData.attachmentData = e.target.result.split(',')[1]; // Get base64 data without prefix
+            
+            // If it's an image, create preview
+            if (file.type.indexOf('image/') === 0) {
+                c.formData.attachmentPreview = e.target.result;
+            }
+            
+            $scope.$apply();
+        };
+        reader.readAsDataURL(file);
+    };
+    
+    // Remove attached file
+    c.removeFile = function() {
+        c.formData.attachmentFile = null;
+        c.formData.attachmentData = null;
+        c.formData.attachmentPreview = null;
+        
+        // Reset file input
+        var fileInput = document.getElementById('attachment');
+        if (fileInput) {
+            fileInput.value = '';
+        }
+    };
+    
+    // Check if file is an image
+    c.isImageFile = function(filename) {
+        if (!filename) return false;
+        var ext = filename.split('.').pop().toLowerCase();
+        return ['jpg', 'jpeg', 'png', 'gif'].indexOf(ext) !== -1;
+    };
+    
+    // Get file icon class based on file type
+    c.getFileIcon = function(filename) {
+        if (!filename) return '';
+        var ext = filename.split('.').pop().toLowerCase();
+        
+        var iconMap = {
+            'jpg': 'fa-file-image',
+            'jpeg': 'fa-file-image',
+            'png': 'fa-file-image',
+            'gif': 'fa-file-image',
+            'pdf': 'fa-file-pdf',
+            'doc': 'fa-file-word',
+            'docx': 'fa-file-word',
+            'txt': 'fa-file-text'
+        };
+        
+        return iconMap[ext] || 'fa-file';
+    };
+    
+    // Format file size for display
+    c.formatFileSize = function(bytes) {
+        if (!bytes) return '0 Bytes';
+        
+        var k = 1024;
+        var sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        var i = Math.floor(Math.log(bytes) / Math.log(k));
+        
+        return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+    };
+    
+    // Submit the issue
+    c.submitIssue = function() {
+        // Validate required fields
+        if (!c.formData.issueCategory) {
+            spModal.alert('Please select an issue type.');
+            return;
+        }
+        
+        if (!c.formData.building || !c.formData.floor) {
+            spModal.alert('Please select a building and a floor');
+            return;
+        }
+        
+        if (!c.formData.shortDescription || c.formData.shortDescription.trim() === '') {
+            spModal.alert('Please provide a short description.');
+            return;
+        }
+        
+        if (!c.formData.description || c.formData.description.trim() === '') {
+            spModal.alert('Please provide a detailed description.');
+            return;
+        }
+        
+        c.submitting = true;
+			var payload = {
+            issueCategory: c.formData.issueCategory,
+            building: c.formData.building,
+            floor: c.formData.floor,
+            specificLocation: c.formData.specificLocation,
+            affectedDevice: c.formData.affectedDevice,
+            shortDescription: c.formData.shortDescription,
+            description: c.formData.description,
+            priority: c.formData.priority
+        };
+			// Add attachment data if file is selected
+        if (c.formData.attachmentFile && c.formData.attachmentData) {
+            payload.attachment = {
+                fileName: c.formData.attachmentFile.name,
+                contentType: c.formData.attachmentFile.type,
+                data: c.formData.attachmentData
+            };
+        }
+        
+        // Submit to server
+        c.server.get({
+            action: 'submit',
+           // payload: c.formData,
+					payload:payload,
+        }).then(function(response) {
+            c.submitting = false;
+            
+            if (response.data.success) {
+								console.log('SYSID:',response.data.sys_id);
+								console.log('issue number:',response.data.issue_number);
+                c.showSuccessModal(response.data.issue_number,response.data.sys_id);
+							console.log('$window available:', typeof $window !== 'undefined')
+							
+            } else {
+                spModal.alert('Error submitting issue: ' + (response.data.error || 'Please try again.'));
+            }
+        }).catch(function(error) {
+            c.submitting = false;
+            spModal.alert('An error occurred while submitting the issue. Please try again.');
+            console.error('Submission error:', error);
+        });
+    };
+	    c.showSuccessModal=function(issueNumber, issueSysId){
+        console.log('Showing success modal for issue sys_id:', issueSysId);
+        
+        spModal.open({
+            title: 'Issue Submitted Successfully',
+            message: 'Your facility issue has been submitted.<br><br><strong>Issue Number: ' + issueNumber + '</strong>',
+            buttons: [
+                {
+                    label: 'View Issue',
+                    primary: true
+                },
+                {
+                    label: 'Submit Another'
+                },
+                {
+                    label: 'Go to Dashboard'
+                }
+            ]
+        }).then(function(response) {
+            // Handle button clicks based on which button was pressed
+            // response is the button label that was clicked
+            console.log('Modal response:', response);
+            
+            if (response && response.label) {
+							if (response.label === 'View Issue') {
+                console.log('User clicked View Issue, navigating to:', issueSysId);
+                c.viewIssue(issueSysId);
+							}
+            } else if (response.label === 'Submit Another') {
+                console.log('User clicked Submit Another');
+                c.resetForm();
+                $scope.$apply();
+            } else if (response === 'Go to Dashboard') {
+                console.log('User clicked Go to Dashboard');
+                c.goToDashboard();
+            }
+        });
+    }
+	
+    // Reset form
+    c.resetForm = function() {
+        c.formData = {
+            issueCategory: '',
+            building: '',
+            floor: '',
+            specificLocation: '',
+            affectedDevice: '',
+            shortDescription: '',
+            description: '',
+            priority: '4'
+        };
+        c.data.availableFloors = [];
+        c.data.suggestedArticles = [];
+    };
+    
+    // Cancel and return to dashboard
+    c.cancel = function() {
+        $location.url('?id=employee_dashboard');
+    };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.report-issue-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+ 	 	margin-top:100px;
+  	height:100vh;
+}
+
+.panel-default {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.panel-heading {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    padding: 20px;
+    border-bottom: none;
+}
+
+.panel-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.panel-heading .text-muted {
+    color: rgba(255,255,255,0.9) !important;
+    margin: 0;
+}
+
+.panel-body {
+    padding: 30px;
+}
+
+/* Issue Type Grid */
+.issue-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 15px 0 25px 0;
+}
+
+.issue-type-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.issue-type-card:hover {
+    border-color: #3498db;
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.issue-type-card.selected {
+    border-color: #3498db;
+    background-color: #e3f2fd;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.type-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.type-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* Knowledge Base Articles */
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.alert-info h4 {
+    color: #31708f;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.alert-info h4 .fa {
+    margin-right: 8px;
+}
+
+.kb-article {
+    padding: 12px;
+    margin: 8px 0;
+    background: white;
+    border-radius: 4px;
+    border-left: 3px solid #3498db;
+}
+
+.kb-article a {
+    color: #2980b9;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kb-article a:hover {
+    color: #1a5276;
+    text-decoration: underline;
+}
+
+.kb-article .fa-external-link {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+    outline: none;
+}
+
+.form-control:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+small.text-muted {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+.attachment-container {
+    margin-top: 10px;
+}
+
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.file-input {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.file-input-label:hover {
+    border-color: #3498db;
+    background-color: #f0f8ff;
+}
+
+.file-input:focus + .file-input-label {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.file-input-label .fa {
+    margin-right: 10px;
+  font-size: 18px;
+}
+.file-info {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.file-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.file-details .fa {
+    font-size: 24px;
+    color: #3498db;
+}
+
+.file-details .fa-file-image {
+    color: #e74c3c;
+}
+
+.file-details .fa-file-pdf {
+    color: #c0392b;
+}
+
+.file-details .fa-file-word {
+    color: #2980b9;
+}
+
+.file-details .fa-file-text {
+    color: #7f8c8d;
+}
+
+.file-meta {
+    flex: 1;
+}
+
+.file-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+    word-break: break-word;
+}
+
+.file-size {
+    font-size: 12px;
+    color: #777;
+}
+
+.remove-file-btn {
+    padding: 4px 8px;
+    min-width: auto;
+}
+
+.remove-file-btn .fa {
+    margin: 0;
+}
+
+/* Image Preview */
+.image-preview {
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Priority Buttons */
+.btn-group-justified {
+    display: flex;
+    width: 100%;
+}
+
+.btn-group {
+    flex: 1;
+}
+
+.btn-group .btn {
+    width: 100%;
+    padding: 12px 8px;
+    font-weight: 600;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-group:first-child .btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.btn-group:last-child .btn {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.btn-success { background-color: #27ae60; border-color: #27ae60; color: white; }
+.btn-info { background-color: #3498db; border-color: #3498db; color: white; }
+.btn-warning { background-color: #f39c12; border-color: #f39c12; color: white; }
+.btn-danger { background-color: #e74c3c; border-color: #e74c3c; color: white; }
+.btn-default { background-color: #ecf0f1; border-color: #bdc3c7; color: #333; }
+
+.btn-success:hover { background-color: #229954; }
+.btn-info:hover { background-color: #2980b9; }
+.btn-warning:hover { background-color: #e67e22; }
+.btn-danger:hover { background-color: #c0392b; }
+.btn-default:hover { background-color: #d5dbdb; }
+
+/* Form Actions */
+.form-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-actions .btn {
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.form-actions .btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.form-actions .btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.form-actions .btn-primary:disabled {
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-actions .btn .fa {
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .issue-type-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .type-icon {
+        font-size: 32px;
+    }
+    
+    .type-label {
+        font-size: 11px;
+    }
+    
+    .panel-body {
+        padding: 20px 15px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-group-justified {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        border-radius: 4px !important;
+        margin-bottom: 5px;
+    }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>report_facility_issue_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Report Facility Issue Form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    
+    // Initialize issue types
+    data.issueTypes = [
+        {value: 'hvac', label: 'HVAC / Temperature', icon: ']]>🌡<![CDATA[️'},
+        {value: 'plumbing', label: 'Plumbing / Water', icon: ']]>💧<![CDATA['},
+        {value: 'electrical', label: 'Electrical', icon: '⚡'},
+        {value: 'electrical', label: 'Lighting', icon: ']]>💡<![CDATA['},
+        {value: 'safety', label: 'Security / Access', icon: ']]>🔒<![CDATA['},
+        {value: 'other', label: 'Cleaning / Janitorial', icon: ']]>🧹<![CDATA['},
+        {value: 'equipment', label: 'Equipment / Machine', icon: ']]>🔧<![CDATA['},
+        {value: 'other', label: 'Other', icon: ']]>📝<![CDATA['}
+    ];
+    
+    data.suggestedArticles = [];
+    
+    // Handle GET request for KB articles
+    if (input && input.action == 'getSuggestions') {
+        var kbGr = new GlideRecord('kb_knowledge');
+        kbGr.addQuery('workflow_state', 'published');
+        kbGr.addActiveQuery();
+        
+        // Search in multiple fields
+        var qc = kbGr.addQuery('short_description', 'CONTAINS', input.issueType);
+        qc.addOrCondition('text', 'CONTAINS', input.issueType);
+        qc.addOrCondition('meta', 'CONTAINS', input.issueType);
+        
+        kbGr.orderByDesc('sys_view_count');
+        kbGr.setLimit(3);
+        kbGr.query();
+        
+        data.suggestedArticles = [];
+        while (kbGr.next()) {
+            data.suggestedArticles.push({
+                title: kbGr.getValue('short_description'),
+                url: '?id=kb_article&sys_id=' + kbGr.getValue('sys_id')
+            });
+        }
+    }
+    
+    // Handle form submission
+    if (input && input.action == 'submit') {
+        try {
+            var payload = input.payload;
+            
+            // Create new Facility Issue record
+            var issue = new GlideRecord('x_1850913_facili_0_facility_issue');
+            issue.initialize();
+            
+            // Map the form fields to table fields
+            // Based on the screenshot, the table appears to be a custom app table
+            issue.setValue('issue_categor0', payload.issueCategory);
+            issue.setValue('building', payload.building);
+            issue.setValue('floor', payload.floor);
+            issue.setValue('locatio0', payload.specificLocation || '');
+            issue.setValue('affected_device', payload.affectedDevice || '');
+            issue.setValue('short_description', payload.shortDescription);
+            issue.setValue('description', payload.description);
+            issue.setValue('priority', payload.priority);
+            issue.setValue('state', 1); // Open state
+            issue.setValue('reported_vi0', 'manual');
+            issue.setValue('opened_by', gs.getUserID());
+	
+            
+            // Insert the record
+            var sysId = issue.insert();
+            
+            if (sysId) {
+							  if (payload.attachment && payload.attachment.data && payload.attachment.fileName) {
+									try{
+										var gsa = new GlideSysAttachment();
+										  // Decode base64 data
+                        var attachmentSysId = gsa.writeBase64(
+                            issue,                           // GlideRecord object
+                            payload.attachment.fileName,      // File name
+                            payload.attachment.contentType,   // Content type
+                            payload.attachment.data           // Base64 encoded data
+                        );
+										 if (attachmentSysId) {
+                            gs.info('Attachment added successfully: ' + attachmentSysId + ' for issue: ' + issue.getValue('number'));
+                        } else {
+                            gs.warn('Failed to attach file to issue: ' + issue.getValue('number'));
+                        }
+										
+									}catch(attachmentError){
+									        	gs.error('Error attaching file to issue ' + issue.getValue('number') + ': ' + attachmentError.message);
+
+								}
+									
+								}
+                data.success = true;
+                data.issue_number = issue.getValue('number');
+                data.sys_id = sysId;
+                
+                // Log the creation
+                gs.info('Facility issue created: ' + data.issue_number + ' by user: ' + gs.getUserName());
+            } else {
+                data.success = false;
+                data.error = 'Failed to create facility issue record';
+                gs.error('Failed to insert facility issue record');
+            }
+            
+        } catch (e) {
+            data.success = false;
+            data.error = e.message;
+            gs.error('Error creating facility issue: ' + e.message);
+        }
+    }
+    
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 08:54:12</sys_created_on>
+        <sys_id>a109b9a7838a36104acac396feaad332</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>Report Facility Issue Form</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_widget_a109b9a7838a36104acac396feaad332</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-08 08:28:11</sys_updated_on>
+        <template><![CDATA[<div class="report-issue-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Report a New Issue</h3>
+      <p class="text-muted">Fill out the form below to report a facility issue</p>
+    </div>
+    <div class="panel-body">
+      <form ng-submit="c.submitIssue()">
+        
+        <!-- Issue Type/Category -->
+        <div class="form-group">
+          <label>What type of issue are you reporting? *</label>
+          <div class="issue-type-grid">
+            <div ng-repeat="type in c.data.issueTypes" 
+                 class="issue-type-card"
+                 ng-class="{'selected': c.formData.issueCategory == type.value}"
+                 ng-click="c.selectIssueType(type.value)">
+              <div class="type-icon">{{type.icon}}</div>
+              <div class="type-label">{{type.label}}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Knowledge Base Suggestions -->
+        <div class="alert alert-info" ng-if="c.data.suggestedArticles.length > 0">
+          <h4><i class="fa fa-lightbulb-o"></i> Suggested Articles</h4>
+          <p>Before submitting, check if these articles can help:</p>
+          <div class="kb-article" ng-repeat="article in c.data.suggestedArticles">
+            <a href="{{article.url}}" target="_blank">
+              <strong>{{article.title}}</strong>
+              <i class="fa fa-external-link"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Building -->
+        <div class="form-group">
+          <label for="building">Building *</label>
+          <select id="building" 
+                  class="form-control" 
+                  ng-model="c.formData.building" 
+                  ng-change="c.updateFloors()"
+                  required>
+            <option value="">Select building...</option>
+            <option value="Building A">Building A</option>
+            <option value="Building B">Building B</option>
+            <option value="Building C">Building C</option>
+          </select>
+        </div>
+
+        <!-- Floor -->
+        <div class="form-group">
+          <label for="floor">Floor *</label>
+          <select id="floor" 
+                  class="form-control" 
+                  ng-model="c.formData.floor" 
+                  ng-change="c.updateLocation()"
+                  ng-disabled="!c.formData.building"
+                  required>
+            <option value="">Select floor...</option>
+            <option ng-repeat="floor in c.data.availableFloors" value="{{floor}}">{{floor}}</option>
+          </select>
+        </div>
+
+        <!-- Location (Optional specific location) -->
+        <div class="form-group">
+          <label for="location">Specific Location (Optional)</label>
+          <input type="text" 
+                 id="location" 
+                 class="form-control" 
+                 ng-model="c.formData.specificLocation" 
+                 placeholder="e.g., Room 205, Conference Room A, Near elevator...">
+        </div>
+
+        <!-- Affected Device (Optional) 
+        <div class="form-group">
+          <label for="affectedDevice">Affected Device/Equipment (Optional)</label>
+          <input type="text" 
+                 id="affectedDevice" 
+                 class="form-control" 
+                 ng-model="c.formData.affectedDevice" 
+                 placeholder="e.g., AC Unit #3, Printer, Door Lock...">
+        </div>
+-->
+        <!-- Short Description -->
+        <div class="form-group">
+          <label for="shortDescription">Short Description *</label>
+          <input type="text" 
+                 id="shortDescription" 
+                 class="form-control" 
+                 ng-model="c.formData.shortDescription" 
+                 placeholder="Brief summary of the issue"
+                 maxlength="160"
+                 required>
+          <small class="text-muted">{{160 - (c.formData.shortDescription || '').length}} characters remaining</small>
+        </div>
+
+        <!-- Detailed Description -->
+        <div class="form-group">
+          <label for="description">Detailed Description *</label>
+          <textarea id="description" 
+                    class="form-control" 
+                    rows="5" 
+                    ng-model="c.formData.description" 
+                    placeholder="Please describe the issue in detail..."
+                    required></textarea>
+        </div>
+        
+        <!-- Attachment Field -->
+        <div class="form-group">
+          <label for="attachment">Attachment (Optional)</label>
+          <div class="attachment-container">
+            <div class="file-input-wrapper">
+              <input type="file" 
+                     id="attachment" 
+                     class="file-input" 
+                     ng-model="c.formData.attachment"
+                     accept="image/*,.pdf,.doc,.docx,.txt"
+                     onchange="angular.element(this).scope().c.handleFileSelect(this.files)">
+              <label for="attachment" class="file-input-label">
+                <i class="fa fa-paperclip"></i>
+                <span ng-if="!c.formData.attachmentFile">Choose file or drag and drop</span>
+                <span ng-if="c.formData.attachmentFile">{{c.formData.attachmentFile.name}}</span>
+              </label>
+            </div>
+            
+            <div class="file-info" ng-if="c.formData.attachmentFile">
+              <div class="file-details">
+                <i class="fa fa-file" ng-class="c.getFileIcon(c.formData.attachmentFile.name)"></i>
+                <div class="file-meta">
+                  <div class="file-name">{{c.formData.attachmentFile.name}}</div>
+                  <div class="file-size">{{c.formatFileSize(c.formData.attachmentFile.size)}}</div>
+                </div>
+                <button type="button" 
+                        class="btn btn-sm btn-danger remove-file-btn" 
+                        ng-click="c.removeFile()"
+                        title="Remove file">
+                  <i class="fa fa-times"></i>
+                </button>
+              </div>
+              
+              <!-- Image preview -->
+              <div class="image-preview" ng-if="c.isImageFile(c.formData.attachmentFile.name)">
+                <img ng-src="{{c.formData.attachmentPreview}}" alt="Preview" />
+              </div>
+            </div>
+            
+            <small class="text-muted">
+              Supported formats: Images (JPG, PNG, GIF), PDF, Word documents, Text files. Max size: 10MB
+            </small>
+          </div>
+        </div>
+        
+        
+        <!-- Priority/Urgency -->
+        <div class="form-group">
+          <label>Priority Level *</label>
+          <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+              <button type="button" 
+                      class="btn"
+                      ng-class="{'btn-success': c.formData.priority == '4', 'btn-default': c.formData.priority != '4'}"
+                      ng-click="c.formData.priority = '4'">
+                <i class="fa fa-arrow-down"></i> Low
+              </button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" 
+                      class="btn"
+                      ng-class="{'btn-info': c.formData.priority == '3', 'btn-default': c.formData.priority != '3'}"
+                      ng-click="c.formData.priority = '3'">
+                <i class="fa fa-minus"></i> Moderate
+              </button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" 
+                      class="btn"
+                      ng-class="{'btn-warning': c.formData.priority == '2', 'btn-default': c.formData.priority != '2'}"
+                      ng-click="c.formData.priority = '2'">
+                <i class="fa fa-arrow-up"></i> High
+              </button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" 
+                      class="btn"
+                      ng-class="{'btn-danger': c.formData.priority == '1', 'btn-default': c.formData.priority != '1'}"
+                      ng-click="c.formData.priority = '1'">
+                <i class="fa fa-exclamation-triangle"></i> Critical
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-actions">
+          <button type="button" class="btn btn-default" ng-click="c.cancel()">
+            <i class="fa fa-times"></i> Cancel
+          </button>
+          <button type="submit" class="btn btn-primary" ng-disabled="c.submitting">
+            <i class="fa fa-paper-plane" ng-if="!c.submitting"></i>
+            <i class="fa fa-spinner fa-spin" ng-if="c.submitting"></i>
+            {{c.submitting ? 'Submitting...' : 'Submit Issue'}}
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a109b9a7838a36104acac396feaad332</id>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 08:54:12</sys_created_on>
+        <sys_id>a509b9a7838a36104acac396feaad336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 08:54:12</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

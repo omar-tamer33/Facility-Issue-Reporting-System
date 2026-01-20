@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">916e316b83ca36104acac396feaad313</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 09:17:40</sys_created_on>
+        <sys_id>dd6e316b83ca36104acac396feaad316</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_column_dd6e316b83ca36104acac396feaad316</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 09:17:40</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sp_column_dd6e316b83ca36104acac396feaad316</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><semantic_tag/><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">916e316b83ca36104acac396feaad313</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>Ahmed</sys_created_by><sys_created_on>2026-01-01 09:17:40</sys_created_on><sys_id>dd6e316b83ca36104acac396feaad316</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sp_column_dd6e316b83ca36104acac396feaad316</sys_update_name><sys_updated_by>Ahmed</sys_updated_by><sys_updated_on>2026-01-01 09:17:40</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>1612574248</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 09:17:40</sys_created_on>
+        <sys_id>9d6e316b83ca36104acac396feaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b78d93a330000001</sys_recorded_at>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 09:17:40</sys_updated_on>
+        <type>Column</type>
+        <update_guid>5d6e316bd8ca3610637bdc7d7f1db818</update_guid>
+        <update_guid_history>5d6e316bd8ca3610637bdc7d7f1db818:1612574248</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">2b1c4a9883dab2104acac396feaad3a6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-03 18:13:05</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>0b31bec03cff49bd811a32a2cea17719</sys_id>
+        <sys_metadata>dd6e316b83ca36104acac396feaad316</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sp_column_dd6e316b83ca36104acac396feaad316</sys_update_name>
+        <sys_update_version display_value="sp_column_dd6e316b83ca36104acac396feaad316">9d6e316b83ca36104acac396feaad319</sys_update_version>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-03 18:13:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

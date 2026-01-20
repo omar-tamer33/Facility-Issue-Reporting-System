@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="0bd6164d838632104acac396feaad38f" sys_domain="global" table="sys_hub_action_output" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>47d6164d838632104acac396feaad3cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0bd6164d838632104acac396feaad38f</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">8fd6164d838632104acac396feaad3ad</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cfd6164d838632104acac396feaad3ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0bd6164d838632104acac396feaad38f</sys_ui_form>
+            <sys_ui_section caption="Reference Specification" display_value="Reference Specification" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0fd6164d838632104acac396feaad3cf</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>07d6164d838632104acac396feaad39c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0bd6164d838632104acac396feaad38f</sys_ui_form>
+            <sys_ui_section caption="Choice List Specification" display_value="Choice List Specification" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">cbd6164d838632104acac396feaad393</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>07d6164d838632104acac396feaad3a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0bd6164d838632104acac396feaad38f</sys_ui_form>
+            <sys_ui_section caption="Dependent Field" display_value="Dependent Field" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">cbd6164d838632104acac396feaad39c</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c7d6164d838632104acac396feaad3ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0bd6164d838632104acac396feaad38f</sys_ui_form>
+            <sys_ui_section caption="Calculated Value" display_value="Calculated Value" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">cbd6164d838632104acac396feaad3a5</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cfd6164d838632104acac396feaad3f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">0bd6164d838632104acac396feaad38f</sys_ui_form>
+            <sys_ui_section caption="Default Value" display_value="Default Value" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">87d6164d838632104acac396feaad3ee</sys_ui_section>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sys_hub_action_output</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-24 16:39:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0bd6164d838632104acac396feaad38f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_hub_action_output</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_ui_form_sections_0bd6164d838632104acac396feaad38f</sys_update_name>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-24 16:39:45</sys_updated_on>
+            <sys_user/>
+            <view display_value="Advanced" name="advanced">7966be310a0a0b8c00bd504090503227</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

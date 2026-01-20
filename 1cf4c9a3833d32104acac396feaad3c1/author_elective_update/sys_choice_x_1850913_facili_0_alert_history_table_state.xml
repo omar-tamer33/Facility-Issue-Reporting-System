@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_1850913_facili_0_alert_history_table" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_1850913_facili_0_alert_history_table</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Sameh</sys_created_by>
+            <sys_created_on>2025-12-19 21:11:01</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_choice_x_1850913_facili_0_alert_history_table_state</sys_update_name>
+            <sys_updated_by>Sameh</sys_updated_by>
+            <sys_updated_on>2025-12-19 21:11:01</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In Progress</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_alert_history_table</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-26 20:18:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-26 20:18:35</sys_updated_on>
+            <value>in_progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Completed</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_alert_history_table</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-26 20:18:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-26 20:18:35</sys_updated_on>
+            <value>completed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Incomplete</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_alert_history_table</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-26 20:18:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Omar</sys_updated_by>
+            <sys_updated_on>2025-12-26 20:18:35</sys_updated_on>
+            <value>incomplete</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

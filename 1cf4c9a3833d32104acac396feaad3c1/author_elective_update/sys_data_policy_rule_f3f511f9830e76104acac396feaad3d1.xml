@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="DELETE">
+        <disabled>true</disabled>
+        <field>skill_rate</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-26 19:52:13</sys_created_on>
+        <sys_data_policy display_value="">e68551b9830e76104acac396feaad357</sys_data_policy>
+        <sys_id>f3f511f9830e76104acac396feaad3d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>skill_rate</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_data_policy_rule_f3f511f9830e76104acac396feaad3d1</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-26 19:52:13</sys_updated_on>
+        <table>x_1850913_facili_0_technician_profile</table>
+    </sys_data_policy_rule>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_data_policy_rule_f3f511f9830e76104acac396feaad3d1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule"><sys_data_policy_rule action="INSERT_OR_UPDATE"><disabled>true</disabled><field>skill_rate</field><mandatory>ignore</mandatory><sys_class_name>sys_data_policy_rule</sys_class_name><sys_created_by>Omar</sys_created_by><sys_created_on>2025-12-26 19:52:13</sys_created_on><sys_data_policy display_value="">e68551b9830e76104acac396feaad357</sys_data_policy><sys_id>f3f511f9830e76104acac396feaad3d1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>skill_rate</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_data_policy_rule_f3f511f9830e76104acac396feaad3d1</sys_update_name><sys_updated_by>Omar</sys_updated_by><sys_updated_on>2025-12-26 19:52:13</sys_updated_on><table>x_1850913_facili_0_technician_profile</table></sys_data_policy_rule></record_update>]]></payload>
+        <payload_hash>-1138469014</payload_hash>
+        <record_name>skill_rate</record_name>
+        <reverted_from/>
+        <source>dcf4c9a3833d32104acac396feaad3fb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-26 19:52:13</sys_created_on>
+        <sys_id>e116d1f9830e76104acac396feaad387</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b5c3802cc0000001</sys_recorded_at>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-26 19:52:13</sys_updated_on>
+        <type>Data Policy Rule</type>
+        <update_guid>e51651f98b0e761006a21bf4970a8256</update_guid>
+        <update_guid_history>e51651f98b0e761006a21bf4970a8256:-1138469014</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-26 19:53:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_data_policy_rule">sys_data_policy_rule</sys_db_object>
+        <sys_id>008586a44fc44f9e8084d693e92dc0c9</sys_id>
+        <sys_metadata>f3f511f9830e76104acac396feaad3d1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>skill_rate</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent display_value="">e68551b9830e76104acac396feaad357</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_data_policy_rule_f3f511f9830e76104acac396feaad3d1</sys_update_name>
+        <sys_update_version display_value="sys_data_policy_rule_f3f511f9830e76104acac396feaad3d1">e116d1f9830e76104acac396feaad387</sys_update_version>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-26 19:53:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_theme">
+    <m2m_app_theme action="INSERT_OR_UPDATE">
+        <applicability/>
+        <order>3</order>
+        <sys_class_name>m2m_app_theme</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-02 19:14:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0d801544835632104acac396feaad3e7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>m2m_app_theme_0d801544835632104acac396feaad3e7</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-01-02 23:36:51</sys_updated_on>
+        <theme display_value="Facility Issue theme">886b4d88831632104acac396feaad32b</theme>
+        <ux_app display_value="Unified Navigation app shell">c86a62e2c7022010099a308dc7c26022</ux_app>
+    </m2m_app_theme>
+</record_update>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_1850913_facili_0_sensor_data" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_1850913_facili_0_sensor_data" element="NULL" name="x_1850913_facili_0_sensor_data" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">312cc8618306f2104acac396feaad399</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-25 19:50:42</sys_created_on>
+            <sys_id>3d2cc8618306f2104acac396feaad39a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-25 19:50:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_1850913_facili_0_sensor_data</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2025-12-25 19:50:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>312cc8618306f2104acac396feaad399</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1850913_facili_0_sensor_data</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_ui_list_x_1850913_facili_0_sensor_data_null</sys_update_name>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2025-12-25 19:50:42</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_ui_list_x_1850913_facili_0_sensor_data_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="" relationship="" sys_domain="global" table="x_1850913_facili_0_sensor_data" version="2" view=""><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>number</element><list_id display_value="x_1850913_facili_0_sensor_data" element="NULL" name="x_1850913_facili_0_sensor_data" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">312cc8618306f2104acac396feaad399</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>Ahmed</sys_created_by><sys_created_on>2025-12-25 19:50:42</sys_created_on><sys_id>3d2cc8618306f2104acac396feaad39a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>Ahmed</sys_updated_by><sys_updated_on>2025-12-25 19:50:42</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>x_1850913_facili_0_sensor_data</name><parent/><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by>Ahmed</sys_created_by><sys_created_on>2025-12-25 19:50:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>312cc8618306f2104acac396feaad399</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1850913_facili_0_sensor_data</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_ui_list_x_1850913_facili_0_sensor_data_null</sys_update_name><sys_updated_by>Ahmed</sys_updated_by><sys_updated_on>2025-12-25 19:50:42</sys_updated_on><sys_user/><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+        <payload_hash>1446440983</payload_hash>
+        <record_name>Sensor Data </record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-25 19:50:42</sys_created_on>
+        <sys_id>3d2cc8618306f2104acac396feaad3f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b5710452e0000001</sys_recorded_at>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-25 19:50:42</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>f92cc861a906f21052b958caba6cf2f5</update_guid>
+        <update_guid_history>f92cc861a906f21052b958caba6cf2f5:1446440983</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-25 20:02:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>004d9dedeb334e6688cc6d74d97d7c51</sys_id>
+        <sys_metadata>312cc8618306f2104acac396feaad399</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1850913_facili_0_sensor_data</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent display_value="">105a086d83c2f2104acac396feaad3c8</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_ui_list_x_1850913_facili_0_sensor_data_null</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_1850913_facili_0_sensor_data_null">3d2cc8618306f2104acac396feaad3f5</sys_update_version>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-25 20:02:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

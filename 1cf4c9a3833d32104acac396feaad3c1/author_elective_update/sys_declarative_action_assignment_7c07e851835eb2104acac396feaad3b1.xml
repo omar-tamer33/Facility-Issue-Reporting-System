@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_declarative_action_assignment">
+    <sys_declarative_action_assignment action="DELETE">
+        <action/>
+        <action_attributes/>
+        <action_name>clear_filters</action_name>
+        <action_payload/>
+        <action_type>type</action_type>
+        <active>true</active>
+        <animate_icon>false</animate_icon>
+        <button_position>right</button_position>
+        <button_type>primary</button_type>
+        <client_action/>
+        <client_conditions/>
+        <client_conditions_on_fields/>
+        <client_script><![CDATA[function onClick() {current.setRedirectURL('x_1850913_facili_0_facility_issue?sysparm_query=active=true'); }]]></client_script>
+        <confirmation_message/>
+        <confirmation_required>false</confirmation_required>
+        <create_access>false</create_access>
+        <declarative_action_render_mode/>
+        <declarative_action_type>client_script</declarative_action_type>
+        <delete_access>false</delete_access>
+        <dependency/>
+        <description/>
+        <design_icon/>
+        <dynamic_record_condition/>
+        <dynamic_script_condition/>
+        <enable_dynamic_evaluation>false</enable_dynamic_evaluation>
+        <enable_for_all_experiences>false</enable_for_all_experiences>
+        <enabled>true</enabled>
+        <experience_restricted>false</experience_restricted>
+        <field_name/>
+        <field_type>glide_date</field_type>
+        <form_fields_required>false</form_fields_required>
+        <form_position/>
+        <group/>
+        <group_by>false</group_by>
+        <icon/>
+        <label>Clear Filters</label>
+        <model display_value="List">c3547169534723003eddddeeff7b126c</model>
+        <model_conditions/>
+        <model_field_required/>
+        <order>0</order>
+        <payload_map/>
+        <read_access>false</read_access>
+        <record_conditions/>
+        <record_selection_required>false</record_selection_required>
+        <required_roles/>
+        <required_translations/>
+        <required_user_role_names/>
+        <requires_value>false</requires_value>
+        <script_condition/>
+        <scripted_client_condition/>
+        <server_script/>
+        <specificity>21</specificity>
+        <sys_class_name>sys_declarative_action_assignment</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-06 13:26:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7c07e851835eb2104acac396feaad3b1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>clear_filters</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_declarative_action_assignment_7c07e851835eb2104acac396feaad3b1</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-06 13:49:45</sys_updated_on>
+        <table>x_1850913_facili_0_facility_issue</table>
+        <tooltip/>
+        <ui_component/>
+        <view/>
+        <workspace/>
+        <write_access>false</write_access>
+    </sys_declarative_action_assignment>
+    <sys_translated_text action="DELETE" query="documentkey=7c07e851835eb2104acac396feaad3b1"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_declarative_action_assignment_7c07e851835eb2104acac396feaad3b1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_declarative_action_assignment"&gt;&lt;sys_declarative_action_assignment action="INSERT_OR_UPDATE"&gt;&lt;action/&gt;&lt;action_attributes/&gt;&lt;action_name&gt;clear_filters&lt;/action_name&gt;&lt;action_payload/&gt;&lt;action_type&gt;type&lt;/action_type&gt;&lt;active&gt;true&lt;/active&gt;&lt;animate_icon&gt;false&lt;/animate_icon&gt;&lt;button_position&gt;right&lt;/button_position&gt;&lt;button_type&gt;primary&lt;/button_type&gt;&lt;client_action/&gt;&lt;client_conditions/&gt;&lt;client_conditions_on_fields/&gt;&lt;client_script&gt;&lt;![CDATA[function onClick() {current.setRedirectURL('x_1850913_facili_0_facility_issue?sysparm_query=active=true'); }]]&gt;&lt;/client_script&gt;&lt;confirmation_message/&gt;&lt;confirmation_required&gt;false&lt;/confirmation_required&gt;&lt;create_access&gt;false&lt;/create_access&gt;&lt;declarative_action_render_mode/&gt;&lt;declarative_action_type&gt;client_script&lt;/declarative_action_type&gt;&lt;delete_access&gt;false&lt;/delete_access&gt;&lt;dependency/&gt;&lt;description/&gt;&lt;design_icon/&gt;&lt;dynamic_record_condition/&gt;&lt;dynamic_script_condition/&gt;&lt;enable_dynamic_evaluation&gt;false&lt;/enable_dynamic_evaluation&gt;&lt;enable_for_all_experiences&gt;false&lt;/enable_for_all_experiences&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;experience_restricted&gt;false&lt;/experience_restricted&gt;&lt;field_name/&gt;&lt;field_type&gt;glide_date&lt;/field_type&gt;&lt;form_fields_required&gt;false&lt;/form_fields_required&gt;&lt;form_position/&gt;&lt;group/&gt;&lt;group_by&gt;false&lt;/group_by&gt;&lt;icon/&gt;&lt;label&gt;Clear Filters&lt;/label&gt;&lt;model display_value="List"&gt;c3547169534723003eddddeeff7b126c&lt;/model&gt;&lt;model_conditions/&gt;&lt;model_field_required/&gt;&lt;order&gt;0&lt;/order&gt;&lt;payload_map/&gt;&lt;read_access&gt;false&lt;/read_access&gt;&lt;record_conditions/&gt;&lt;record_selection_required&gt;false&lt;/record_selection_required&gt;&lt;required_roles/&gt;&lt;required_translations/&gt;&lt;required_user_role_names/&gt;&lt;requires_value&gt;false&lt;/requires_value&gt;&lt;script_condition/&gt;&lt;scripted_client_condition/&gt;&lt;server_script/&gt;&lt;specificity&gt;21&lt;/specificity&gt;&lt;sys_class_name&gt;sys_declarative_action_assignment&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Omar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-06 13:26:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7c07e851835eb2104acac396feaad3b1&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;clear_filters&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0"&gt;1cf4c9a3833d32104acac396feaad3c1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Facility Issue Reporting System "&gt;1cf4c9a3833d32104acac396feaad3c1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_declarative_action_assignment_7c07e851835eb2104acac396feaad3b1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Omar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-01-06 13:49:45&lt;/sys_updated_on&gt;&lt;table&gt;x_1850913_facili_0_facility_issue&lt;/table&gt;&lt;tooltip/&gt;&lt;ui_component/&gt;&lt;view/&gt;&lt;workspace/&gt;&lt;write_access&gt;false&lt;/write_access&gt;&lt;/sys_declarative_action_assignment&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=7c07e851835eb2104acac396feaad3b1"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>848356541</payload_hash>
+        <record_name>clear_filters</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-06 13:49:45</sys_created_on>
+        <sys_id>9f9ce09d835eb2104acac396feaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b93921d900000001</sys_recorded_at>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-06 13:49:45</sys_updated_on>
+        <type>Action Assignment</type>
+        <update_guid>5f9ce09d695eb210a628f00b01a245eb</update_guid>
+        <update_guid_history>5f9ce09d695eb210a628f00b01a245eb:848356541,f05c685dcf5eb210d23e05abfee4e8b0:-372457524,1b4764919b5eb210037c26e529a56469:-537854974</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-06 14:01:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_declarative_action_assignment">sys_declarative_action_assignment</sys_db_object>
+        <sys_id>0967ec20a31d4a9288efb3116f23df44</sys_id>
+        <sys_metadata>7c07e851835eb2104acac396feaad3b1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>clear_filters</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_declarative_action_assignment_7c07e851835eb2104acac396feaad3b1</sys_update_name>
+        <sys_update_version display_value="sys_declarative_action_assignment_7c07e851835eb2104acac396feaad3b1">9f9ce09d835eb2104acac396feaad3ec</sys_update_version>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-06 14:01:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

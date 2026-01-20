@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 19:29:52</sys_created_on>
+        <sys_id>5edd45e7837d32104acac396feaad319</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1850913_facili_0_facility_issue.x_1850913_facili_0.admin</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_security_acl display_value="x_1850913_facili_0_facility_issue">16dd05e7837d32104acac396feaad34d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_5edd45e7837d32104acac396feaad319</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 19:29:52</sys_updated_on>
+        <sys_user_role display_value="x_1850913_facili_0.admin" name="x_1850913_facili_0.admin">5cf40da3833d32104acac396feaad304</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_security_acl_role_5edd45e7837d32104acac396feaad319</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>Ahmed</sys_created_by><sys_created_on>2025-12-19 19:29:52</sys_created_on><sys_id>5edd45e7837d32104acac396feaad319</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1850913_facili_0_facility_issue.x_1850913_facili_0.admin</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_security_acl display_value="x_1850913_facili_0_facility_issue">16dd05e7837d32104acac396feaad34d</sys_security_acl><sys_update_name>sys_security_acl_role_5edd45e7837d32104acac396feaad319</sys_update_name><sys_updated_by>Ahmed</sys_updated_by><sys_updated_on>2025-12-19 19:29:52</sys_updated_on><sys_user_role display_value="x_1850913_facili_0.admin" name="x_1850913_facili_0.admin">5cf40da3833d32104acac396feaad304</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1994858173</payload_hash>
+        <record_name>x_1850913_facili_0_facility_issue.x_1850913_facili_0.admin</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 19:29:52</sys_created_on>
+        <sys_id>92dd45e7837d32104acac396feaad31f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_recorded_at>19b38170af20000001</sys_recorded_at>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-19 21:24:33</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>52dd45e7a87d321035daf5714e98db1e</update_guid>
+        <update_guid_history>52dd45e7a87d321035daf5714e98db1e:-1994858173</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1850913_facili_0_facility_issue.x_1850913_facili_0.admin">80ac174583ce32104acac396feaad3bb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-24 21:44:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>71a7fb14c4704c0d98bde6153d42ec19</sys_id>
+        <sys_metadata>5edd45e7837d32104acac396feaad319</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1850913_facili_0_facility_issue.x_1850913_facili_0.admin</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_5edd45e7837d32104acac396feaad319</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_5edd45e7837d32104acac396feaad319">92dd45e7837d32104acac396feaad31f</sys_update_version>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-24 21:44:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

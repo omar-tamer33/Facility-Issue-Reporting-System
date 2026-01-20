@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate">
+    <sys_ux_composite_data_template_predicate action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sc_req_item">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <custom_condition/>
+        <custom_field_list/>
+        <field_list>due_date,cat_item.picture,short_description,price,recurring_price,recurring_frequency,state,number,cat_item.name</field_list>
+        <name>My Requests - Requested item predicate</name>
+        <order/>
+        <predicate_bundle display_value="My requests - reqested item bundle">75fbb8974082b210b53b851b4c162aea</predicate_bundle>
+        <required_roles/>
+        <sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-31 09:49:02</sys_created_on>
+        <sys_id>75fbb8971c82b2106e2f787fcc0fefe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Requests - Requested item predicate</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_75fbb8971c82b2106e2f787fcc0fefe6</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-31 09:49:02</sys_updated_on>
+        <table>sc_req_item</table>
+        <ux_template display_value="Custom Portal Landing - My Requests template">71fbb8973a82b210b55d19f097d350e8</ux_template>
+    </sys_ux_composite_data_template_predicate>
+</record_update>
