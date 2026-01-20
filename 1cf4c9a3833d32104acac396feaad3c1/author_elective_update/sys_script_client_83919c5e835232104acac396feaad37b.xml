@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Say Hi</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	g_form.addInfoMessage("Happy to have you");
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-09 14:39:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>83919c5e835232104acac396feaad37b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Say Hi</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_script_client_83919c5e835232104acac396feaad37b</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-09 14:41:13</sys_updated_on>
+        <table>x_1850913_facili_0_facility_issue</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_script_client_83919c5e835232104acac396feaad37b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Say Hi&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+	g_form.addInfoMessage("Happy to have you");
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Ahmed&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-09 14:39:11&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;83919c5e835232104acac396feaad37b&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Say Hi&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0"&gt;1cf4c9a3833d32104acac396feaad3c1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Facility Issue Reporting System "&gt;1cf4c9a3833d32104acac396feaad3c1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_83919c5e835232104acac396feaad37b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Ahmed&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-01-09 14:41:13&lt;/sys_updated_on&gt;&lt;table&gt;x_1850913_facili_0_facility_issue&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-522166353</payload_hash>
+        <record_name>Say Hi</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-09 14:41:13</sys_created_on>
+        <sys_id>3a25d016835632104acac396feaad3ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ba33451420000001</sys_recorded_at>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-09 14:41:13</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>e625d01682563210dbc1ff885bf73aee</update_guid>
+        <update_guid_history>e625d01682563210dbc1ff885bf73aee:-522166353,1fe41cd24d5632109f3ea24dce581a10:675402053,8db49092a9563210b510da62d4501e54:-1737664536</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-09 14:41:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>8eb1eb7038074986ab5b5ef4b594ca81</sys_id>
+        <sys_metadata>83919c5e835232104acac396feaad37b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Say Hi</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent display_value="Facility Issue">d9ddc1e7837d32104acac396feaad370</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_script_client_83919c5e835232104acac396feaad37b</sys_update_name>
+        <sys_update_version display_value="sys_script_client_83919c5e835232104acac396feaad37b">3a25d016835632104acac396feaad3ef</sys_update_version>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-09 14:41:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

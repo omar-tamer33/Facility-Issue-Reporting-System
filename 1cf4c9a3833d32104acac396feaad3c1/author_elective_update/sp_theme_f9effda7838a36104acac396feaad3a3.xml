@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="DELETE">
+        <css_variables/>
+        <footer/>
+        <footer_fixed>true</footer_fixed>
+        <header/>
+        <matching_now_experience_theme/>
+        <name>Stock</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 09:24:28</sys_created_on>
+        <sys_id>f9effda7838a36104acac396feaad3a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Stock</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_theme_f9effda7838a36104acac396feaad3a3</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 09:24:28</sys_updated_on>
+        <turn_off_scss_compilation>false</turn_off_scss_compilation>
+    </sp_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sp_theme_f9effda7838a36104acac396feaad3a3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme"><sp_theme action="INSERT_OR_UPDATE"><css_variables/><footer/><footer_fixed>true</footer_fixed><header/><matching_now_experience_theme/><name>Stock</name><navbar_fixed>true</navbar_fixed><sys_class_name>sp_theme</sys_class_name><sys_created_by>Ahmed</sys_created_by><sys_created_on>2026-01-01 09:24:28</sys_created_on><sys_id>f9effda7838a36104acac396feaad3a3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Stock</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sp_theme_f9effda7838a36104acac396feaad3a3</sys_update_name><sys_updated_by>Ahmed</sys_updated_by><sys_updated_on>2026-01-01 09:24:28</sys_updated_on><turn_off_scss_compilation>false</turn_off_scss_compilation></sp_theme></record_update>]]></payload>
+        <payload_hash>770404107</payload_hash>
+        <record_name>Stock</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 09:24:28</sys_created_on>
+        <sys_id>f8ffb527830e36104acac396feaad3df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b78df71b90000001</sys_recorded_at>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 09:24:28</sys_updated_on>
+        <type>Theme</type>
+        <update_guid>b8ffb527b70e361088bf5329ac712ade</update_guid>
+        <update_guid_history>b8ffb527b70e361088bf5329ac712ade:770404107</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Stock">2d008667830e36104acac396feaad3f6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 09:24:48</sys_created_on>
+        <sys_db_object display_value="" name="sp_theme">sp_theme</sys_db_object>
+        <sys_id>05cde80ce8f64e9f8e198f3a80b1ebf9</sys_id>
+        <sys_metadata>f9effda7838a36104acac396feaad3a3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Stock</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sp_theme_f9effda7838a36104acac396feaad3a3</sys_update_name>
+        <sys_update_version display_value="sp_theme_f9effda7838a36104acac396feaad3a3">f8ffb527830e36104acac396feaad3df</sys_update_version>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 09:24:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

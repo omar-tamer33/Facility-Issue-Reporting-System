@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope,spUtil, $location) {
+  /* widget controller */
+  var c = this;
+	c.data.activeTab = c.data.activeTab || 'about';
+	c.setActiveTab = function(tab) {
+    c.data.activeTab = tab;
+  };
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.employee-profile-widget {&#13;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;&#13;
+  max-width: 1000px;&#13;
+  margin: 0 auto;&#13;
+  padding: 20px;&#13;
+}&#13;
+&#13;
+.profile-container {&#13;
+  background: #ffffff;&#13;
+  border-radius: 16px;&#13;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);&#13;
+  overflow: hidden;&#13;
+}&#13;
+&#13;
+/* Header Section */&#13;
+.profile-header {&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.header-gradient {&#13;
+  height: 120px;&#13;
+  background: linear-gradient(135deg, #5b47db 0%, #8b5cf6 50%, #3b82f6 100%);&#13;
+}&#13;
+&#13;
+.profile-main {&#13;
+  display: flex;&#13;
+  align-items: flex-end;&#13;
+  padding: 0 32px;&#13;
+  margin-top: -60px;&#13;
+  margin-bottom: 24px;&#13;
+}&#13;
+&#13;
+.profile-picture-section {&#13;
+  position: relative;&#13;
+  margin-right: 24px;&#13;
+}&#13;
+&#13;
+.profile-avatar {&#13;
+  width: 120px;&#13;
+  height: 120px;&#13;
+  border-radius: 50%;&#13;
+  background: linear-gradient(135deg, #e0e7ff, #ddd6fe);&#13;
+  border: 4px solid #ffffff;&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: center;&#13;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);&#13;
+}&#13;
+&#13;
+.avatar-icon i {&#13;
+  font-size: 48px;&#13;
+  color: #5b47db;&#13;
+}&#13;
+&#13;
+.upload-btn {&#13;
+  position: absolute;&#13;
+  bottom: 0;&#13;
+  right: 0;&#13;
+  width: 36px;&#13;
+  height: 36px;&#13;
+  border-radius: 50%;&#13;
+  background: #5b47db;&#13;
+  border: none;&#13;
+  color: white;&#13;
+  cursor: pointer;&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: center;&#13;
+  box-shadow: 0 2px 8px rgba(91, 71, 219, 0.4);&#13;
+  transition: all 0.2s;&#13;
+}&#13;
+&#13;
+.upload-btn:hover {&#13;
+  background: #4c3bc7;&#13;
+  transform: scale(1.05);&#13;
+}&#13;
+&#13;
+.profile-info {&#13;
+  flex: 1;&#13;
+}&#13;
+&#13;
+.profile-name {&#13;
+  font-size: 28px;&#13;
+  font-weight: 700;&#13;
+  color: #1f2937;&#13;
+  margin: 0 0 4px 0;&#13;
+}&#13;
+&#13;
+.profile-title {&#13;
+  font-size: 16px;&#13;
+  font-weight: 500;&#13;
+  color: #5b47db;&#13;
+  margin: 0;&#13;
+}&#13;
+&#13;
+/* Info Cards */&#13;
+.info-cards {&#13;
+  display: grid;&#13;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));&#13;
+  gap: 16px;&#13;
+  padding: 0 32px 24px 32px;&#13;
+}&#13;
+&#13;
+.info-card {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  padding: 20px;&#13;
+  border-radius: 12px;&#13;
+  gap: 16px;&#13;
+}&#13;
+&#13;
+.company-card {&#13;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);&#13;
+}&#13;
+&#13;
+.department-card {&#13;
+  background: linear-gradient(135deg, #faf5ff, #f3e8ff);&#13;
+}&#13;
+&#13;
+.location-card {&#13;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);&#13;
+}&#13;
+&#13;
+.info-card i {&#13;
+  font-size: 20px;&#13;
+  width: 24px;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+.company-card i { color: #5b47db; }&#13;
+.department-card i { color: #8b5cf6; }&#13;
+.location-card i { color: #3b82f6; }&#13;
+&#13;
+.card-content {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+}&#13;
+&#13;
+.card-label {&#13;
+  font-size: 11px;&#13;
+  font-weight: 600;&#13;
+  color: #6b7280;&#13;
+  text-transform: uppercase;&#13;
+  letter-spacing: 0.5px;&#13;
+}&#13;
+&#13;
+.card-value {&#13;
+  font-size: 14px;&#13;
+  font-weight: 600;&#13;
+  color: #1f2937;&#13;
+  margin-top: 2px;&#13;
+}&#13;
+&#13;
+/* Tabs */&#13;
+.profile-tabs {&#13;
+  display: flex;&#13;
+  border-bottom: 1px solid #e5e7eb;&#13;
+  padding: 0 32px;&#13;
+}&#13;
+&#13;
+.tab-button {&#13;
+  padding: 16px 24px;&#13;
+  background: none;&#13;
+  border: none;&#13;
+  font-size: 15px;&#13;
+  font-weight: 500;&#13;
+  color: #6b7280;&#13;
+  cursor: pointer;&#13;
+  position: relative;&#13;
+  transition: color 0.2s;&#13;
+}&#13;
+&#13;
+.tab-button:hover {&#13;
+  color: #1f2937;&#13;
+}&#13;
+&#13;
+.tab-button.active {&#13;
+  color: #5b47db;&#13;
+}&#13;
+&#13;
+.tab-button.active::after {&#13;
+  content: '';&#13;
+  position: absolute;&#13;
+  bottom: -1px;&#13;
+  left: 0;&#13;
+  right: 0;&#13;
+  height: 2px;&#13;
+  background: #5b47db;&#13;
+}&#13;
+&#13;
+/* Tab Content */&#13;
+.tab-content {&#13;
+  padding: 32px;&#13;
+}&#13;
+&#13;
+/* About Section */&#13;
+.section-header {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 12px;&#13;
+  margin-bottom: 16px;&#13;
+}&#13;
+&#13;
+.section-header i {&#13;
+  font-size: 18px;&#13;
+  color: #5b47db;&#13;
+}&#13;
+&#13;
+.section-header h3 {&#13;
+  font-size: 16px;&#13;
+  font-weight: 600;&#13;
+  color: #1f2937;&#13;
+  margin: 0;&#13;
+}&#13;
+&#13;
+.bio-section {&#13;
+  background: #f9fafb;&#13;
+  padding: 24px;&#13;
+  border-radius: 12px;&#13;
+  margin-bottom: 24px;&#13;
+}&#13;
+&#13;
+.bio-text {&#13;
+  color: #4b5563;&#13;
+  line-height: 1.6;&#13;
+  margin: 0;&#13;
+}&#13;
+&#13;
+.contact-section {&#13;
+  margin-top: 24px;&#13;
+}&#13;
+&#13;
+.contact-list {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  gap: 12px;&#13;
+}&#13;
+&#13;
+.contact-item {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  padding: 16px;&#13;
+  background: #f9fafb;&#13;
+  border-radius: 8px;&#13;
+  gap: 16px;&#13;
+  transition: background 0.2s;&#13;
+}&#13;
+&#13;
+.contact-item:hover {&#13;
+  background: #f3f4f6;&#13;
+}&#13;
+&#13;
+.contact-item i {&#13;
+  font-size: 18px;&#13;
+  color: #9ca3af;&#13;
+  width: 24px;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+.contact-details {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+}&#13;
+&#13;
+.contact-label {&#13;
+  font-size: 11px;&#13;
+  font-weight: 600;&#13;
+  color: #6b7280;&#13;
+  text-transform: uppercase;&#13;
+  letter-spacing: 0.5px;&#13;
+}&#13;
+&#13;
+.contact-value {&#13;
+  font-size: 14px;&#13;
+  color: #1f2937;&#13;
+  margin-top: 2px;&#13;
+}&#13;
+&#13;
+/* Preferences Section */&#13;
+.preference-item {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: space-between;&#13;
+  padding: 20px;&#13;
+  background: #f9fafb;&#13;
+  border-radius: 8px;&#13;
+  margin-bottom: 12px;&#13;
+}&#13;
+&#13;
+.preference-info {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+}&#13;
+&#13;
+.preference-label {&#13;
+  font-size: 15px;&#13;
+  font-weight: 500;&#13;
+  color: #1f2937;&#13;
+}&#13;
+&#13;
+.preference-desc {&#13;
+  font-size: 13px;&#13;
+  color: #6b7280;&#13;
+  margin-top: 2px;&#13;
+}&#13;
+&#13;
+/* Toggle Switch */&#13;
+.toggle-switch {&#13;
+  position: relative;&#13;
+  display: inline-block;&#13;
+  width: 52px;&#13;
+  height: 28px;&#13;
+  margin: 0;&#13;
+}&#13;
+&#13;
+.toggle-switch input {&#13;
+  opacity: 0;&#13;
+  width: 0;&#13;
+  height: 0;&#13;
+}&#13;
+&#13;
+.toggle-slider {&#13;
+  position: absolute;&#13;
+  cursor: pointer;&#13;
+  top: 0;&#13;
+  left: 0;&#13;
+  right: 0;&#13;
+  bottom: 0;&#13;
+  background-color: #d1d5db;&#13;
+  transition: 0.3s;&#13;
+  border-radius: 28px;&#13;
+}&#13;
+&#13;
+.toggle-slider:before {&#13;
+  position: absolute;&#13;
+  content: "";&#13;
+  height: 22px;&#13;
+  width: 22px;&#13;
+  left: 3px;&#13;
+  bottom: 3px;&#13;
+  background-color: white;&#13;
+  transition: 0.3s;&#13;
+  border-radius: 50%;&#13;
+}&#13;
+&#13;
+.toggle-switch input:checked + .toggle-slider {&#13;
+  background-color: #5b47db;&#13;
+}&#13;
+&#13;
+.toggle-switch input:checked + .toggle-slider:before {&#13;
+  transform: translateX(24px);&#13;
+}&#13;
+&#13;
+/* Timezone Item */&#13;
+.timezone-item {&#13;
+  flex-direction: column;&#13;
+  align-items: flex-start;&#13;
+  gap: 12px;&#13;
+}&#13;
+&#13;
+.timezone-item select {&#13;
+  width: 100%;&#13;
+  padding: 10px 12px;&#13;
+  border: 1px solid #d1d5db;&#13;
+  border-radius: 8px;&#13;
+  font-size: 14px;&#13;
+  color: #1f2937;&#13;
+  background: white;&#13;
+}&#13;
+&#13;
+.timezone-item select:focus {&#13;
+  outline: none;&#13;
+  border-color: #5b47db;&#13;
+  box-shadow: 0 0 0 3px rgba(91, 71, 219, 0.1);&#13;
+}&#13;
+&#13;
+/* Action Links */&#13;
+.action-links {&#13;
+  margin-top: 24px;&#13;
+  padding-top: 24px;&#13;
+  border-top: 1px solid #e5e7eb;&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  gap: 8px;&#13;
+}&#13;
+&#13;
+.action-link {&#13;
+  padding: 12px 16px;&#13;
+  color: #5b47db;&#13;
+  font-weight: 500;&#13;
+  text-decoration: none;&#13;
+  border-radius: 8px;&#13;
+  transition: background 0.2s;&#13;
+  display: block;&#13;
+}&#13;
+&#13;
+.action-link:hover {&#13;
+  background: #eef2ff;&#13;
+}&#13;
+&#13;
+/* Action Buttons */&#13;
+.action-buttons {&#13;
+  display: flex;&#13;
+  gap: 16px;&#13;
+  padding: 24px 32px;&#13;
+  border-top: 1px solid #e5e7eb;&#13;
+}&#13;
+&#13;
+.btn-primary,&#13;
+.btn-secondary {&#13;
+  flex: 1;&#13;
+  padding: 12px 24px;&#13;
+  font-size: 15px;&#13;
+  font-weight: 500;&#13;
+  border-radius: 12px;&#13;
+  border: none;&#13;
+  cursor: pointer;&#13;
+  transition: all 0.2s;&#13;
+}&#13;
+&#13;
+.btn-primary {&#13;
+  background: linear-gradient(135deg, #5b47db, #8b5cf6);&#13;
+  color: white;&#13;
+  box-shadow: 0 4px 12px rgba(91, 71, 219, 0.3);&#13;
+}&#13;
+&#13;
+.btn-primary:hover {&#13;
+  box-shadow: 0 6px 16px rgba(91, 71, 219, 0.4);&#13;
+  transform: translateY(-1px);&#13;
+}&#13;
+&#13;
+.btn-secondary {&#13;
+  background: white;&#13;
+  color: #4b5563;&#13;
+  border: 1px solid #d1d5db;&#13;
+}&#13;
+&#13;
+.btn-secondary:hover {&#13;
+  background: #f9fafb;&#13;
+}&#13;
+&#13;
+/* Responsive */&#13;
+@media (max-width: 768px) {&#13;
+  .info-cards {&#13;
+    grid-template-columns: 1fr;&#13;
+  }&#13;
+  &#13;
+  .profile-main {&#13;
+    flex-direction: column;&#13;
+    align-items: center;&#13;
+    text-align: center;&#13;
+  }&#13;
+  &#13;
+  .profile-picture-section {&#13;
+    margin-right: 0;&#13;
+    margin-bottom: 16px;&#13;
+  }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>employee_profile_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Employee Profile widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    var userId = gs.getUserID();
+    var user = new GlideRecord('sys_user');
+    if (user.get(userId)) {
+        // User profile data
+        data.user = {
+            name: user.getDisplayValue('name'),
+            email: user.getDisplayValue('email'),
+            title: user.getDisplayValue('title') || 'Not specified',
+            company: user.company.getDisplayValue('name') || 'Not specified',
+            department: user.getDisplayValue('department') || 'Not specified',
+            location: user.location.getDisplayValue('name') || 'Not specified',
+            bio: user.getDisplayValue('u_bio') || 'No bio available',
+            business_phone: user.getDisplayValue('phone') || 'Not specified',
+            mobile_phone: user.getDisplayValue('mobile_phone') || 'Not specified',
+            user_image: user.getDisplayValue('photo')
+        };
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-08 08:43:39</sys_created_on>
+        <sys_id>43b979798356f6104acac396feaad3df</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Employee Profile widget</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_widget_43b979798356f6104acac396feaad3df</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-08 09:06:36</sys_updated_on>
+        <template><![CDATA[<div class="employee-profile-widget">
+  <div class="profile-container">
+    <!-- Header Section -->
+    <div class="profile-header">
+      <div class="header-gradient"></div>
+      
+      <div class="profile-main">
+        <!-- Profile Picture -->
+        <div class="profile-picture-section">
+          <div class="profile-avatar">
+            <span class="avatar-icon">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+          <button class="upload-btn" ng-click="c.uploadPicture()">
+            <i class="fa fa-camera"></i>
+          </button>
+        </div>
+        
+        <!-- Profile Info -->
+        <div class="profile-info">
+          <h1 class="profile-name">{{c.data.user.name}}</h1>
+          <p class="profile-title">{{c.data.user.title}}</p>
+        </div>
+      </div>
+
+      <!-- Quick Info Cards -->
+      <div class="info-cards">
+        <div class="info-card company-card">
+          <i class="fa fa-building"></i>
+          <div class="card-content">
+            <span class="card-label">Company</span>
+            <span class="card-value">{{c.data.user.company}}</span>
+          </div>
+        </div>
+        
+        <div class="info-card department-card">
+          <i class="fa fa-briefcase"></i>
+          <div class="card-content">
+            <span class="card-label">Department</span>
+            <span class="card-value">{{c.data.user.department}}</span>
+          </div>
+        </div>
+        
+        <div class="info-card location-card">
+          <i class="fa fa-map-marker"></i>
+          <div class="card-content">
+            <span class="card-label">Location</span>
+            <span class="card-value">{{c.data.user.location}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="profile-tabs">
+      <button class="tab-button" 
+              ng-class="{'active': c.data.activeTab === 'about'}"
+              ng-click="c.setActiveTab('about')">
+        About
+      </button>
+      <button class="tab-button" 
+              ng-class="{'active': c.data.activeTab === 'preferences'}"
+              ng-click="c.setActiveTab('preferences')">
+        Preferences
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- About Tab -->
+      <div ng-if="c.data.activeTab === 'about'" class="about-section">
+        <!-- Bio -->
+        <div class="bio-section">
+          <div class="section-header">
+            <i class="fa fa-file-text"></i>
+            <h3>Bio</h3>
+          </div>
+          <p class="bio-text">{{c.data.user.bio}}</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-section">
+          <div class="section-header">
+            <i class="fa fa-envelope"></i>
+            <h3>Contact Information</h3>
+          </div>
+          
+          <div class="contact-list">
+            <div class="contact-item">
+              <i class="fa fa-envelope"></i>
+              <div class="contact-details">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">{{c.data.user.email}}</span>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fa fa-phone"></i>
+              <div class="contact-details">
+                <span class="contact-label">Business Phone</span>
+                <span class="contact-value">{{c.data.user.business_phone}}</span>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fa fa-mobile"></i>
+              <div class="contact-details">
+                <span class="contact-label">Mobile Phone</span>
+                <span class="contact-value">{{c.data.user.mobile_phone}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preferences Tab -->
+      <div ng-if="c.data.activeTab === 'preferences'" class="preferences-section">
+        <div class="section-header">
+          <i class="fa fa-cog"></i>
+          <h3>User Preferences</h3>
+        </div>
+
+        <!-- Accessibility Toggle -->
+        <div class="preference-item">
+          <div class="preference-info">
+            <span class="preference-label">Accessibility</span>
+            <span class="preference-desc">Enable accessibility features</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" 
+                   ng-model="c.data.preferences.accessibility"
+                   ng-change="c.updatePreference('accessibility')">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <!-- Analytics Toggle -->
+        <div class="preference-item">
+          <div class="preference-info">
+            <span class="preference-label">Analytics</span>
+            <span class="preference-desc">Enable usage analytics</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" 
+                   ng-model="c.data.preferences.analytics"
+                   ng-change="c.updatePreference('analytics')">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <!-- Timezone Selector -->
+        <div class="preference-item timezone-item">
+          <label class="preference-label">Time Zone</label>
+          <select class="form-control" 
+                  ng-model="c.data.preferences.timezone"
+                  ng-change="c.updatePreference('timezone')">
+            <option value="America/Los_Angeles">America/Los Angeles</option>
+            <option value="America/New_York">America/New York</option>
+            <option value="Europe/London">Europe/London</option>
+            <option value="Asia/Tokyo">Asia/Tokyo</option>
+          </select>
+        </div>
+
+        <!-- Action Links -->
+        <div class="action-links">
+          <a href="javascript:void(0)" ng-click="c.viewPrivacyPolicy()" class="action-link">
+            Privacy Policy
+          </a>
+          <a href="javascript:void(0)" ng-click="c.viewIdentityCenter()" class="action-link">
+            View Identity Center
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="btn-primary" ng-click="c.saveChanges()">
+        Save Changes
+      </button>
+      <button class="btn-secondary" ng-click="c.cancelChanges()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>43b979798356f6104acac396feaad3df</id>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-08 08:43:39</sys_created_on>
+        <sys_id>8fb979798356f6104acac396feaad3e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-08 08:43:39</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

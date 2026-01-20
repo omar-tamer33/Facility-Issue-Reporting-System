@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Facility Manager Workspace">200e89f78346b6104acac396feaad3da</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>Email Page</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>email-page</route_type>
+        <screen_type display_value="Email Page">1993effe835a32104acac396feaad3f4</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-11 19:00:02</sys_created_on>
+        <sys_id>9d93effe835a32104acac396feaad3f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email Page</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_app_route_9d93effe835a32104acac396feaad3f9</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 19:00:02</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=9d93effe835a32104acac396feaad3f9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_ux_app_route_9d93effe835a32104acac396feaad3f9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Facility Manager Workspace">200e89f78346b6104acac396feaad3da</app_config><description/><extension_point/><fields/><icon/><interoperable>false</interoperable><name>Email Page</name><optional_parameters/><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>email-page</route_type><screen_type display_value="Email Page">1993effe835a32104acac396feaad3f4</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>Omar</sys_created_by><sys_created_on>2026-01-11 19:00:02</sys_created_on><sys_id>9d93effe835a32104acac396feaad3f9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Email Page</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_ux_app_route_9d93effe835a32104acac396feaad3f9</sys_update_name><sys_updated_by>Omar</sys_updated_by><sys_updated_on>2026-01-11 19:00:02</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=9d93effe835a32104acac396feaad3f9"/></record_update>]]></payload>
+        <payload_hash>-668349572</payload_hash>
+        <record_name>Email Page</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-11 19:00:02</sys_created_on>
+        <sys_id>9593e332839a32104acac396feaad334</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19bae6dfc060000001</sys_recorded_at>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 19:00:02</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>1593e3329f9a32101ba00432a4cea333</update_guid>
+        <update_guid_history>1593e3329f9a32101ba00432a4cea333:-668349572</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-11 19:42:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>1a98ac9d5dcd4a899778027bed2dd5d1</sys_id>
+        <sys_metadata>9d93effe835a32104acac396feaad3f9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email Page</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_9d93effe835a32104acac396feaad3f9</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_9d93effe835a32104acac396feaad3f9">9593e332839a32104acac396feaad334</sys_update_version>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 19:42:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

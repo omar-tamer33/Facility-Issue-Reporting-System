@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">72067896835a32104acac396feaad362</macroponent>
+        <name>Multitask Selector - On Task Selected</name>
+        <preset/>
+        <required_translations>[
+    {
+        "message": "Continue without more tasks"
+    },
+    {
+        "message": "Continue with selected tasks"
+    }
+]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ * @param {ApiHelpers} params.helpers
+ */
+async function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    var selectedRows = event.payload.selectedRows;
+    var resultRows = api.state.searchResult.rows;
+    var filteredSelectedRows = {};
+    for (var resultRow of resultRows) {
+        if (selectedRows[resultRow.key])
+            filteredSelectedRows[resultRow.key] = selectedRows[resultRow.key];
+    }
+    api.setState('selectedTasks', selectedRows);
+    api.setState('filteredSelectedTasks', filteredSelectedRows);
+    var n = Object.keys(filteredSelectedRows).length;
+    if (n == 0) {
+        if (api.state.genAiSourceRecordId != null && api.state.genAiSourceRecordId.trim().length > 0) {
+            api.setState('multitaskOKButtonIsDisabled', false);
+            api.setState('multitaskOKButtonLabel', await helpers.translate("Continue without more tasks"));
+        } else {
+            api.setState('multitaskOKButtonIsDisabled', true);
+            api.setState('multitaskOKButtonLabel', await helpers.translate('Continue with selected tasks'));
+        }
+    } else {
+        api.setState('multitaskOKButtonLabel', await helpers.translate('Continue with selected tasks'));
+        if (n > 5) {
+            api.setState('multitaskOKButtonIsDisabled', true);
+        } else {
+            api.setState('multitaskOKButtonIsDisabled', false);
+        }
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-09 17:04:53</sys_created_on>
+        <sys_id>d7067896835a32104acac396feaad3f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Multitask Selector - On Task Selected</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_client_script_d7067896835a32104acac396feaad3f9</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-09 17:04:53</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

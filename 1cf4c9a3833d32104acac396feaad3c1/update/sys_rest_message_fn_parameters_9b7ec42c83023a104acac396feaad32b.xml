@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>count</name>
+        <rest_message_function display_value="Get Sensors">b22e0ce883023a104acac396feaad3f9</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-22 17:27:23</sys_created_on>
+        <sys_id>9b7ec42c83023a104acac396feaad32b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>count</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_9b7ec42c83023a104acac396feaad32b</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-22 17:27:23</sys_updated_on>
+        <type>string</type>
+        <value>5</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

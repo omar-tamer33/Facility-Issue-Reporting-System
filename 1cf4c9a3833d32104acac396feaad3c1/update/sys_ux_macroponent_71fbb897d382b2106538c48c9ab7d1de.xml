@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <bundles/>
+        <category>page</category>
+        <component_dependencies/>
+        <composition/>
+        <da_relay_models/>
+        <data/>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <dispatched_events/>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <form_factors/>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings/>
+        <layout>{&#13;
+  "default": {&#13;
+    "children": null,&#13;
+    "items": [&#13;
+      {&#13;
+        "slotName": "Main",&#13;
+        "rules": {&#13;
+          "grid-area": "main"&#13;
+        },&#13;
+        "styles": {&#13;
+          "display": "flex",&#13;
+          "flex-direction": "column"&#13;
+        }&#13;
+      },&#13;
+      {&#13;
+        "slotName": "Sidebar",&#13;
+        "rules": {&#13;
+          "grid-area": "sidebar"&#13;
+        },&#13;
+        "styles": {}&#13;
+      }&#13;
+    ],&#13;
+    "root": null,&#13;
+    "rules": {&#13;
+      "grid-template-rows": "auto",&#13;
+      "grid-template-columns": "2fr 1fr",&#13;
+      "grid-template-areas": "\"main sidebar\"",&#13;
+      "grid-gap": "0px 2rem",&#13;
+      "max-width": "90rem"&#13;
+    },&#13;
+    "styles": {&#13;
+      "margin": "2rem auto 4rem auto"&#13;
+    },&#13;
+    "type": "grid"&#13;
+  }&#13;
+}</layout>
+        <macroponent_dependencies/>
+        <name>Fixed Width Two-One</name>
+        <output_prop_mapping/>
+        <props/>
+        <required_translations>[]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_persistence_config/>
+        <state_properties/>
+        <style_config/>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-31 09:49:00</sys_created_on>
+        <sys_id>71fbb897d382b2106538c48c9ab7d1de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fixed Width Two-One</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_macroponent_71fbb897d382b2106538c48c9ab7d1de</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-31 09:49:00</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=71fbb897d382b2106538c48c9ab7d1de"/>
+</record_update>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_1850913_facili_0.FacilityIssueRouter</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Handles routing logic for facility issues </description>
+        <mobile_callable>false</mobile_callable>
+        <name>FacilityIssueRouter</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FacilityIssueRouter = Class.create();
+FacilityIssueRouter.prototype = {
+    initialize: function() {
+		this.CATEGORY_MAP = {
+            'temperature': 'hvac',
+            'hvac': 'hvac',
+            'heat': 'hvac',
+            'cooling': 'hvac',
+            'smoke': 'safety',
+            'fire': 'safety',
+            'motion': 'safety',
+            'security': 'safety',
+            'water': 'plumbing',
+            'leak': 'plumbing',
+            'plumbing': 'plumbing',
+            'moisture': 'plumbing',
+            'power': 'electrical',
+            'electrical': 'electrical',
+            'voltage': 'electrical',
+            'equipment': 'equipment',
+            'machine': 'equipment',
+            'air_quality': 'hvac',
+            'co2': 'hvac'
+        };
+        this.GROUP_MAP = {
+            'hvac': 'HVAC Technicians',
+            'electrical': 'Electrical Team',
+            'plumbing': 'Plumbing Team',
+            'safety': 'Safety & Security',
+            'equipment': 'Equipment Maintenance',
+            'other': 'General Maintenance'
+        };
+    },
+	routeIssue:function(sensorType, building, location){
+		var routingInfo = {
+            category: null,
+            assignmentGroup: null,
+            assignedTo: null,
+            groupName: 'Unassigned',
+            success: false,
+            message: ''
+        };
+		try{
+			routingInfo.category = this.determineCategory(sensorType);
+			var groupInfo = this.findAssignmentGroup(routingInfo.category);
+			routingInfo.assignmentGroup = groupInfo.sysId;
+			routingInfo.groupName = groupInfo.name;
+			if(routingInfo.assignmentGroup){
+				routingInfo.assignedTo = this.findBestTechnician(
+                    routingInfo.assignmentGroup, 
+                    building,
+                    routingInfo.category
+                );
+			}
+			routingInfo.success = true;
+            routingInfo.message = 'Routed to ' + routingInfo.groupName;
+		}catch(err){
+			routingInfo.success=false;
+			routingInfo.message = 'Routing error: ' + err.message;
+			gs.error('FacilityIssueRouter: ' + err.message);
+		}
+	return routingInfo;
+	},
+
+	determineCategory:function(sensorType){
+		if (!sensorType) {
+            return 'other';
+        }
+		var type = sensorType.toLowerCase().trim();
+		for(var key in this.CATEGORY_MAP){
+			if(type.indexOf(key)!==-1){
+				return this.CATEGORY_MAP[key];
+			}
+		}
+		return 'other';
+	},
+	findAssignmentGroup:function(category){
+		var groupName = this.GROUP_MAP[category] || this.GROUP_MAP['other'];
+		var grp = new GlideRecord('sys_user_group');
+		grp.addQuery('name',groupName);
+		grp.addQuery('active',true);
+		grp.query();
+		if(grp.next()){
+			return{
+				sysId:grp.sys_id.toString(),
+				name:grp.name.toString()
+			};
+		}
+		gs.warn('Assignment group "' + groupName + '" not found');
+        return {
+            sysId: null,
+            name: 'Unassigned'
+        };
+	},
+	findBestTechnician:function(groupSysId ,category){
+		var onCallTech = this.findOnCallTechnician(groupSysId);
+        if (onCallTech) {
+            return onCallTech;
+        }
+
+		var leastBusyTech = this._findLeastBusyTechnician(groupSysId);
+        if (leastBusyTech) {
+            return leastBusyTech;
+        }
+		return this._findAnyActiveMember(groupSysId);
+	},
+	findOnCallTechnician:function(groupSysId){
+		var grp = new GlideRecord('sys_user_group');
+		if(grp.get(groupSysId)){
+			if(grp.getValue()){
+
+			}
+		}
+	},
+    type: 'FacilityIssueRouter'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-27 11:18:46</sys_created_on>
+        <sys_id>a0e0ec0a8346f6104acac396feaad3c1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FacilityIssueRouter</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_script_include_a0e0ec0a8346f6104acac396feaad3c1</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-28 06:54:58</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_1850913_facili_0.FacilitySensorProcessor</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FacilitySensorProcessor</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FacilitySensorProcessor = Class.create();
+FacilitySensorProcessor.prototype = {
+	STATUS: {
+        ALERT: 'alert',
+        NORMAL: 'normal',
+        WARNING: 'warning'
+    },
+    initialize: function() {
+		this.result = {
+            recordsCreated: 0,
+            recordsUpdated: 0,
+            alertsGenerated: 0,
+            issuesCreated: 0,
+            issuesUpdated: 0,
+            issuesClosed: 0,
+            errors: 0
+        };
+    },
+	process: function (sensorDataJson) {
+
+        if (!sensorDataJson) return this.result;
+
+        var sensors = JSON.parse(sensorDataJson);
+
+        for (var i = 0; i < sensors.length; i++) {
+            try {
+                this._processSingleSensor(sensors[i]);
+            } catch (e) {
+                this.result.errors++;
+                gs.error(e.message);
+            }
+        }
+
+        return this.result;
+    },
+
+    _processSingleSensor: function (sensor) {
+
+        if (!sensor.sensor_id || !sensor.status) return;
+
+        var sensorGR = this._upsertSensor(sensor);
+        if (!sensorGR) return;
+
+        var issueAction = this._handleIssue(sensor, sensorGR.sys_id.toString());
+
+        if (issueAction === 'created') {
+            this.result.issuesCreated++;
+            this.result.alertsGenerated++;
+        } else if (issueAction === 'updated') {
+            this.result.issuesUpdated++;
+            this.result.alertsGenerated++;
+        } else if (issueAction === 'closed') {
+            this.result.issuesClosed++;
+        }
+    },
+
+    _upsertSensor: function (sensor) {
+
+        var gr = new GlideRecord('x_1850913_facili_0_facility_sensor');
+        gr.addQuery('sensor_id', sensor.sensor_id);
+        gr.query();
+
+        var isNew = !gr.next();
+        if (isNew) {
+            gr.initialize();
+            gr.sensor_id = sensor.sensor_id;
+        }
+
+        gr.sensor_type = sensor.sensor_type;
+        gr.status = sensor.status;
+        gr.metric_value = parseFloat(sensor.metric_value) || 0;
+        gr.reading_timestamp = sensor.timestamp
+            ? new GlideDateTime(sensor.timestamp)
+            : new GlideDateTime();
+
+        var sysId = isNew ? gr.insert() : gr.update();
+
+        if (sysId) {
+            isNew ? this.result.recordsCreated++ : this.result.recordsUpdated++;
+            return gr;
+        }
+
+        this.result.errors++;
+        return null;
+    },
+
+    _handleIssue: function (sensor, sensorSysId) {
+
+        var issue = new GlideRecord('x_1850913_facili_0_facility_issue');
+        issue.addQuery('sensor_typ0', sensorSysId);
+        issue.addQuery('state', 'open');
+        issue.query();
+
+        var hasIssue = issue.next();
+
+        if (sensor.status === this.STATUS.ALERT) {
+
+            if (hasIssue) {
+                issue.priority = this._calculatePriority(sensor.metric_value);
+                issue.update();
+                return 'updated';
+            }
+
+            issue.initialize();
+            issue.sensor_typ0 = sensorSysId;
+            issue.priority = this._calculatePriority(sensor.metric_value);
+            issue.opened_by = gs.getProperty('facility.integration.user');
+            return issue.insert() ? 'created' : 'none';
+        }
+
+        if ((sensor.status === this.STATUS.NORMAL || sensor.status === this.STATUS.WARNING) && hasIssue) {
+            issue.state = 3;
+            issue.update();
+            return 'closed';
+        }
+
+        return 'none';
+    },
+
+    _calculatePriority: function (metric) {
+        if (metric > 90) return 1;
+        if (metric > 75) return 2;
+        return 3;
+    },
+
+    type: 'FacilitySensorProcessor'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-29 09:44:47</sys_created_on>
+        <sys_id>0a276eea83c23e104acac396feaad316</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FacilitySensorProcessor</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_script_include_0a276eea83c23e104acac396feaad316</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-29 09:49:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

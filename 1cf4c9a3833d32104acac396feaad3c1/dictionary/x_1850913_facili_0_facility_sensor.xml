@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="367f1523833172104acac396feaad362" label="Facility Sensor" max_length="40" name="x_1850913_facili_0_facility_sensor" type="collection">
+        <element label="Last Reading" max_length="40" name="last_reading" type="string"/>
+        <element choice="1" label="Sensor Type" mandatory="true" max_length="40" name="sensor_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Gas" sequence="10" value="gas"/>
+                <element inactive_on_update="false" label="Water leak" sequence="6" value="water_leak"/>
+                <element inactive_on_update="false" label="Humidity" sequence="4" value="humidity"/>
+                <element inactive_on_update="false" label="Machine" sequence="8" value="machine"/>
+                <element inactive_on_update="false" label="Fire" sequence="11" value="fire"/>
+                <element inactive_on_update="false" label="Equipment" sequence="9" value="equipment"/>
+                <element inactive_on_update="false" label="Power" sequence="2" value="power"/>
+                <element inactive_on_update="false" label="Smoke" sequence="0" value="smoke"/>
+                <element inactive_on_update="false" label="Light" sequence="1" value="light"/>
+                <element inactive_on_update="false" label="Motion" sequence="5" value="motion"/>
+                <element inactive_on_update="false" label="Temperature" sequence="3" value="temperature"/>
+                <element inactive_on_update="false" label="Device" sequence="7" value="device"/>
+            </choice>
+        </element>
+        <element label="Location" mandatory="true" max_length="32" name="location" type="string"/>
+        <element label="Reading Timestamp" max_length="40" name="reading_timestamp" type="glide_date_time"/>
+        <element label="Warning count" max_length="40" name="warning_count" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:getNextObjNumberPadded();" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="number" read_only="true" type="string" use_dynamic_default="true"/>
+        <element label="metric value" max_length="40" name="metric_value" type="integer"/>
+        <element choice="3" default="normal" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Normal" sequence="0" value="normal"/>
+                <element inactive_on_update="false" label="Warning" sequence="1" value="warning"/>
+                <element inactive_on_update="false" label="alert" sequence="3" value="alert"/>
+                <element inactive_on_update="false" label="Critical" sequence="2" value="critical"/>
+            </choice>
+        </element>
+        <element label="building" max_length="40" name="building" type="integer"/>
+        <element label="Sensor ID" max_length="40" name="sensor_id" type="string"/>
+        <index name="index">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

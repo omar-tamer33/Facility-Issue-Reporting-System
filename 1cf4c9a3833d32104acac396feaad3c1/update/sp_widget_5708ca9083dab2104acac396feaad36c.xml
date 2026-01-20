@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.issue-details-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top:100px;
+}
+
+/* Issue Header */
+.issue-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.issue-title-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.issue-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.issue-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-open {
+  background: #ffc107;
+  color: #000;
+}
+
+.status-progress {
+  background: #2196F3;
+  color: white;
+}
+
+.status-resolved {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Cards */
+.details-card,
+.technician-card,
+.activity-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.card-title i {
+  color: #667eea;
+  margin-right: 8px;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.detail-value i {
+  color: #667eea;
+  margin-right: 5px;
+}
+
+/* Priority Badges */
+.priority-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.priority-critical {
+  background: #f44336;
+  color: white;
+}
+
+.priority-high {
+  background: #ff9800;
+  color: white;
+}
+
+.priority-medium {
+  background: #ffc107;
+  color: #000;
+}
+
+.priority-low {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Description Section */
+.description-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description-text {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Technician Card */
+.technician-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.tech-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.tech-details {
+  flex: 1;
+}
+
+.tech-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.tech-role {
+  color: #666;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+.tech-contact {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  color: #667eea;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+}
+
+/* Unassigned Card */
+.unassigned-card {
+  text-align: center;
+  padding: 40px;
+}
+
+.unassigned-message i {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.unassigned-message h5 {
+  color: #666;
+  margin: 10px 0;
+}
+
+.unassigned-message p {
+  color: #999;
+  margin: 0;
+}
+
+/* Activity Timeline */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #667eea;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #667eea;
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.activity-description {
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.activity-time i {
+  margin-right: 5px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-back:hover {
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .issue-details-container {
+    padding: 15px;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .technician-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tech-contact {
+    justify-content: center;
+  }
+  
+  .timeline {
+    padding-left: 30px;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>issue_details</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Issue details</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var issueId = $sp.getParameter('sys_id');
+    
+    data.issue = {};
+    data.technician = null;
+    data.activities = [];
+	if(issueId){
+			var gr = new GlideRecord('x_1850913_facili_0_facility_issue');
+			if(gr.get(issueId)){
+				data.issue={
+					sys_id: gr.getValue('sys_id'),
+                number: gr.getValue('number'),
+                short_description: gr.getValue('short_description'),
+                description: gr.getValue('description'),
+                state: gr.getValue('state'),
+                state_label: gr.getDisplayValue('state'),
+                priority: gr.getValue('priority'),
+                priority_label: gr.getDisplayValue('priority'),
+                location: gr.getDisplayValue('locatio0'),
+                issue_type: gr.getDisplayValue('issue_categor0'),
+                building: gr.getDisplayValue('building'),
+                opened_at: gr.getDisplayValue('sys_created_on'),
+                updated_at: gr.getDisplayValue('sys_updated_on'),
+                assigned_to: gr.getValue('assigned_technician')
+				}
+				
+				if(gr.getValue('assigned_technician')){
+					var techGr = new GlideRecord('sys_user');
+					if (techGr.get(gr.getValue('assigned_technician'))){
+						 var fullName = techGr.getDisplayValue('name');
+             var nameParts = fullName.split(' ');
+						 var initials = nameParts[0].charAt(0) + (nameParts[1] ? nameParts[1].charAt(0) : '');
+						data.technician = {
+                        name: fullName,
+                        title: techGr.getDisplayValue('title'),
+                        email: techGr.getValue('email'),
+                        phone: techGr.getValue('phone'),
+                        initials: initials.toUpperCase()
+                    };
+					}
+				}
+			}
+		
+	}	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-03 17:55:19</sys_created_on>
+        <sys_id>5708ca9083dab2104acac396feaad36c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Issue details</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_widget_5708ca9083dab2104acac396feaad36c</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-03 18:18:05</sys_updated_on>
+        <template><![CDATA[<div class="issue-details-container">
+  
+  <!-- Issue Header -->
+  <div class="issue-header">
+    <div class="header-content">
+      <div class="issue-title-section">
+        <h2 class="issue-number">{{data.issue.number}}</h2>
+        <span class="status-badge" ng-class="{
+          'status-open': data.issue.state == '1',
+          'status-progress': data.issue.state == '2',
+          'status-resolved': data.issue.state == '3'
+        }">
+          {{data.issue.state_label}}
+        </span>
+      </div>
+      <h3 class="issue-title">{{data.issue.short_description}}</h3>
+    </div>
+  </div>
+
+  <!-- Issue Details Card -->
+  <div class="details-card">
+    <h4 class="card-title">
+      <i class="fa fa-info-circle"></i> Issue Details
+    </h4>
+    <div class="details-grid">
+      <div class="detail-item">
+        <span class="detail-label">Priority</span>
+        <span class="detail-value priority-badge" ng-class="{
+          'priority-critical': data.issue.priority == '1',
+          'priority-high': data.issue.priority == '2',
+          'priority-medium': data.issue.priority == '3',
+          'priority-low': data.issue.priority == '4'
+        }">
+          {{data.issue.priority_label}}
+        </span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Location</span>
+        <span class="detail-value">
+          <i class="fa fa-map-marker"></i> {{data.issue.location}}
+        </span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Issue Type</span>
+        <span class="detail-value">{{data.issue.issue_type || 'Not specified'}}</span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Reported</span>
+        <span class="detail-value">
+          <i class="fa fa-calendar"></i> {{data.issue.opened_at}}
+        </span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Last Updated</span>
+        <span class="detail-value">
+          <i class="fa fa-clock-o"></i> {{data.issue.updated_at}}
+        </span>
+      </div>
+      
+      <div class="detail-item">
+        <span class="detail-label">Building</span>
+        <span class="detail-value">{{data.issue.building || 'N/A'}}</span>
+      </div>
+    </div>
+
+    <!-- Description Section -->
+    <div class="description-section">
+      <h5 class="section-subtitle">Description</h5>
+      <p class="description-text">{{data.issue.description}}</p>
+    </div>
+  </div>
+
+  <!-- Technician Card -->
+  <div class="technician-card" ng-if="data.technician">
+    <h4 class="card-title">
+      <i class="fa fa-user"></i> Assigned Technician
+    </h4>
+    <div class="technician-info">
+      <div class="tech-avatar">
+        <div class="avatar-circle">
+          {{data.technician.initials}}
+        </div>
+      </div>
+      <div class="tech-details">
+        <h5 class="tech-name">{{data.technician.name}}</h5>
+        <p class="tech-role">{{data.technician.title || 'Facilities Technician'}}</p>
+        <div class="tech-contact">
+          <a href="tel:{{data.technician.phone}}" class="contact-btn" ng-if="data.technician.phone">
+            <i class="fa fa-phone"></i> {{data.technician.phone}}
+          </a>
+          <a href="mailto:{{data.technician.email}}" class="contact-btn" ng-if="data.technician.email">
+            <i class="fa fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unassigned Message -->
+  <div class="technician-card unassigned-card" ng-if="!data.technician">
+    <div class="unassigned-message">
+      <i class="fa fa-clock-o fa-3x"></i>
+      <h5>Awaiting Assignment</h5>
+      <p>A technician will be assigned to your issue shortly.</p>
+    </div>
+  </div>
+
+  <!-- Activity Timeline -->
+  <div class="activity-card" ng-if="data.activities.length > 0">
+    <h4 class="card-title">
+      <i class="fa fa-history"></i> Activity Timeline
+    </h4>
+    <div class="timeline">
+      <div class="timeline-item" ng-repeat="activity in data.activities">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <p class="activity-description">{{activity.description}}</p>
+          <span class="activity-time">
+            <i class="fa fa-clock-o"></i> {{activity.created_on}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <div class="action-buttons">
+    <a href="?id=employee_dashboard" class="btn btn-back">
+      <i class="fa fa-arrow-left"></i> Back to Dashboard
+    </a>
+  </div>
+
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>5708ca9083dab2104acac396feaad36c</id>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-03 17:55:19</sys_created_on>
+        <sys_id>9308ca9083dab2104acac396feaad371</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-03 17:55:19</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

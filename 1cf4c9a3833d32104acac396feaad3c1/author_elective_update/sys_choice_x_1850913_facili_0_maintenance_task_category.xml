@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="category" table="x_1850913_facili_0_maintenance_task" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <name>x_1850913_facili_0_maintenance_task</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2026-01-14 08:32:51</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>category</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_choice_x_1850913_facili_0_maintenance_task_category</sys_update_name>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-14 08:32:51</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HVAC</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_maintenance_task</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2026-01-14 08:32:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-14 08:32:51</sys_updated_on>
+            <value>hvac</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Electrical</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_maintenance_task</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2026-01-14 08:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-14 08:32:52</sys_updated_on>
+            <value>electrical</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Plumbing</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_maintenance_task</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2026-01-14 08:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-14 08:32:52</sys_updated_on>
+            <value>plumbing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Safety</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_maintenance_task</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2026-01-14 08:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-14 08:32:52</sys_updated_on>
+            <value>safety</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Equipment</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_maintenance_task</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>Ahmed</sys_created_by>
+            <sys_created_on>2026-01-14 08:32:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-14 08:32:52</sys_updated_on>
+            <value>equipment</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

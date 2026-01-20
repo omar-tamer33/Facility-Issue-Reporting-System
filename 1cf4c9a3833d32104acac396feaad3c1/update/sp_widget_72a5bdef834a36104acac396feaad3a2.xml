@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.stats-container {
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.stat-open {
+  border-left-color: #ffc107;
+}
+
+.stat-progress {
+  border-left-color: #2196F3;
+}
+
+.stat-resolved {
+  border-left-color: #4CAF50;
+}
+
+.stat-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-icon {
+  font-size: 48px;
+  opacity: 0.3;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>facility_issue_stats</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Facility Issue Stats</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    // Get current user's issues
+    var userId = gs.getUserID();
+    
+    // Count open issues
+    var openGr = new GlideRecord('x_1850913_facili_0_facility_issue');
+    openGr.addQuery('opened_by', userId);
+    openGr.addQuery('state', 1);
+    openGr.query();
+    data.open = openGr.getRowCount();
+    
+    // Count in progress issues
+    var progressGr = new GlideRecord('x_1850913_facili_0_facility_issue');
+    progressGr.addQuery('opened_by', userId);
+    progressGr.addQuery('state', 2);
+    progressGr.query();
+    data.inProgress = progressGr.getRowCount();
+    
+    // Count resolved issues
+    var resolvedGr = new GlideRecord('x_1850913_facili_0_facility_issue');
+    resolvedGr.addQuery('opened_by', userId);
+    resolvedGr.addQuery('state', 3);
+    resolvedGr.query();
+    data.resolved = resolvedGr.getRowCount();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 08:39:33</sys_created_on>
+        <sys_id>72a5bdef834a36104acac396feaad3a2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Facility Issue Stats</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_widget_72a5bdef834a36104acac396feaad3a2</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 08:41:22</sys_updated_on>
+        <template><![CDATA[<div class="stats-container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="stat-card stat-open">
+        <div class="stat-content">
+          <div class="stat-info">
+            <span class="stat-label">Open Issues</span>
+            <span class="stat-number">{{c.data.open}}</span>
+          </div>
+          <i class="fa fa-clock-o stat-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stat-card stat-progress">
+        <div class="stat-content">
+          <div class="stat-info">
+            <span class="stat-label">In Progress</span>
+            <span class="stat-number">{{c.data.inProgress}}</span>
+          </div>
+          <i class="fa fa-cog fa-spin stat-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="stat-card stat-resolved">
+        <div class="stat-content">
+          <div class="stat-info">
+            <span class="stat-label">Resolved</span>
+            <span class="stat-number">{{c.data.resolved}}</span>
+          </div>
+          <i class="fa fa-check-circle stat-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>72a5bdef834a36104acac396feaad3a2</id>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 08:39:33</sys_created_on>
+        <sys_id>b6a53123838a36104acac396feaad381</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-01 08:39:33</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

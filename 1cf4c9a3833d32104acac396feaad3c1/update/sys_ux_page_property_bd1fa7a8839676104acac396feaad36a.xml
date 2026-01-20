@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>chrome_toolbar</name>
+        <page display_value="Facility Manager Workspace">2c0e89f78346b6104acac396feaad3df</page>
+        <required_translations>[ {
+  "message" : "Alert History",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Facility Issue",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Home",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Maintenance",
+  "code" : "",
+  "comment" : ""
+}, {
+  "message" : "Technician Profile",
+  "code" : "",
+  "comment" : ""
+} ]</required_translations>
+        <route/>
+        <suffix>chrome_toolbar</suffix>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-04 20:03:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>bd1fa7a8839676104acac396feaad36a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>chrome_toolbar</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_page_property_bd1fa7a8839676104acac396feaad36a</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-13 10:20:27</sys_updated_on>
+        <type>json</type>
+        <unique_name>x_1850913_facili_0.2c0e89f78346b6104acac396feaad3df.root.global.chrome_toolbar</unique_name>
+        <value>[
+    {
+        "id": "home",
+        "label": {
+            "translatable": true,
+            "message": "Home"
+        },
+        "icon": "home-fill",
+        "routeInfo": {
+            "route": "home"
+        },
+        "group": "top",
+        "order": 0,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "facility-issues-page",
+        "label": {
+            "translatable": true,
+            "message": "Facility Issue"
+        },
+        "icon": "list-fill",
+        "routeInfo": {
+            "route": "facility-issues-page"
+        },
+        "group": "top",
+        "order": 100,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "alert-history-page",
+        "label": {
+            "translatable": true,
+            "message": "Alert History"
+        },
+        "icon": "calendar-clock-fill",
+        "routeInfo": {
+            "route": "alert-history-page"
+        },
+        "group": "top",
+        "order": 200,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "maintenance-page",
+        "label": {
+            "translatable": true,
+            "message": "Maintenance"
+        },
+        "icon": "hand-gear-fill",
+        "routeInfo": {
+            "route": "maintenance-page"
+        },
+        "group": "top",
+        "order": 300,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    },
+    {
+        "id": "technician-profile-page",
+        "label": {
+            "translatable": true,
+            "message": "Technician Profile"
+        },
+        "icon": "verify-person-fill",
+        "routeInfo": {
+            "route": "technician-profile-page"
+        },
+        "group": "top",
+        "order": 400,
+        "badge": {},
+        "presence": {},
+        "availability": {},
+        "viewportInfo": {}
+    }
+]</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=bd1fa7a8839676104acac396feaad36a"/>
+</record_update>

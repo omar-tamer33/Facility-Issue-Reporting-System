@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition table="x_1850913_facili_0_facility_issue">assigned_technicianDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ<item endquery="false" field="assigned_technician" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for records in x_1850913_facili_0_facility_issue, for users with role x_1850913_facili_0.facility_technician, and if the ACL condition (assigned_technicianDYNAMIC90d1921e5f510100a9ad2572f2b477fe^EQ) evaluates to true.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_1850913_facili_0_facility_issue</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-26 18:36:33</sys_created_on>
+        <sys_id>05a40d35838a76104acac396feaad30a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_1850913_facili_0_facility_issue</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_security_acl_05a40d35838a76104acac396feaad30a</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 22:10:40</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

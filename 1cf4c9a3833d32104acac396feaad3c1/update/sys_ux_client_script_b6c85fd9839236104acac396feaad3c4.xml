@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Home">27db96d583daf2104acac396feaad37d</macroponent>
+        <name>stylized_text_11/now_default/text</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  const thisWeek = Number(api.data.aggregation_query_4.output.data.GlideAggregate_Query[0].count);
+  const lastWeek = Number(api.data.aggregation_query_3.output.data.GlideAggregate_Query[0].count);
+  
+   if (lastWeek === 0) {
+    return 0 + " %";
+  }
+
+  const percentageChange =
+    ((thisWeek - lastWeek) / lastWeek) * 100;
+  return Number(percentageChange.toFixed(1)) + " %";
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-07 03:28:40</sys_created_on>
+        <sys_id>b6c85fd9839236104acac396feaad3c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>stylized_text_11/now_default/text</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_client_script_b6c85fd9839236104acac396feaad3c4</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-07 03:28:40</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $location,$document) {
+    var c = this;
+    c.dropdownOpen = false;
+    c.data = c.data || {};
+    c.data.user = c.data.user || {
+        name: '',
+        email: '',
+        sys_id: ''
+    };
+    c.toggleDropdown = function(event) {
+        event.stopPropagation();
+        c.dropdownOpen = !c.dropdownOpen;
+
+        // Close dropdown when clicking outside
+        if (c.dropdownOpen) {
+            $document.on('click', c.closeDropdown);
+        }
+    };
+    c.closeDropdown = function() {
+        c.dropdownOpen = false;
+        $document.off('click', c.closeDropdown);
+        $scope.$apply();
+    };
+    c.goToProfile = function() {
+        console.log('Navigating to profile');
+        c.dropdownOpen = false;
+        $location.search({
+            id: 'user_facility_profile'
+        });
+    };
+
+    c.goToMyIssues = function() {
+        console.log('Navigating to my issues');
+        c.dropdownOpen = false;
+        $location.search({
+            id: 'my_issues'
+        });
+    };
+
+    c.goToSettings = function() {
+        console.log('Navigating to settings');
+        c.dropdownOpen = false;
+        $location.search({
+            id: 'settings'
+        });
+    };
+
+    c.goToDashboard = function() {
+        console.log('Navigating to dashboard');
+       $location.search({
+            id: 'user_facility_profile '
+        });
+		//$location.path('/user_profile').search({});
+    };
+
+    c.goToReportIssue = function() {
+        console.log('Navigating to report issue');
+        $location.search({
+            id: 'report_issue'
+        });
+    };
+
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* ========================================&#13;
+   NAVBAR CONTAINER&#13;
+   ======================================== */&#13;
+.navbar-custom {&#13;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);&#13;
+  border: none;&#13;
+  border-radius: 0;&#13;
+  margin-bottom: 0;&#13;
+  padding: 0;&#13;
+  min-height: 64px;&#13;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);&#13;
+  position: fixed;&#13;
+  top: 0;&#13;
+  left: 0;&#13;
+  right: 0;&#13;
+  z-index: 1000;&#13;
+  transition: padding-left 0.3s ease;&#13;
+}&#13;
+.&#13;
+&#13;
+/* Adjust for sidebar */&#13;
+.navbar-custom {&#13;
+  padding-left:0px; /* Match sidebar width */&#13;
+}&#13;
+&#13;
+.navbar-container {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: space-between;&#13;
+  padding: 0 24px;&#13;
+  height: 64px;&#13;
+  max-width: 100%;&#13;
+}&#13;
+&#13;
+/* ========================================&#13;
+   NAVBAR LEFT - BRAND&#13;
+   ======================================== */&#13;
+.navbar-left {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  flex-shrink: 0;&#13;
+}&#13;
+&#13;
+.navbar-brand {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 12px;&#13;
+  color: white !important;&#13;
+  font-size: 20px;&#13;
+  font-weight: 700;&#13;
+  text-decoration: none;&#13;
+  padding: 0;&#13;
+  margin: 0;&#13;
+  transition: all 0.3s ease;&#13;
+}&#13;
+&#13;
+.navbar-brand:hover,&#13;
+.navbar-brand:focus {&#13;
+  color: rgba(255, 255, 255, 0.9) !important;&#13;
+  text-decoration: none;&#13;
+  transform: translateX(2px);&#13;
+}&#13;
+&#13;
+.navbar-brand i {&#13;
+  font-size: 26px;&#13;
+}&#13;
+&#13;
+.brand-text {&#13;
+  display: inline-block;&#13;
+  letter-spacing: -0.02em;&#13;
+}&#13;
+&#13;
+/* ========================================&#13;
+   NAVBAR RIGHT - ACTIONS &amp; USER&#13;
+   ======================================== */&#13;
+.navbar-right-section {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 16px;&#13;
+  margin-left: auto;&#13;
+}&#13;
+&#13;
+/* Home Link */&#13;
+.nav-link-item {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 8px;&#13;
+  color: white;&#13;
+  text-decoration: none;&#13;
+  padding: 8px 16px;&#13;
+  border-radius: 6px;&#13;
+  font-size: 15px;&#13;
+  font-weight: 500;&#13;
+  transition: all 0.3s ease;&#13;
+  white-space: nowrap;&#13;
+}&#13;
+&#13;
+.nav-link-item:hover,&#13;
+.nav-link-item:focus {&#13;
+  background: rgba(255, 255, 255, 0.15);&#13;
+  color: white;&#13;
+  text-decoration: none;&#13;
+  transform: translateY(-1px);&#13;
+}&#13;
+&#13;
+.nav-link-item i {&#13;
+  font-size: 18px;&#13;
+}&#13;
+&#13;
+/* Report Issue Button */&#13;
+.btn-report-issue {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 8px;&#13;
+  background: white;&#13;
+  color: #667eea;&#13;
+  padding: 10px 24px;&#13;
+  border-radius: 8px;&#13;
+  font-size: 15px;&#13;
+  font-weight: 600;&#13;
+  text-decoration: none;&#13;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);&#13;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);&#13;
+  white-space: nowrap;&#13;
+}&#13;
+&#13;
+.btn-report-issue:hover {&#13;
+  background: #f0f0f0;&#13;
+  color: #667eea;&#13;
+  text-decoration: none;&#13;
+  transform: translateY(-2px);&#13;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);&#13;
+}&#13;
+&#13;
+.btn-report-issue:active {&#13;
+  transform: translateY(0);&#13;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);&#13;
+}&#13;
+&#13;
+.btn-report-issue i {&#13;
+  font-size: 18px;&#13;
+}&#13;
+&#13;
+/* ========================================&#13;
+   USER DROPDOWN&#13;
+   ======================================== */&#13;
+.user-dropdown {&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.user-dropdown-toggle {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 10px;&#13;
+  background: rgba(255, 255, 255, 0.1);&#13;
+  border: 2px solid rgba(255, 255, 255, 0.2);&#13;
+  color: white;&#13;
+  padding: 8px 16px;&#13;
+  border-radius: 50px;&#13;
+  font-size: 14px;&#13;
+  font-weight: 600;&#13;
+  cursor: pointer;&#13;
+  transition: all 0.3s ease;&#13;
+  white-space: nowrap;&#13;
+}&#13;
+&#13;
+.user-dropdown-toggle:hover {&#13;
+  background: rgba(255, 255, 255, 0.2);&#13;
+  border-color: rgba(255, 255, 255, 0.3);&#13;
+  transform: translateY(-1px);&#13;
+}&#13;
+&#13;
+.user-dropdown-toggle:focus {&#13;
+  outline: none;&#13;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);&#13;
+}&#13;
+&#13;
+.user-avatar-small {&#13;
+  width: 32px;&#13;
+  height: 32px;&#13;
+  background: white;&#13;
+  color: #667eea;&#13;
+  border-radius: 50%;&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: center;&#13;
+  font-size: 16px;&#13;
+  flex-shrink: 0;&#13;
+}&#13;
+&#13;
+.user-name-header {&#13;
+  max-width: 150px;&#13;
+  overflow: hidden;&#13;
+  text-overflow: ellipsis;&#13;
+  white-space: nowrap;&#13;
+}&#13;
+&#13;
+.user-dropdown-toggle .fa-chevron-down {&#13;
+  font-size: 12px;&#13;
+  transition: transform 0.3s ease;&#13;
+}&#13;
+&#13;
+.user-dropdown.open .user-dropdown-toggle .fa-chevron-down {&#13;
+  transform: rotate(180deg);&#13;
+}&#13;
+&#13;
+/* Dropdown Menu */&#13;
+.dropdown-menu {&#13;
+  position: absolute;&#13;
+  top: calc(100% + 8px);&#13;
+  right: 0;&#13;
+  background: white;&#13;
+  border: 1px solid #e2e8f0;&#13;
+  border-radius: 12px;&#13;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);&#13;
+  min-width: 240px;&#13;
+  padding: 8px 0;&#13;
+  margin: 0;&#13;
+  z-index: 1001;&#13;
+  opacity: 0;&#13;
+  visibility: hidden;&#13;
+  transform: translateY(-10px);&#13;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);&#13;
+}&#13;
+&#13;
+.user-dropdown.open .dropdown-menu {&#13;
+  opacity: 1;&#13;
+  visibility: visible;&#13;
+  transform: translateY(0);&#13;
+}&#13;
+&#13;
+.dropdown-header {&#13;
+  padding: 12px 20px;&#13;
+  background: #f8fafc;&#13;
+  border-bottom: 1px solid #e2e8f0;&#13;
+  margin-bottom: 8px;&#13;
+}&#13;
+&#13;
+.dropdown-user-info {&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  gap: 4px;&#13;
+}&#13;
+&#13;
+.dropdown-user-info strong {&#13;
+  color: #1e293b;&#13;
+  font-size: 15px;&#13;
+  font-weight: 600;&#13;
+}&#13;
+&#13;
+.dropdown-user-info small {&#13;
+  color: #64748b;&#13;
+  font-size: 13px;&#13;
+}&#13;
+&#13;
+.dropdown-menu li a {&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  gap: 12px;&#13;
+  padding: 10px 20px;&#13;
+  color: #334155;&#13;
+  text-decoration: none;&#13;
+  font-size: 14px;&#13;
+  font-weight: 500;&#13;
+  transition: all 0.2s ease;&#13;
+}&#13;
+&#13;
+.dropdown-menu li a:hover {&#13;
+  background: #f1f5f9;&#13;
+  color: #667eea;&#13;
+}&#13;
+&#13;
+.dropdown-menu li a i {&#13;
+  width: 18px;&#13;
+  font-size: 16px;&#13;
+  text-align: center;&#13;
+}&#13;
+&#13;
+.dropdown-menu li a.text-danger {&#13;
+  color: #ef4444;&#13;
+}&#13;
+&#13;
+.dropdown-menu li a.text-danger:hover {&#13;
+  background: #fee2e2;&#13;
+  color: #dc2626;&#13;
+}&#13;
+&#13;
+.dropdown-menu .divider {&#13;
+  height: 1px;&#13;
+  background: #e2e8f0;&#13;
+  margin: 8px 0;&#13;
+  overflow: hidden;&#13;
+}&#13;
+&#13;
+/* ========================================&#13;
+   RESPONSIVE DESIGN&#13;
+   ======================================== */&#13;
+@media (max-width: 992px) {&#13;
+  .navbar-custom {&#13;
+    padding-left: 0;&#13;
+  }&#13;
+  &#13;
+  .navbar-container {&#13;
+    padding: 0 16px;&#13;
+  }&#13;
+  &#13;
+  .brand-text {&#13;
+    display: none;&#13;
+  }&#13;
+  &#13;
+  .nav-text {&#13;
+    display: none;&#13;
+  }&#13;
+  &#13;
+  .nav-link-item {&#13;
+    padding: 8px 12px;&#13;
+  }&#13;
+  &#13;
+  .btn-report-issue span {&#13;
+    display: none;&#13;
+  }&#13;
+  &#13;
+  .btn-report-issue {&#13;
+    padding: 10px 16px;&#13;
+  }&#13;
+  &#13;
+  .user-name-header {&#13;
+    display: none;&#13;
+  }&#13;
+  &#13;
+  .user-dropdown-toggle {&#13;
+    padding: 8px 12px;&#13;
+  }&#13;
+  &#13;
+  .navbar-right-section {&#13;
+    gap: 8px;&#13;
+  }&#13;
+}&#13;
+&#13;
+@media (max-width: 576px) {&#13;
+  .navbar-container {&#13;
+    padding: 0 12px;&#13;
+    height: 56px;&#13;
+  }&#13;
+  &#13;
+  .navbar-custom {&#13;
+    min-height: 56px;&#13;
+  }&#13;
+  &#13;
+  .navbar-brand {&#13;
+    font-size: 18px;&#13;
+  }&#13;
+  &#13;
+  .navbar-brand i {&#13;
+    font-size: 22px;&#13;
+  }&#13;
+  &#13;
+  .nav-link-item {&#13;
+    display: none; /* Hide home link on very small screens */&#13;
+  }&#13;
+  &#13;
+  .btn-report-issue {&#13;
+    padding: 8px 12px;&#13;
+  }&#13;
+  &#13;
+  .btn-report-issue i {&#13;
+    font-size: 16px;&#13;
+  }&#13;
+}&#13;
+&#13;
+/* ========================================&#13;
+   MAIN CONTENT ADJUSTMENT&#13;
+   ======================================== */&#13;
+body {&#13;
+  padding-top: 64px; /* Match navbar height */&#13;
+}&#13;
+&#13;
+.main-content,&#13;
+.page-container {&#13;
+  margin-left: 260px;&#13;
+  transition: margin-left 0.3s ease;&#13;
+}&#13;
+&#13;
+@media (max-width: 992px) {&#13;
+  .main-content,&#13;
+  .page-container {&#13;
+    margin-left: 0;&#13;
+  }&#13;
+}&#13;
+&#13;
+/* ========================================&#13;
+   DROPDOWN TOGGLE FIX&#13;
+   ======================================== */&#13;
+/* Add this JavaScript to your controller for dropdown functionality */</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Employee Portal Header</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  var user = gs.getUser();
+  data.user = {
+        name: user.getDisplayName(),
+        email: user.getEmail(),
+        sys_id: user.getID(),
+        username: user.getName(),
+        first_name: user.getFirstName(),
+        last_name: user.getLastName()
+    };
+	var userGr = new GlideRecord('sys_user');
+    if (userGr.get(user.getID())) {
+        data.user.phone = userGr.getValue('phone') || '';
+        data.user.title = userGr.getValue('title') || '';
+        data.user.department = userGr.getDisplayValue('department') || '';
+        
+        // Check if user has a profile picture
+        if (userGr.getValue('photo')) {
+            data.user.hasPhoto = true;
+            data.user.photoUrl = 'sys_attachment.do?sys_id=' + userGr.getValue('photo');
+        } else {
+            data.user.hasPhoto = false;
+        }
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-01 09:34:31</sys_created_on>
+        <sys_id>6c318e2f830e36104acac396feaad372</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Employee Portal Header</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_header_footer_6c318e2f830e36104acac396feaad372</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-08 09:02:59</sys_updated_on>
+        <template><![CDATA[<nav class="navbar navbar-custom">
+  <div class="navbar-container">
+    <!-- Left side: Brand -->
+    <div class="navbar-left">
+      <a class="navbar-brand" href="?id=employee_dashboard">
+        <i class="fa fa-building-o"></i>
+        <span class="brand-text">Employee Facility Portal</span>
+      </a>
+    </div>
+    
+    <!-- Right side: Actions & User -->
+    <div class="navbar-right-section">
+      <a href="?id=employee_dashboard" class="nav-link-item">
+        <i class="fa fa-home"></i>
+        <span class="nav-text">Home</span>
+      </a>
+      
+      <a href="?id=report_issue" class="btn-report-issue">
+        <i class="fa fa-plus-circle"></i>
+        <span>Report Issue</span>
+      </a>
+      
+      <div class="user-dropdown" ng-class="{'open': c.dropdownOpen}">
+        <button class="user-dropdown-toggle" ng-click="c.toggleDropdown($event)">
+          <div class="user-avatar-small">
+            <!-- Show user photo if available, otherwise show icon -->
+            <img ng-if="c.data.user.hasPhoto" 
+                 ng-src="{{c.data.user.photoUrl}}" 
+                 alt="{{c.data.user.name}}"
+                 class="user-photo">
+            <i ng-if="!c.data.user.hasPhoto" class="fa fa-user"></i>
+          </div>
+          <span class="user-name-header">{{c.data.user.name || 'User'}}</span>
+          <i class="fa fa-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">
+            <div class="dropdown-user-info">
+              <strong>{{c.data.user.name}}</strong>
+              <small>{{c.data.user.email}}</small>
+              <small ng-if="c.data.user.department">{{c.data.user.department}}</small>
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a ng-click="c.goToProfile()" style="cursor: pointer;">
+              <i class="fa fa-user-circle"></i> My Profile
+            </a>
+          </li>
+          <li>
+            <a ng-click="c.goToMyIssues()" style="cursor: pointer;">
+              <i class="fa fa-list-alt"></i> My Issues
+            </a>
+          </li>
+          <li>
+            <a ng-click="c.goToSettings()" style="cursor: pointer;">
+              <i class="fa fa-cog"></i> Settings
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="/logout.do" class="text-danger">
+              <i class="fa fa-sign-out"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>]]></template>
+    </sp_header_footer>
+</record_update>

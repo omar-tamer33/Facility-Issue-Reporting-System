@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1850913_facili_0_maintenance_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Assign Random Tecnican</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    if (current.assignment_group.nil() || !current.assigned_technician.nil()) {
+        return;
+    }
+
+    gs.info('BR Fired for maintenance task: ' + current.getDisplayValue());
+
+    var groupId = current.getValue('assignment_group');
+    gs.info('Assignment Group ID: ' + groupId);
+
+    var techProfile = new GlideRecord('x_1850913_facili_0_technician_profile'); // Update with your actual table name
+    techProfile.addQuery('group', groupId); // Reference field to sys_user_group
+    techProfile.addQuery('user.active', 'true'); // Make sure user is active
+    techProfile.query();
+
+    var availableTechs = [];
+
+    gs.info('Searching for technicians in group...');
+
+    while (techProfile.next()) {
+        var userId = techProfile.getValue('user'); // Get the sys_id of the user reference field
+        if (userId) {
+            availableTechs.push(userId);
+            gs.info('Found technician: ' + techProfile.user.getDisplayValue() + ' (Skill: ' + techProfile.getValue('skill_rate') + ')');
+        }
+    }
+
+    gs.info('Total available technicians: ' + availableTechs.length);
+
+
+    var randomIndex = Math.floor(Math.random() * availableTechs.length);
+    var selectedTechId = availableTechs[0];
+
+    current.setValue('assigned_technician', selectedTechId);
+
+    var selectedUser = new GlideRecord('sys_user');
+    if (selectedUser.get(selectedTechId)) {
+        gs.info('Randomly assigned technician: ' + selectedUser.getDisplayValue() +
+            ' (Selected ' + (randomIndex + 1) + ' of ' + availableTechs.length + ')');
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-14 09:36:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a97d30b3831ef2104acac396feaad35f</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Assign Random Tecnican</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_script_a97d30b3831ef2104acac396feaad35f</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-14 12:44:01</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=a97d30b3831ef2104acac396feaad35f"/>
+</record_update>

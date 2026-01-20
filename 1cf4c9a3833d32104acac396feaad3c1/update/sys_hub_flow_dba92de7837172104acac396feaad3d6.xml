@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=1962426000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>handle_issue_from_employee</internal_name>
+        <label_cache>[{"name":"Created_1.current.assignment_group.email","label":"Trigger - Record Created➛Facility Issue Record➛Assignment group➛Group email","reference":"","reference_display":"Group email","type":"email","base_type":"email","parent_table_name":"sys_user_group","column_name":"email","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":["ah_to"]}},{"name":"Created_1.current.assigned_to","label":"Trigger - Record Created➛Facility Issue Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"assigned_to","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["assigned_to"]}},{"name":"Created_1.current.assignment_group.manager.email","label":"Trigger - Record Created➛Facility Issue Record➛Assignment group➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":["ah_to"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Facility Issue Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"number","usedInstances":{"4283bd77-52b2-4c18-a9f8-893e2b37466a":["short_description"],"7091e6a6-c769-4056-bae9-ce012d737f17":[null,"ah_subject"],"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["issue_no"]}},{"name":"Created_1.current.location","label":"Trigger - Record Created➛Facility Issue Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"location","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["location"],"4283bd77-52b2-4c18-a9f8-893e2b37466a":["location"]}},{"name":"Created_1.current.sys_created_on","label":"Trigger - Record Created➛Facility Issue Record➛Created","reference":"","reference_display":"Created","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"sys_created_on","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["time"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Facility Issue Record","reference":"x_1850913_facili_0_facility_issue","reference_display":"Facility Issue","type":"reference","base_type":"reference","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["time"],"4283bd77-52b2-4c18-a9f8-893e2b37466a":["assignment_group"],"9b90a45e-a593-4af9-b477-fdac1a8fa84e":["record"],"9ae9d683-3954-459a-a1d3-2209debcaf61":["record"]},"attributes":{}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Facility Issue Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"assignment_group","usedInstances":{"4283bd77-52b2-4c18-a9f8-893e2b37466a":["assignment_group"]}},{"name":"Created_1.current.reported_vi0","label":"Trigger - Record Created➛Facility Issue Record➛Reported Via","reference":"","reference_display":"Reported Via","type":"choice","base_type":"choice","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"reported_vi0","choices":[{"label":"Manual","used":false,"image":"","rawLabel":"Manual","selected":false,"missing":false,"reference":false,"value":"manual","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"IoT","used":false,"image":"","rawLabel":"IoT","selected":false,"missing":false,"reference":false,"value":"iot","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}}],"usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["reported_via"],"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.issue_categor0","label":"Trigger - Record Created➛Facility Issue Record➛Issue Category","reference":"","reference_display":"Issue Category","type":"choice","base_type":"choice","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"issue_categor0","choices":[{"label":"HVAC","used":false,"image":"","rawLabel":"HVAC","selected":false,"missing":false,"reference":false,"value":"hvac","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Electrical","used":false,"image":"","rawLabel":"Electrical","selected":false,"missing":false,"reference":false,"value":"electrical","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Plumbing","used":false,"image":"","rawLabel":"Plumbing","selected":false,"missing":false,"reference":false,"value":"plumbing","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Safety","used":false,"image":"","rawLabel":"Safety","selected":false,"missing":false,"reference":false,"value":"safety","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Equipment","used":false,"image":"","rawLabel":"Equipment","selected":false,"missing":false,"reference":false,"value":"equipment","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Other","used":false,"image":"","rawLabel":"Other","selected":false,"missing":false,"reference":false,"value":"other","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}}],"usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["name"]}},{"name":"Created_1.current.priority","label":"Trigger - Record Created➛Facility Issue Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"priority","choices":[{"label":"-- None --","used":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"reference":false,"value":""},{"label":"1 - Critical","used":false,"image":"","rawLabel":"1 - Critical","selected":false,"missing":false,"reference":false,"value":"1","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"2 - High","used":false,"image":"","rawLabel":"2 - High","selected":false,"missing":false,"reference":false,"value":"2","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"3 - Moderate","used":false,"image":"","rawLabel":"3 - Moderate","selected":false,"missing":false,"reference":false,"value":"3","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"4 - Low","used":false,"image":"","rawLabel":"4 - Low","selected":false,"missing":false,"reference":false,"value":"4","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"5 - Planning","used":false,"image":"","rawLabel":"5 - Planning","selected":false,"missing":false,"reference":false,"value":"5","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}}],"usedInstances":{"12d5d2d8-1a00-477b-8fa4-0c3d7fc6d060":["condition"],"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.building.name","label":"Trigger - Record Created➛Facility Issue Record➛Building➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"imp_location","column_name":"name","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.floor","label":"Trigger - Record Created➛Facility Issue Record➛Floor","reference":"","reference_display":"Floor","type":"string","base_type":"string","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"floor","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.assigned_technician","label":"Trigger - Record Created➛Facility Issue Record➛Assigned Technician","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"assigned_technician","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["assigned_to"]}}]</label_cache>
+        <master_snapshot>f5d1712b83b172104acac396feaad3a5</master_snapshot>
+        <master_snapshot_digest/>
+        <name>handle issue from employee</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>44c72af2839232104acac396feaad36e</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:31:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dba92de7837172104acac396feaad3d6</sys_id>
+        <sys_mod_count>105</sys_mod_count>
+        <sys_name>handle issue from employee</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_hub_flow_dba92de7837172104acac396feaad3d6</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-13 12:31:39</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record display_value="Created 2026-01-13 04:31:29">99dddc23835a72104acac396feaad3e3</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=dba92de7837172104acac396feaad3d6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=dba92de7837172104acac396feaad3d6"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1850913_facili_0_facility_issue">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-11 14:38:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>44c72af2839232104acac396feaad36e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:37</sys_updated_on>
+        <table>x_1850913_facili_0_facility_issue</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>dba92de7837172104acac396feaad3d6</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-11 14:38:37</sys_created_on>
+        <sys_id>0cc72af2839232104acac396feaad388</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:37</sys_updated_on>
+        <trigger display_value="">44c72af2839232104acac396feaad36e</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=dba92de7837172104acac396feaad3d6^sys_idNOT IN0cc72af2839232104acac396feaad388"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=dba92de7837172104acac396feaad3d6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=dba92de7837172104acac396feaad3d6^sys_idNOT IN5fa92de7837172104acac396feaad3da"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>dba92de7837172104acac396feaad3d6</id>
+        <name>handle issue from employee</name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:31:28</sys_created_on>
+        <sys_id>5fa92de7837172104acac396feaad3da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 21:31:28</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5fa92de7837172104acac396feaad3da"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=dba92de7837172104acac396feaad3d6^sys_idNOT IN0b2a216b837172104acac396feaad325,832a216b837172104acac396feaad34f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</model>
+        <model_id>dba92de7837172104acac396feaad3d6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_dba92de7837172104acac396feaad3d6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:33:37</sys_created_on>
+        <sys_id>0b2a216b837172104acac396feaad325</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:07:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0b2a216b837172104acac396feaad325"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</model>
+        <model_id>dba92de7837172104acac396feaad3d6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_dba92de7837172104acac396feaad3d6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:33:37</sys_created_on>
+        <sys_id>832a216b837172104acac396feaad34f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:07:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=832a216b837172104acac396feaad34f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=dba92de7837172104acac396feaad3d6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dba92de7837172104acac396feaad3d6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=dba92de7837172104acac396feaad3d6^sys_idNOT INb22a216b837172104acac396feaad31c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:33:36</sys_created_on>
+        <sys_id>b22a216b837172104acac396feaad31c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:14:27</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2W7jNhT9FUFPLeACWrzmbZoFNTCdoLanfQhSgZJImyhNuhKlxDPIv/dSm2Utjh0rU+cliHgp3sOjc88l/fBdZ8jFTL/SF8hlWO/plEsccMQW2w2GYamGHY7WKrZG3EdSBFv9SgYR7ukkEOsFXm8YkjCZIBbCoAh8HOhXZk+PEYvwfBtOfVgJ3k+WydbUszA8PzvmeGBMTNshyKOMOkb2j9w6NAwjNdenIWTZ/pm9cpfFtWkW91aU+QHm+tXDY0/foABSSQXjeyVEFRaPeGhiYcOzTduyDMMa9013aLum5dsIGwYsWOWlgl020LPbOH6WmPvYLzipMRdg5N9zti1mrID4lKU1eg7pN1h9bKh5BAN2D6ex4tHJCEmHvZWgHr7fSCp4OpLiTIOCRWv+JcWvqMQERUzmVMJIFMJ6eKMgKxAZIjJfiadZnvCO8mR3WZAJD7HiCUkZUDeSOFSEE8qAeiflJhRRkKCf3V7fz26cvz4trn+7nTmz2/liNr1e3N7oL8m+nH8jtWKKMMPipNt5Kb7/HcVMfUAerV1A09NDL6Ab+cmTNM4V+NLbqfpacJ8mrNSU7eWhcF/Z+e4PSdswWsXtlTLmAv/79o+6hNPB03Q7HCLkY9SiW5eUdFveeQM02UBCeXeHFJyNHCPhvmH8TyLODOqtGl4LH7Ob3XI6BJdLUDXlm0gqtp4Ql6EjhYN83ynxqKYCptdEne7t5VUFBxGHF5zie9R1nNBW8PeZhgD3Aaow5yZZEuLkc7bkLOKagA8HfzQvCoAaqeW+RqZrtMwYJXPMsCdLIiBfw/LT7+DOlC9LqIukCQe1nEU6EJOWbynNHZ6Z/LHLIq6THlfIrBTzyZVsmoS4mFjGSNWxadguMY2RMUDEtw3Ds0qVXAfTilJWJPEuFX1aPYeJGNkR0qtSnIE3ytVwlIzifQ3mJCiJZLZx3Q00syNoloJWsT/7JP8rZJkO3+yr89DWOu79yI8RvOEfa4NHOiBh4gms9w3u5yLvn2UgIu5X7UitqVGu7WZoP2X8/dyhExIR4MMA9mdckgfuaM+Fi/i2A/ezielOcB8bYHo2+J07mExcD1mEjIYjbJkV99vBaMT2IVzvFbXFTXJtc8BG4cRNejvB+84AWPPBkwGe74CZMBv9L419DKd7WmHuANTAYcrLaoa3ZNTHeazbaq+ljnf1fW7Fk/HEG5ijkTeCWwtUPOljF5l9a4Amo6E9HlQqvgblEEzZwMwPucuE2zAB0uIGX9PQZV3O31O2IZZStaPTuzSHc2zyDkqTlDql+ixaYioi0L4I/st0N0+bY2iAyYW2q3Z9DAr1YbX3heEKuaqdFyD1rzC+l1qdM1tYubgrVUUk8f5ez75S4f54MCF2s8WQSZPF7MC0w7z448WRFRK31lrTOeNYwceNddN6MHiDhCsyKZ8YDhxpuiLF7JwU6/1Isc8+RuW12HqPfAvYD9TCknPFOX1M5cSOIGXzvhEaBDRIolGiZb8kYl9zt5pcYaCUwXkZEmoq+7muXe4idSiFgn8skPQEXutmMKxlB6jLa1QVKXR7A8b+CA0Gdst5eFK9ATcBegXvxbetk6sibiqyg73rtHWrazZ2r5Jk9xVxZF/qdNfNzem8XTe2p9d2fX7jOXR/b0BxoS3l8T9Ay9YdUh8AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=dba92de7837172104acac396feaad3d6^sys_idNOT INeabae1ab837172104acac396feaad380,fc2d0f5c830af6104acac396feaad3c8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:36:03</sys_created_on>
+        <sys_id>eabae1ab837172104acac396feaad380</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 18:13:02</sys_updated_on>
+        <ui_id>5d4e69fd-5912-4b93-8a8f-0569b6cd152b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOhmHXbZDmVqQIdthaYB166VpBluhEgCx5kpw2C/zfR1nOB7JkH8AuBeabyPfIR4qinzZECjIl4xyyq+t8zIu8KC6y7GJymZfjoswvRMEALklCNKsBkZ6VCmh/SMiKqTYY32g+ucqu84JWjEslaUaZAuvpUjpv7Jr2LCQI6RrF1o8D7yaARh8iaIR+vpRKWNBk+vSckIZZzOPBkunmyPWnqhUrQSH0yyDgVBV+3Zy0fTzkju6iw1gR9GQJgTcPWgAKqZhykJCaacFCJWTqbYsGC0zca7XeIZZSewxIAvbNye+YdpIFXAVYGYfo2x3p0K5orm6ZZw8YmfvWDlC+NJKDiz0RULFW+dmhLQLuGy+NjpR4FZFtVFvru9gSsguwvR20tA5FQBPqDMqHMqqHpXn9vFU5l7pvyeBUhjO1OzHvrSxbH/RsCCioMRCtWdNIvaCNNSvZk1FLnS4UHtJKmVdM6uRCp4wH4Sm2laVztN/25kdmZajiE4ZBcpcQt3YzxZzb14JNpN/aoCRWNtRAYxsChVvZ+BtMsIJBbpdsn4OA7PrsYOXlfpD6F+AOnoKXNXxts6wQm80MB8CDoHnKW4u98inqpHywGt11LxYaY8NpJdl52gEqQ1LIfR4snWuBcrQujA1w7As2DTHenGftQcCXWnLJgjznERZJUofrWlhw7iWm0L8Ip9u6BNt1P7/5/w06btBfLr3fz+Z26c0lKOFODOt240GNN+OBxuE92nqDc/Q4OIfNl/+rzZePs/57R/svFvfu19/Bn+70ItwaUXTXPf8AQt9utCUIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eabae1ab837172104acac396feaad380"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>12d5d2d8-1a00-477b-8fa4-0c3d7fc6d060</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:41:28</sys_created_on>
+        <sys_id>fc2d0f5c830af6104acac396feaad3c8</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 18:13:02</sys_updated_on>
+        <ui_id>7091e6a6-c769-4056-bae9-ce012d737f17</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1by27jNhT9FULryCPbsmVlVmmCoAFmMsUkmC4mA4MiKZuNLKoUNRk3MNB9P6FA0W/pp/RLeqmH5VccOfGktqNNEvF5eHnOPXqEn+8NTo1jw6Y9q+v5NnasdqttWb2W63pt17d6jms1CTWOjBCPGLSUjAipr7/iINEF8CflcRTg8aeyhAx5QCULjePPX46MCEvorJg0ju8XqqrOHmCPBdD0GssBU+hjgWIRlRpH+poKkoxYqPq8KHyXD3CW16CLM6iBThqVdWSwb4qFlAEcHwcxOzJGOKRYCTmelkiG6YcwKAuGPFQw5EkcC8KxYjFSQ4bYCPMA3XE1RBhlwBqGHu9bzH8DcO2WHspnEAOisfKQcAqIjJnifh5SqL4oq/0zrPCVkglRiZxGWnDC4iyalPk4CdTpbFnW4EOkuAizLgp7QdFbBMkovMyCaEwHmNnJJAYwLNKx0YuFyWHh/tVQ3H0swJ7zMI1iHpVAEBxMr/wrhiUZnnMW6K0Ok5EHbY8MrJTkXqI0TCBFAK3KefopVD0XtGQBS7dyhKOIh4N+JMVXnk4I8EeNQQAXDT8Qd9A/5oOwgYleawN2DzfOofwsLf6EJdcLfw/DQOfJkRGP49MAx3G5fIh//9dEo8+CMQ9H9+6nhNOdieSROoGpvrJ8sZOjXE1Ndx2fqV3ydmbMrSqqAoJSUZoNqxHlaloqezfbF11mFbmWmhtqKWNULqVr0I/KJJ4pB6kc3lQ+PWtePg/IZjfkMhVBZb3M6+L7cB9IEvczAudrSyd/giYeU4LV7Xpe1+s47ZKHLvGp4/ld7JB2ybs7yJ9yhOVtP82fM3JoLushzwybaaIClkITkHODhDL0cwFqHc5cJJ4QkMTCRYUA0jfnaXSnCmk9y20yaiIlEGxmMAaPmULShaUDqSFWiMcoht1qoGuBeL6qmR5HaCwSNEpiBc0U1MyJb8627N3VXU6HvPRsJVf2QpjbF2BnvRHgkth42FdiRnbo/v4UOKgY7TcbJJFS0wiAAep05QMpkqgBvMUDJhsp5SaTap2KxsvCfplJN8sbFUI49VKxHM88PcTAnnCwkB2uisI8M7TXZ4bMKpcSw4w1Wrsr0n3RoAYe8BFPCZFlj+3Lkq7lFLPmaETIdm8OK0xeEPr0dBnJJoS2n2Z1NaP3jtHNtc/wrDvHI2/blK4we0HpHxY47W1M6k5N6ldC6s56WpE5IsWJ9wsjaobYp5IrDoFB55jwgKsxOgmYVMhceceSvRqZTJbl8ORxNrzReXy1hYiupmtdtf5NxNStb3n+dy1tXzh4LZX81nwGFnQ8o5qbxLLaJEp/sRNECvL7Bfl5HCcMDXGMPMZCRIHSBCTQyDq+yXvehHMD6Z+tbujF0du17X6SXMCM42OUFccRDhHRoUmv6Y2hY9kHLelgRDwIbgwUq3HApvUZ547heTvgIXsL9USEQHHAyFPyFC3TmEG1HtHUQ6UhKGrv733aVxKHsS/k6Njr2rTXaxOTOVbPtH27Y/balmdSG7s+Y13f6dqTyY1RLvdh8DAVQpgQFqm4nKLvJ2FKlxgwAVBNy29FR+uFl5GNBrRXnBZDaf3+BONf0CrLTKGYOeb0N4btkI911b3iKo0A3Dc1BSpEoHhklmDT57+08FpEi81yVEXba8kH8EALCT37sIHyrI4y1g7U2zL1X6Tsz9uV9QVvKyGPFZaqaPnQ5LlM9BAVhsRSirvq25IaiUlARWrTTnMz/fvXnw/gnCloNBo7hmiz2ELmLUafbvNTpwArUSJEJU+X5d+HTIsp61eRqs4Ks3gfHA2FYibT6FeXHChmIO1EWRiLIT6A06BpU1SMgyJOboGmUIgeoizEfqVOoLyqPrKkbWbmZnIQ6ooeq/N9KNJsn9Pg9z8q71G2J5vt43LBaj8D04eAXYrGzhma2/WpC7cHpuuwjmk3e5aJ7ZZjYmY1247vdxzi7IGhVV1GbWibGVpK3NrNDtrNsj1+ASurItK9sbJKyjgcH8sTDQ/HI8KkEMqDJ+TbAnWB8yOLhNQZ5hPHx1kWmXnY2xnTI27Xwi2/aQJkx7Rd1zfdTo+YFnVc5lKbtl13D0yv6jJq09vM9GZZXHvfQXvf3Fa/gAVWkezeWOAmOjkcJ8wui38IRZfpi/4dNrtex6YtG7tmB7eBcpg6Zq+nGcj8ltPDNoNbsj0wu6rLqM1uM7PL+Fvb3EHbXL7JL2BwVWS6NwZXTRuHZm1LVvbcj3kBw7H+j/JbhvhoBC4AYUf5N9H5nstf3edG2tp3yH/+Xo/4O3x+3I697ox71XZxwHZxaN+3Xlf+/i4fm+r0VaevfUlfB/VB43XlrrkPCMVdWp2/6vz1mvLXIb6Ufl1pbPHtcJ3J6kz2GjPZYb13fF057JF3ZI+9Qtvopd9mR2QqnGuYnjPLTjUsHXPID8cM1ShYOBrz4/X7d+XBGOeZp8y6nU67Wx+NefYxs+iOtqgUUZSvbctHzb78B1L1KSWDSQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fc2d0f5c830af6104acac396feaad3c8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=dba92de7837172104acac396feaad3d6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=dba92de7837172104acac396feaad3d6^sys_idNOT IN81cc435c830af6104acac396feaad30e"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c001d354834af6104acac396feaad363</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:39:50</sys_created_on>
+        <sys_id>81cc435c830af6104acac396feaad30e</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:34</sys_updated_on>
+        <ui_id>12d5d2d8-1a00-477b-8fa4-0c3d7fc6d060</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnQdAjNhrfAhcJCrQ22gS5tKlAkSubKEWyJGVHNfzvXeqRGI2DBEWOuYmzy92Z5Q60J7rxpvHuRl84J9aKzL/fRUSogOH3nihaA5kTphUXXmhVdEBEtlQ2IbDUXlTt5MrqxkxWarKwmMaoxBQunJG0vX05k22E5BaG7oZa7OHBkvn+n5BvDRSSliCx4LW3Qq3xuuB4qhJapecsZXk2y7MkyT6cpeUsL9OM5xRojnnjxcUoZvK5Q6JnVYZ+iLuxk7Y80EqTiMC9B8UBW1dUOohITRWnXtv2AbFA+UrJR2AjlMdyJCTfO/EHa2fTaUisADUy6IMPx2IYYQ+zjRYMViYQ7BFPSzncYVo2tVr2OsLwoaKN9OPwEWkc1gMTSAcWA6XqeqN338aGl0J1Aoeg1OF9xhP1OIay8eDCw4CEGgsVNTUGh1MYq7eiu4xc6ngt8RBXUu+wadismLJAPMYZ0fgS8Y8dfEutCCq+YBm83NMsqROs6LYQy3mLEg7dWIrfTSDUCxykFP00MMExK4y/wD5bGFgfoqcrfLS9+/0CH8kDL9KYNRZn4GNjhcbVbA+HH02S5Dz9ufz6mrzs6cq/dfm38Mk5nVbTNJme9snZ7JRPTjjkeXNkL5gjPOcrvZEkybs5js0hXNEv+aCta/7f3rgLRug7uH5vODDhkMhNwD6Nf4EQaHEBBDuGdtr+ChIescNflgtYo08GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=dba92de7837172104acac396feaad3d6^sys_idNOT IN355f831c830af6104acac396feaad3e4,795f831c830af6104acac396feaad3e4,bd5f831c830af6104acac396feaad3e2,bd5f831c830af6104acac396feaad3e4,f15f831c830af6104acac396feaad3e5,fd5f831c830af6104acac396feaad3e3"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dba92de7837172104acac396feaad3d6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.floor}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:51:05</sys_created_on>
+        <sys_id>355f831c830af6104acac396feaad3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:51:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>96fd9032-97e5-4180-a427-ae0137ff57c7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dba92de7837172104acac396feaad3d6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.building.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:51:05</sys_created_on>
+        <sys_id>795f831c830af6104acac396feaad3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:51:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>4d3dfdc3-8ea6-4577-ae1f-2f3a7f63cfec</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dba92de7837172104acac396feaad3d6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.reported_vi0}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:51:05</sys_created_on>
+        <sys_id>bd5f831c830af6104acac396feaad3e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:51:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c960a2f1-03e7-499f-958c-0d79e9d4d399</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dba92de7837172104acac396feaad3d6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.priority}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:51:05</sys_created_on>
+        <sys_id>bd5f831c830af6104acac396feaad3e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:51:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b64d883c-e708-4f45-830b-d4a9fee6f764</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dba92de7837172104acac396feaad3d6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:51:05</sys_created_on>
+        <sys_id>f15f831c830af6104acac396feaad3e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:51:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9a3a51e8-3ca8-4af2-9de8-a2fa5d1f06d3</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>dba92de7837172104acac396feaad3d6</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:51:05</sys_created_on>
+        <sys_id>fd5f831c830af6104acac396feaad3e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:51:05</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>854d24a9-5a37-4ad7-88f1-0ef278a4e903</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=dba92de7837172104acac396feaad3d6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_dba92de7837172104acac396feaad3d6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:33:38</sys_created_on>
+        <sys_id>032a216b837172104acac396feaad356</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 21:33:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_dba92de7837172104acac396feaad3d6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 21:33:37</sys_created_on>
+        <sys_id>072a216b837172104acac396feaad34b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 21:33:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_dba92de7837172104acac396feaad3d6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_dba92de7837172104acac396feaad3d6"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>handle_issue_from_employee</internal_name>
+        <label_cache>[{"name":"Created_1.current.assignment_group.email","label":"Trigger - Record Created➛Facility Issue Record➛Assignment group➛Group email","reference":"","reference_display":"Group email","type":"email","base_type":"email","parent_table_name":"sys_user_group","column_name":"email","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":["ah_to"]}},{"name":"Created_1.current.assigned_to","label":"Trigger - Record Created➛Facility Issue Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"assigned_to","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["assigned_to"]}},{"name":"Created_1.current.assignment_group.manager.email","label":"Trigger - Record Created➛Facility Issue Record➛Assignment group➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":["ah_to"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Facility Issue Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"number","usedInstances":{"4283bd77-52b2-4c18-a9f8-893e2b37466a":["short_description"],"7091e6a6-c769-4056-bae9-ce012d737f17":[null,"ah_subject"],"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["issue_no"]}},{"name":"Created_1.current.location","label":"Trigger - Record Created➛Facility Issue Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"location","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["location"],"4283bd77-52b2-4c18-a9f8-893e2b37466a":["location"]}},{"name":"Created_1.current.sys_created_on","label":"Trigger - Record Created➛Facility Issue Record➛Created","reference":"","reference_display":"Created","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"sys_created_on","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["time"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Facility Issue Record","reference":"x_1850913_facili_0_facility_issue","reference_display":"Facility Issue","type":"reference","base_type":"reference","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["time"],"4283bd77-52b2-4c18-a9f8-893e2b37466a":["assignment_group"],"9b90a45e-a593-4af9-b477-fdac1a8fa84e":["record"],"9ae9d683-3954-459a-a1d3-2209debcaf61":["record"]},"attributes":{}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Facility Issue Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"assignment_group","usedInstances":{"4283bd77-52b2-4c18-a9f8-893e2b37466a":["assignment_group"]}},{"name":"Created_1.current.reported_vi0","label":"Trigger - Record Created➛Facility Issue Record➛Reported Via","reference":"","reference_display":"Reported Via","type":"choice","base_type":"choice","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"reported_vi0","choices":[{"label":"Manual","used":false,"image":"","rawLabel":"Manual","selected":false,"missing":false,"reference":false,"value":"manual","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"IoT","used":false,"image":"","rawLabel":"IoT","selected":false,"missing":false,"reference":false,"value":"iot","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}}],"usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["reported_via"],"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.issue_categor0","label":"Trigger - Record Created➛Facility Issue Record➛Issue Category","reference":"","reference_display":"Issue Category","type":"choice","base_type":"choice","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"issue_categor0","choices":[{"label":"HVAC","used":false,"image":"","rawLabel":"HVAC","selected":false,"missing":false,"reference":false,"value":"hvac","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Electrical","used":false,"image":"","rawLabel":"Electrical","selected":false,"missing":false,"reference":false,"value":"electrical","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Plumbing","used":false,"image":"","rawLabel":"Plumbing","selected":false,"missing":false,"reference":false,"value":"plumbing","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Safety","used":false,"image":"","rawLabel":"Safety","selected":false,"missing":false,"reference":false,"value":"safety","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Equipment","used":false,"image":"","rawLabel":"Equipment","selected":false,"missing":false,"reference":false,"value":"equipment","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"Other","used":false,"image":"","rawLabel":"Other","selected":false,"missing":false,"reference":false,"value":"other","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}}],"usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["name"]}},{"name":"Created_1.current.priority","label":"Trigger - Record Created➛Facility Issue Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"priority","choices":[{"label":"-- None --","used":false,"image":"","rawLabel":"-- None --","selected":false,"missing":false,"reference":false,"value":""},{"label":"1 - Critical","used":false,"image":"","rawLabel":"1 - Critical","selected":false,"missing":false,"reference":false,"value":"1","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"2 - High","used":false,"image":"","rawLabel":"2 - High","selected":false,"missing":false,"reference":false,"value":"2","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"3 - Moderate","used":false,"image":"","rawLabel":"3 - Moderate","selected":false,"missing":false,"reference":false,"value":"3","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"4 - Low","used":false,"image":"","rawLabel":"4 - Low","selected":false,"missing":false,"reference":false,"value":"4","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}},{"label":"5 - Planning","used":false,"image":"","rawLabel":"5 - Planning","selected":false,"missing":false,"reference":false,"value":"5","parameters":{"name":"x_1850913_facili_0_facility_issue","dependent_values":[""]}}],"usedInstances":{"12d5d2d8-1a00-477b-8fa4-0c3d7fc6d060":["condition"],"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.building.name","label":"Trigger - Record Created➛Facility Issue Record➛Building➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"imp_location","column_name":"name","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.floor","label":"Trigger - Record Created➛Facility Issue Record➛Floor","reference":"","reference_display":"Floor","type":"string","base_type":"string","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"floor","usedInstances":{"7091e6a6-c769-4056-bae9-ce012d737f17":[null]}},{"name":"Created_1.current.assigned_technician","label":"Trigger - Record Created➛Facility Issue Record➛Assigned Technician","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1850913_facili_0_facility_issue","column_name":"assigned_technician","usedInstances":{"5d4e69fd-5912-4b93-8a8f-0569b6cd152b":["assigned_to"]}}]</label_cache>
+        <master>true</master>
+        <name>handle issue from employee</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="handle issue from employee">dba92de7837172104acac396feaad3d6</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f5d1712b83b172104acac396feaad3a5</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:36</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f5d1712b83b172104acac396feaad3a5^sys_idNOT INf5d1712b83b172104acac396feaad3a7"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f5d1712b83b172104acac396feaad3a5</id>
+        <name>handle issue from employee</name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:07</sys_created_on>
+        <sys_id>f5d1712b83b172104acac396feaad3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:07:07</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f5d1712b83b172104acac396feaad3a7"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f5d1712b83b172104acac396feaad3a5^sys_idNOT IN75d1712b83b172104acac396feaad3eb,f1d1712b83b172104acac396feaad3a9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="handle issue from employee">f5d1712b83b172104acac396feaad3a5</model>
+        <model_id>f5d1712b83b172104acac396feaad3a5</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f5d1712b83b172104acac396feaad3a5</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:08</sys_created_on>
+        <sys_id>75d1712b83b172104acac396feaad3eb</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=75d1712b83b172104acac396feaad3eb"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="handle issue from employee">f5d1712b83b172104acac396feaad3a5</model>
+        <model_id>f5d1712b83b172104acac396feaad3a5</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f5d1712b83b172104acac396feaad3a5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:07</sys_created_on>
+        <sys_id>f1d1712b83b172104acac396feaad3a9</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f1d1712b83b172104acac396feaad3a9"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f5d1712b83b172104acac396feaad3a5^sys_idNOT IN39d1b12b83b172104acac396feaad31a"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="handle issue from employee">f5d1712b83b172104acac396feaad3a5</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:08</sys_created_on>
+        <sys_id>39d1b12b83b172104acac396feaad31a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:14:28</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY2W7jNhT9FUFPLeACWrzmbZoFNTCdoLanfQhSgZJImyhNuhKlxDPIv/dSm2Utjh0rU+cliHgp3sOjc88l/fBdZ8jFTL/SF8hlWO/plEsccMQW2w2GYamGHY7WKrZG3EdSBFv9SgYR7ukkEOsFXm8YkjCZIBbCoAh8HOhXZk+PEYvwfBtOfVgJ3k+WydbUszA8PzvmeGBMTNshyKOMOkb2j9w6NAwjNdenIWTZ/pm9cpfFtWkW91aU+QHm+tXDY0/foABSSQXjeyVEFRaPeGhiYcOzTduyDMMa9013aLum5dsIGwYsWOWlgl020LPbOH6WmPvYLzipMRdg5N9zti1mrID4lKU1eg7pN1h9bKh5BAN2D6ex4tHJCEmHvZWgHr7fSCp4OpLiTIOCRWv+JcWvqMQERUzmVMJIFMJ6eKMgKxAZIjJfiadZnvCO8mR3WZAJD7HiCUkZUDeSOFSEE8qAeiflJhRRkKCf3V7fz26cvz4trn+7nTmz2/liNr1e3N7oL8m+nH8jtWKKMMPipNt5Kb7/HcVMfUAerV1A09NDL6Ab+cmTNM4V+NLbqfpacJ8mrNSU7eWhcF/Z+e4PSdswWsXtlTLmAv/79o+6hNPB03Q7HCLkY9SiW5eUdFveeQM02UBCeXeHFJyNHCPhvmH8TyLODOqtGl4LH7Ob3XI6BJdLUDXlm0gqtp4Ql6EjhYN83ynxqKYCptdEne7t5VUFBxGHF5zie9R1nNBW8PeZhgD3Aaow5yZZEuLkc7bkLOKagA8HfzQvCoAaqeW+RqZrtMwYJXPMsCdLIiBfw/LT7+DOlC9LqIukCQe1nEU6EJOWbynNHZ6Z/LHLIq6THlfIrBTzyZVsmoS4mFjGSNWxadguMY2RMUDEtw3Ds0qVXAfTilJWJPEuFX1aPYeJGNkR0qtSnIE3ytVwlIzifQ3mJCiJZLZx3Q00syNoloJWsT/7JP8rZJkO3+yr89DWOu79yI8RvOEfa4NHOiBh4gms9w3u5yLvn2UgIu5X7UitqVGu7WZoP2X8/dyhExIR4MMA9mdckgfuaM+Fi/i2A/ezielOcB8bYHo2+J07mExcD1mEjIYjbJkV99vBaMT2IVzvFbXFTXJtc8BG4cRNejvB+84AWPPBkwGe74CZMBv9L419DKd7WmHuANTAYcrLaoa3ZNTHeazbaq+ljnf1fW7Fk/HEG5ijkTeCWwtUPOljF5l9a4Amo6E9HlQqvgblEEzZwMwPucuE2zAB0uIGX9PQZV3O31O2IZZStaPTuzSHc2zyDkqTlDql+ixaYioi0L4I/st0N0+bY2iAyYW2q3Z9DAr1YbX3heEKuaqdFyD1rzC+l1qdM1tYubgrVUUk8f5ez75S4f54MCF2s8WQSZPF7MC0w7z448WRFRK31lrTOeNYwceNddN6MHiDhCsyKZ8YDhxpuiLF7JwU6/1Isc8+RuW12HqPfAvYD9TCknPFOX1M5cSOIGXzvhEaBDRIolGiZb8kYl9zt5pcYaCUwXkZEmoq+7muXe4idSiFgn8skPQEXutmMKxlB6jLa1QVKXR7A8b+CA0Gdst5eFK9ATcBegXvxbetk6sibiqyg73rtHWrazZ2r5Jk9xVxZF/qdNfNzem8XTe2p9d2fX7jOXR/b0BxoS3l8T9Ay9YdUh8AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f5d1712b83b172104acac396feaad3a5^sys_idNOT IN54011754834af6104acac396feaad312,f9d1b12b83b172104acac396feaad316"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="handle issue from employee">f5d1712b83b172104acac396feaad3a5</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>12d5d2d8-1a00-477b-8fa4-0c3d7fc6d060</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:21</sys_created_on>
+        <sys_id>54011754834af6104acac396feaad312</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-29 14:08:31</sys_updated_on>
+        <ui_id>7091e6a6-c769-4056-bae9-ce012d737f17</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=54011754834af6104acac396feaad312"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="handle issue from employee">f5d1712b83b172104acac396feaad3a5</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:08</sys_created_on>
+        <sys_id>f9d1b12b83b172104acac396feaad316</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-26 22:04:47</sys_updated_on>
+        <ui_id>5d4e69fd-5912-4b93-8a8f-0569b6cd152b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOhmHXbZDmVqQIdthaYB166VpBluhEgCx5kpw2C/zfR1nOB7JkH8AuBeabyPfIR4qinzZECjIl4xyyq+t8zIu8KC6y7GJymZfjoswvRMEALklCNKsBkZ6VCmh/SMiKqTYY32g+ucqu84JWjEslaUaZAuvpUjpv7Jr2LCQI6RrF1o8D7yaARh8iaIR+vpRKWNBk+vSckIZZzOPBkunmyPWnqhUrQSH0yyDgVBV+3Zy0fTzkju6iw1gR9GQJgTcPWgAKqZhykJCaacFCJWTqbYsGC0zca7XeIZZSewxIAvbNye+YdpIFXAVYGYfo2x3p0K5orm6ZZw8YmfvWDlC+NJKDiz0RULFW+dmhLQLuGy+NjpR4FZFtVFvru9gSsguwvR20tA5FQBPqDMqHMqqHpXn9vFU5l7pvyeBUhjO1OzHvrSxbH/RsCCioMRCtWdNIvaCNNSvZk1FLnS4UHtJKmVdM6uRCp4wH4Sm2laVztN/25kdmZajiE4ZBcpcQt3YzxZzb14JNpN/aoCRWNtRAYxsChVvZ+BtMsIJBbpdsn4OA7PrsYOXlfpD6F+AOnoKXNXxts6wQm80MB8CDoHnKW4u98inqpHywGt11LxYaY8NpJdl52gEqQ1LIfR4snWuBcrQujA1w7As2DTHenGftQcCXWnLJgjznERZJUofrWlhw7iWm0L8Ip9u6BNt1P7/5/w06btBfLr3fz+Z26c0lKOFODOt240GNN+OBxuE92nqDc/Q4OIfNl/+rzZePs/57R/svFvfu19/Bn+70ItwaUXTXPf8AQt9utCUIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f9d1b12b83b172104acac396feaad316"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f5d1712b83b172104acac396feaad3a5^sys_idNOT INdc011754834af6104acac396feaad313"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c001d354834af6104acac396feaad363</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="handle issue from employee">f5d1712b83b172104acac396feaad3a5</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:21</sys_created_on>
+        <sys_id>dc011754834af6104acac396feaad313</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:36</sys_updated_on>
+        <ui_id>12d5d2d8-1a00-477b-8fa4-0c3d7fc6d060</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnQdAjNhrfAgcpCqQ22gS5tImwoiibKEWqfNhRBf97l3o4RuMiCZpjb+JwuTsz5EAtUc7WzppbdWEMX0sy/3YfEC49ht8tkVAxMidUyYJbrmTWAQHZgnB+Y6ksL5vJR61cPVnJyUJjGQWBJQU3tYDm7uVKuuGi0GyYXoPGGZZpMm//2OIFNiojKONzGtM0maVJFCUfzuJ8luZxUqTAIMWGAnImsHQx0p5cd0jwVz22qT1urOZyPayvhy43I6h04VnFUUDYo2WyYMinBGFYQCqQBVilmwOiGRQrKZ6ADZcW2xFf/Gj4LxyYTKe+sGQokbJ+87DMBgd7uLwEC0jFUev0UEo3ilNmenMKVoITdnGM9QWr2kvtj1jIxXhaCVfJZe8IOTQYLwwRZ5AEq71ST33QUd5s1O7ryPKKy86VYVMof6fjCix6lzvr+bSECVZho6yCukZHs1qrLe8OI5cqXAtchKVQOxzqX2MI1BMP0VgIrxC/7OA70Nyr+Ixt8HBPMwfDada9XGyHNjGyD4hpzEKAMU8i0d3sp/MUe8mDuKz3xx+hmtf2Aidv2aBjHzwPwlEG2naBd21ZkcUhdRpdsWGtucIH3uz3310UpUX8sPzymrrkeXDeu/3b0nYO03IaR9PTaTubnUrbiZy9MWLJCxHz9/vKhEVR9D9i/xwxbrI+GIO2bvg7Juzex6mfefCacoPUbj32afwj+Y0GHxenx9BO6R9e1BO2/w3x+A2/2wYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f5d1712b83b172104acac396feaad3a5^sys_idNOT IN24011754834af6104acac396feaad347,28011754834af6104acac396feaad348,68011754834af6104acac396feaad347,6c011754834af6104acac396feaad348,ac011754834af6104acac396feaad347,e0011754834af6104acac396feaad348"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f5d1712b83b172104acac396feaad3a5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.reported_vi0}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:22</sys_created_on>
+        <sys_id>24011754834af6104acac396feaad347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:58:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c960a2f1-03e7-499f-958c-0d79e9d4d399</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f5d1712b83b172104acac396feaad3a5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.priority}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:22</sys_created_on>
+        <sys_id>28011754834af6104acac396feaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:58:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b64d883c-e708-4f45-830b-d4a9fee6f764</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f5d1712b83b172104acac396feaad3a5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.floor}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:22</sys_created_on>
+        <sys_id>68011754834af6104acac396feaad347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:58:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>96fd9032-97e5-4180-a427-ae0137ff57c7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f5d1712b83b172104acac396feaad3a5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:22</sys_created_on>
+        <sys_id>6c011754834af6104acac396feaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:58:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9a3a51e8-3ca8-4af2-9de8-a2fa5d1f06d3</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f5d1712b83b172104acac396feaad3a5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:22</sys_created_on>
+        <sys_id>ac011754834af6104acac396feaad347</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:58:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>854d24a9-5a37-4ad7-88f1-0ef278a4e903</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f5d1712b83b172104acac396feaad3a5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created_1.current.building.name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2025-12-22 12:58:22</sys_created_on>
+        <sys_id>e0011754834af6104acac396feaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2025-12-22 12:58:22</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>4d3dfdc3-8ea6-4577-ae1f-2f3a7f63cfec</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f5d1712b83b172104acac396feaad3a5"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f5d1712b83b172104acac396feaad3a5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:08</sys_created_on>
+        <sys_id>39d1712b83b172104acac396feaad3ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:07:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f5d1712b83b172104acac396feaad3a5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:08</sys_created_on>
+        <sys_id>b5d1712b83b172104acac396feaad3f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2025-12-19 22:07:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f5d1712b83b172104acac396feaad3a5"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f5d1712b83b172104acac396feaad3a5"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>dba92de7837172104acac396feaad3d6</sys_id>
+        <latest_snapshot>f5d1712b83b172104acac396feaad3a5</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch2-09-24-2025_10-12-2025_0904.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=dba92de7837172104acac396feaad3d6^sys_idNOT IN42d1b12b83b172104acac396feaad347"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"42d1b12b83b172104acac396feaad347","name":"plan","plan_signature":null}}</plan>
+        <plan_id>dba92de7837172104acac396feaad3d6</plan_id>
+        <snapshot>81d817b6831a32104acac396feaad334</snapshot>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2025-12-19 22:07:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>42d1b12b83b172104acac396feaad347</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-11 14:38:37</sys_updated_on>
+        <trigger display_value="">44c72af2839232104acac396feaad36e</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=dba92de7837172104acac396feaad3d6"/>
+</record_update>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description/>
+        <name>globalSearchDataConfigId</name>
+        <page display_value="Technician Workspace">2945d925834ef2104acac396feaad3ab</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-27 14:20:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>64b3110e83caf6104acac396feaad379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>globalSearchDataConfigId</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_page_property_64b3110e83caf6104acac396feaad379</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-27 14:20:14</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_1850913_facili_0.2945d925834ef2104acac396feaad3ab.root.global.globalSearchDataConfigId</unique_name>
+        <value>null</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="DELETE" query="documentkey=64b3110e83caf6104acac396feaad379"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_ux_page_property_64b3110e83caf6104acac396feaad379</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description/><name>globalSearchDataConfigId</name><page display_value="Technician Workspace">2945d925834ef2104acac396feaad3ab</page><required_translations/><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>Sameh</sys_created_by><sys_created_on>2025-12-27 14:20:14</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>64b3110e83caf6104acac396feaad379</sys_id><sys_mod_count>0</sys_mod_count><sys_name>globalSearchDataConfigId</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_ux_page_property_64b3110e83caf6104acac396feaad379</sys_update_name><sys_updated_by>Sameh</sys_updated_by><sys_updated_on>2025-12-27 14:20:14</sys_updated_on><type>string</type><unique_name>x_1850913_facili_0.2945d925834ef2104acac396feaad3ab.root.global.globalSearchDataConfigId</unique_name><value>null</value></sys_ux_page_property><sys_translated_text action="delete_multiple" query="documentkey=64b3110e83caf6104acac396feaad379"/></record_update>]]></payload>
+        <payload_hash>-1491321579</payload_hash>
+        <record_name>globalSearchDataConfigId</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-27 14:20:15</sys_created_on>
+        <sys_id>24b3110e83caf6104acac396feaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b602e71190000001</sys_recorded_at>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-27 14:20:15</sys_updated_on>
+        <type>UX Page Property</type>
+        <update_guid>e0b3110ec4caf610cb98958d0b509d7c</update_guid>
+        <update_guid_history>e0b3110ec4caf610cb98958d0b509d7c:-1491321579</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-31 11:02:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>28819de4754d416fa9632f19274a94a9</sys_id>
+        <sys_metadata>64b3110e83caf6104acac396feaad379</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>globalSearchDataConfigId</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_64b3110e83caf6104acac396feaad379</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_64b3110e83caf6104acac396feaad379">24b3110e83caf6104acac396feaad37d</sys_update_version>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-31 11:02:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

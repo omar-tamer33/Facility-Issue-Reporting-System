@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d9ddc1e7837d32104acac396feaad370" extends="task" label="Facility Issue" max_length="40" name="x_1850913_facili_0_facility_issue" type="collection">
+        <element label="Location" max_length="40" name="locatio0" type="string"/>
+        <element label="Affected Device" mandatory="true" max_length="32" name="affected_device" reference="cmdb_ci" type="reference"/>
+        <element label="Building" max_length="40" name="building" type="string"/>
+        <element label="Floor" mandatory="true" max_length="40" name="floor" type="string"/>
+        <element label="Assigned Technician" max_length="32" name="assigned_technician" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="Issue Category" mandatory="true" max_length="40" name="issue_categor0" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Equipment" sequence="4" value="equipment"/>
+                <element inactive_on_update="false" label="HVAC" sequence="0" value="hvac"/>
+                <element inactive_on_update="false" label="Plumbing" sequence="2" value="plumbing"/>
+                <element inactive_on_update="false" label="Safety" sequence="3" value="safety"/>
+                <element inactive_on_update="false" label="Electrical" sequence="1" value="electrical"/>
+                <element inactive_on_update="false" label="Other" sequence="5" value="other"/>
+            </choice>
+        </element>
+        <element label="Attachment" max_length="255" name="attachment" type="file_attachment"/>
+        <element choice="3" default="manual" label="Reported Via" max_length="40" name="reported_vi0" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="IoT" sequence="1" value="iot"/>
+                <element inactive_on_update="false" label="Manual" sequence="0" value="manual"/>
+            </choice>
+        </element>
+        <element label="Sensor" max_length="32" name="sensor_typ0" reference="x_1850913_facili_0_facility_sensor" type="reference"/>
+    </element>
+</database>

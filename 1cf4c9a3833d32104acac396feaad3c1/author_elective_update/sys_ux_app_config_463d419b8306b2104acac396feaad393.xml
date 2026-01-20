@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="DELETE">
+        <active>true</active>
+        <custom_icon/>
+        <default_route_type/>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <encode_query_string>false</encode_query_string>
+        <icon/>
+        <landing_path>home</landing_path>
+        <name>technician workspace </name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-31 11:04:21</sys_created_on>
+        <sys_id>463d419b8306b2104acac396feaad393</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>technician workspace </sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_app_config_463d419b8306b2104acac396feaad393</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-31 11:04:21</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="DELETE" query="documentkey=463d419b8306b2104acac396feaad393"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_ux_app_config_463d419b8306b2104acac396feaad393</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config"><sys_ux_app_config action="INSERT_OR_UPDATE"><active>true</active><custom_icon/><default_route_type/><description/><disable_auto_reflow>false</disable_auto_reflow><encode_query_string>false</encode_query_string><icon/><landing_path>home</landing_path><name>technician workspace </name><prefetch_limits/><sys_class_name>sys_ux_app_config</sys_class_name><sys_created_by>Sameh</sys_created_by><sys_created_on>2025-12-31 11:04:21</sys_created_on><sys_id>463d419b8306b2104acac396feaad393</sys_id><sys_mod_count>0</sys_mod_count><sys_name>technician workspace </sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_ux_app_config_463d419b8306b2104acac396feaad393</sys_update_name><sys_updated_by>Sameh</sys_updated_by><sys_updated_on>2025-12-31 11:04:21</sys_updated_on></sys_ux_app_config><sys_translated_text action="delete_multiple" query="documentkey=463d419b8306b2104acac396feaad393"/></record_update>]]></payload>
+        <payload_hash>1229792333</payload_hash>
+        <record_name>technician workspace </record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-31 11:04:21</sys_created_on>
+        <sys_id>d63d859b8306b2104acac396feaad367</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b74148a830000001</sys_recorded_at>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-31 11:04:21</sys_updated_on>
+        <type>UX App Configuration</type>
+        <update_guid>963d859ba306b210b88d85348e147866</update_guid>
+        <update_guid_history>963d859ba306b210b88d85348e147866:1229792333</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-31 11:06:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_config">sys_ux_app_config</sys_db_object>
+        <sys_id>18c37eaa2a5744308b89f1f66a91ca10</sys_id>
+        <sys_metadata>463d419b8306b2104acac396feaad393</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>technician workspace </sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_ux_app_config_463d419b8306b2104acac396feaad393</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_config_463d419b8306b2104acac396feaad393">d63d859b8306b2104acac396feaad367</sys_update_version>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-31 11:06:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

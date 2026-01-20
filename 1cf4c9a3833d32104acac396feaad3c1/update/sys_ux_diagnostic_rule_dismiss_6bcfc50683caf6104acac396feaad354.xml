@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_diagnostic_rule_dismiss">
+    <sys_ux_diagnostic_rule_dismiss action="INSERT_OR_UPDATE">
+        <dismiss_targets>{
+  "55b74c5270408210f877603d6fa53cf8": [
+    {
+      "open_record_button": {
+        "queryId": "",
+        "dismissTimestamp": "2025-12-27T13:43:55.085Z",
+        "dismissedBy": "f318d9ba833132104acac396feaad37c"
+      }
+    },
+    {
+      "open_record_button_2": {
+        "queryId": "",
+        "dismissTimestamp": "2025-12-27T15:33:57.208Z",
+        "dismissedBy": "f318d9ba833132104acac396feaad37c"
+      }
+    },
+    {
+      "open_record_button_4": {
+        "queryId": "",
+        "dismissTimestamp": "2025-12-27T15:33:58.768Z",
+        "dismissedBy": "f318d9ba833132104acac396feaad37c"
+      }
+    }
+  ],
+  "945ff4359f3b1210763d485bf90a1ccb": [
+    {
+      "form_default": {
+        "queryId": "now_default",
+        "dismissTimestamp": "2025-12-27T15:31:58.116Z",
+        "dismissedBy": "f318d9ba833132104acac396feaad37c"
+      }
+    }
+  ]
+}</dismiss_targets>
+        <sys_class_name>sys_ux_diagnostic_rule_dismiss</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2025-12-27 14:03:15</sys_created_on>
+        <sys_id>6bcfc50683caf6104acac396feaad354</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_diagnostic_rule_dismiss_6bcfc50683caf6104acac396feaad354</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2025-12-27 15:36:14</sys_updated_on>
+        <table_name>sys_ux_macroponent</table_name>
+        <target_id>cc79dd6d834ef2104acac396feaad3b8</target_id>
+    </sys_ux_diagnostic_rule_dismiss>
+</record_update>

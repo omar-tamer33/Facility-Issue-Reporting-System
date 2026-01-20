@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-02 00:38:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b51119738386b6104acac396feaad30f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>m2m_app_config_theme_b51119738386b6104acac396feaad30f</sys_update_name>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-02 00:38:13</sys_updated_on>
+        <theme/>
+        <ux_app_configuration display_value="Facility Manager Workspace">200e89f78346b6104acac396feaad3da</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>m2m_app_config_theme_b51119738386b6104acac396feaad30f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability/><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>Omar</sys_created_by><sys_created_on>2026-01-02 00:38:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b51119738386b6104acac396feaad30f</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>m2m_app_config_theme_b51119738386b6104acac396feaad30f</sys_update_name><sys_updated_by>Omar</sys_updated_by><sys_updated_on>2026-01-02 00:38:13</sys_updated_on><theme/><ux_app_configuration display_value="Facility Manager Workspace">200e89f78346b6104acac396feaad3da</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>-283608793</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-02 00:38:13</sys_created_on>
+        <sys_id>f51119738386b6104acac396feaad312</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19b7c2403490000001</sys_recorded_at>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-02 00:38:13</sys_updated_on>
+        <type>UX App Theme</type>
+        <update_guid>b5111973c286b610423c3c0af45a0b11</update_guid>
+        <update_guid_history>b5111973c286b610423c3c0af45a0b11:-283608793</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">22aec540835632104acac396feaad3ff</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Omar</sys_created_by>
+        <sys_created_on>2026-01-02 19:06:07</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>5b9bf5ecd0a44c2bb1d72fa8dea47cf1</sys_id>
+        <sys_metadata>b51119738386b6104acac396feaad30f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_b51119738386b6104acac396feaad30f</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_b51119738386b6104acac396feaad30f">f51119738386b6104acac396feaad312</sys_update_version>
+        <sys_updated_by>Omar</sys_updated_by>
+        <sys_updated_on>2026-01-02 19:06:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

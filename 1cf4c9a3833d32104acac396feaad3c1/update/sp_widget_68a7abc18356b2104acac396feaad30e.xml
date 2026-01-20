@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	  c.filters = {
+        status: '',
+        priority: '',
+        search: ''
+    };
+	
+	c.pagination = {
+        currentPage: 1,
+        pageSize: 10,
+        start: 0,
+        totalPages: 1
+    };
+	c.data.filteredIssues = c.data.issues || [];
+	c.calculatePagination = function() {
+        c.pagination.totalPages = Math.ceil(c.data.filteredIssues.length / c.pagination.pageSize);
+        c.pagination.start = (c.pagination.currentPage - 1) * c.pagination.pageSize;
+    };
+	c.applyFilters = function() {
+        c.data.filteredIssues = c.data.issues.filter(function(issue) {
+            // Status filter
+            if (c.filters.status && issue.state != c.filters.status) {
+                return false;
+            }
+            
+            // Priority filter
+            if (c.filters.priority && issue.priority != c.filters.priority) {
+                return false;
+            }
+            
+            // Search filter
+            if (c.filters.search) {
+                var searchLower = c.filters.search.toLowerCase();
+                var matchesNumber = issue.number.toLowerCase().indexOf(searchLower) > -1;
+                var matchesDescription = issue.short_description.toLowerCase().indexOf(searchLower) > -1;
+                var matchesLocation = issue.location.toLowerCase().indexOf(searchLower) > -1;
+                
+                if (!matchesNumber && !matchesDescription && !matchesLocation) {
+                    return false;
+                }
+            }
+            
+            return true;
+        });
+        
+        // Reset to first page when filters change
+        c.pagination.currentPage = 1;
+        c.calculatePagination();
+    };
+    
+    // Clear all filters
+    c.clearFilters = function() {
+        c.filters = {
+            status: '',
+            priority: '',
+            search: ''
+        };
+        c.applyFilters();
+    };
+    
+    // Check if any filters are active
+    c.hasActiveFilters = function() {
+        return c.filters.status || c.filters.priority || c.filters.search;
+    };
+    
+    // Pagination controls
+    c.nextPage = function() {
+        if (c.pagination.currentPage < c.pagination.totalPages) {
+            c.pagination.currentPage++;
+            c.calculatePagination();
+        }
+    };
+    
+    c.previousPage = function() {
+        if (c.pagination.currentPage > 1) {
+            c.pagination.currentPage--;
+            c.calculatePagination();
+        }
+    };
+    
+    // Initialize
+    c.calculatePagination();
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.my-issues-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 80px
+}
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.header-left i {
+  font-size: 32px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.btn-new-issue {
+  background: white;
+  color: #667eea;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-new-issue:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: #667eea;
+}
+
+/* Stats Summary */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid;
+}
+
+.stat-all {
+  border-left-color: #667eea;
+}
+
+.stat-open {
+  border-left-color: #ffc107;
+}
+
+.stat-progress {
+  border-left-color: #2196F3;
+}
+
+.stat-resolved {
+  border-left-color: #4CAF50;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Filters Section */
+.filters-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.filter-select,
+.filter-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.btn-clear-filters {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-clear-filters:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Issues Container */
+.issues-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Table */
+.issues-table {
+  width: 100%;
+}
+
+.table-header,
+.issue-row {
+  display: grid;
+  grid-template-columns: 120px 2fr 1.5fr 120px 130px 150px 40px;
+  gap: 15px;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.table-header {
+  background: #f9f9ff;
+  font-weight: 600;
+  color: #666;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.issue-row {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.issue-row:hover {
+  background: linear-gradient(to right, #f8f9ff 0%, #ffffff 100%);
+  transform: translateX(5px);
+}
+
+.issue-row:last-child {
+  border-bottom: none;
+}
+
+/* Column Styling */
+.issue-number {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 14px;
+}
+
+.issue-title {
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+}
+
+.issue-meta-mobile {
+  display: none;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.col-location i {
+  color: #667eea;
+  margin-right: 5px;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-open {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-progress {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-resolved {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Priority Badge */
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.priority-critical {
+  color: #f44336;
+}
+
+.priority-high {
+  color: #ff9800;
+}
+
+.priority-medium {
+  color: #ffc107;
+}
+
+.priority-low {
+  color: #4CAF50;
+}
+
+.col-date {
+  font-size: 13px;
+  color: #666;
+}
+
+.col-date i {
+  color: #667eea;
+  margin-right: 5px;
+}
+
+.col-action {
+  text-align: right;
+  color: #ccc;
+}
+
+.issue-row:hover .col-action {
+  color: #667eea;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.empty-state i {
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  color: #666;
+  margin: 20px 0 10px;
+}
+
+.empty-state p {
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.page-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-weight: 600;
+  color: #333;
+}
+
+.total-items {
+  color: #999;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .table-header,
+  .issue-row {
+    grid-template-columns: 100px 2fr 1fr 100px 120px 130px 30px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .stats-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .col-location,
+  .col-date {
+    display: none;
+  }
+  
+  .table-header,
+  .issue-row {
+    grid-template-columns: 100px 2fr 100px 110px 30px;
+  }
+  
+  .issue-meta-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-issues-page {
+    padding: 15px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters-section {
+    flex-direction: column;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .table-header {
+    display: none;
+  }
+  
+  .issue-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .col-number,
+  .col-description,
+  .col-status,
+  .col-priority,
+  .col-action {
+    display: block;
+  }
+  
+  .col-number {
+    margin-bottom: 5px;
+  }
+  
+  .col-status,
+  .col-priority {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .col-action {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>my_issues_full_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>My Issues Full List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.issues = [];
+    data.stats = {
+        total: 0,
+        open: 0,
+        inProgress: 0,
+        resolved: 0
+    };
+    
+    var userId = gs.getUserID();
+	var gr = new GlideRecord('x_1850913_facili_0_facility_issue');
+    gr.addQuery('opened_by', userId);
+    gr.orderByDesc('sys_created_on');
+    gr.query();
+	   data.stats.total = gr.getRowCount();
+		 while (gr.next()) {
+        var state = gr.getValue('state');
+        
+        // Count by state
+        if (state == 1) data.stats.open++;
+        else if (state == 2) data.stats.inProgress++;
+        else if (state == 3) data.stats.resolved++;
+        
+        // Add to issues array
+        data.issues.push({
+            sys_id: gr.getValue('sys_id'),
+            number: gr.getValue('number'),
+            short_description: gr.getValue('short_description'),
+            location: gr.getDisplayValue('locatio0'),
+            state: gr.getValue('state'),
+            state_label: gr.getDisplayValue('state'),
+            priority: gr.getValue('priority'),
+            priority_label: gr.getDisplayValue('priority'),
+            opened_at: gr.getDisplayValue('sys_created_on'),
+            assigned_to: gr.getDisplayValue('assigned_to')
+        });
+    }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-06 08:48:22</sys_created_on>
+        <sys_id>68a7abc18356b2104acac396feaad30e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>My Issues Full List</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sp_widget_68a7abc18356b2104acac396feaad30e</sys_update_name>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-06 09:05:00</sys_updated_on>
+        <template><![CDATA[<div class="my-issues-page">
+  
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <i class="fa fa-list-alt"></i>
+        <h1>My Issues</h1>
+      </div>
+      <a href="?id=report_issue" class="btn-new-issue">
+        <i class="fa fa-plus-circle"></i>
+        New Issue
+      </a>
+    </div>
+  </div>
+
+  <!-- Stats Summary -->
+  <div class="stats-summary">
+    <div class="stat-card stat-all">
+      <div class="stat-number">{{c.data.stats.total}}</div>
+      <div class="stat-label">Total Issues</div>
+    </div>
+    <div class="stat-card stat-open">
+      <div class="stat-number">{{c.data.stats.open}}</div>
+      <div class="stat-label">Open</div>
+    </div>
+    <div class="stat-card stat-progress">
+      <div class="stat-number">{{c.data.stats.inProgress}}</div>
+      <div class="stat-label">In Progress</div>
+    </div>
+    <div class="stat-card stat-resolved">
+      <div class="stat-number">{{c.data.stats.resolved}}</div>
+      <div class="stat-label">Resolved</div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-section">
+    <div class="filter-group">
+      <label>Status</label>
+      <select ng-model="c.filters.status" 
+              ng-change="c.applyFilters()" 
+              class="filter-select">
+        <option value="">All Statuses</option>
+        <option value="1">Open</option>
+        <option value="2">In Progress</option>
+        <option value="3">Resolved</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Priority</label>
+      <select ng-model="c.filters.priority" 
+              ng-change="c.applyFilters()" 
+              class="filter-select">
+        <option value="">All Priorities</option>
+        <option value="1">Critical</option>
+        <option value="2">High</option>
+        <option value="3">Medium</option>
+        <option value="4">Low</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Search</label>
+      <input type="text" 
+             ng-model="c.filters.search" 
+             ng-change="c.applyFilters()" 
+             placeholder="Search issues..."
+             class="filter-input">
+    </div>
+
+    <button class="btn-clear-filters" ng-click="c.clearFilters()" ng-if="c.hasActiveFilters()">
+      <i class="fa fa-times"></i> Clear Filters
+    </button>
+  </div>
+
+  <!-- Issues List -->
+  <div class="issues-container">
+    <div class="issues-table" ng-if="c.data.filteredIssues.length > 0">
+      
+      <!-- Table Header -->
+      <div class="table-header">
+        <div class="col-number">Number</div>
+        <div class="col-description">Description</div>
+        <div class="col-location">Location</div>
+        <div class="col-status">Status</div>
+        <div class="col-priority">Priority</div>
+        <div class="col-date">Created</div>
+        <div class="col-action"></div>
+      </div>
+
+      <!-- Issue Rows -->
+      <a ng-repeat="issue in c.data.filteredIssues | limitTo: c.pagination.pageSize : c.pagination.start"
+         href="?id=issue_details&sys_id={{issue.sys_id}}"
+         class="issue-row">
+        
+        <div class="col-number">
+          <span class="issue-number">{{issue.number}}</span>
+        </div>
+
+        <div class="col-description">
+          <div class="issue-title">{{issue.short_description}}</div>
+          <div class="issue-meta-mobile">
+            <span class="meta-item">
+              <i class="fa fa-map-marker"></i> {{issue.location}}
+            </span>
+          </div>
+        </div>
+
+        <div class="col-location">
+          <i class="fa fa-map-marker"></i>
+          {{issue.location}}
+        </div>
+
+        <div class="col-status">
+          <span class="status-badge" ng-class="{
+            'status-open': issue.state == '1',
+            'status-progress': issue.state == '2',
+            'status-resolved': issue.state == '3'
+          }">
+            {{issue.state_label}}
+          </span>
+        </div>
+
+        <div class="col-priority">
+          <span class="priority-badge" ng-class="{
+            'priority-critical': issue.priority == '1',
+            'priority-high': issue.priority == '2',
+            'priority-medium': issue.priority == '3',
+            'priority-low': issue.priority == '4'
+          }">
+            <i class="fa fa-flag"></i>
+            {{issue.priority_label}}
+          </span>
+        </div>
+
+        <div class="col-date">
+          <i class="fa fa-calendar"></i>
+          {{issue.opened_at}}
+        </div>
+
+        <div class="col-action">
+          <i class="fa fa-chevron-right"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" ng-if="c.data.filteredIssues.length == 0">
+      <i class="fa fa-inbox fa-4x"></i>
+      <h3>No Issues Found</h3>
+      <p ng-if="c.hasActiveFilters()">
+        Try adjusting your filters or clearing them.
+      </p>
+      <p ng-if="!c.hasActiveFilters()">
+        You haven't reported any issues yet.
+      </p>
+      <a href="?id=report_issue" class="btn-primary">
+        <i class="fa fa-plus-circle"></i>
+        Report Your First Issue
+      </a>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" ng-if="c.data.filteredIssues.length > c.pagination.pageSize">
+      <button class="page-btn" 
+              ng-click="c.previousPage()" 
+              ng-disabled="c.pagination.currentPage == 1">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      
+      <span class="page-info">
+        Page {{c.pagination.currentPage}} of {{c.pagination.totalPages}}
+        <span class="total-items">({{c.data.filteredIssues.length}} issues)</span>
+      </span>
+      
+      <button class="page-btn" 
+              ng-click="c.nextPage()" 
+              ng-disabled="c.pagination.currentPage == c.pagination.totalPages">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>68a7abc18356b2104acac396feaad30e</id>
+        <sys_created_by>Ahmed</sys_created_by>
+        <sys_created_on>2026-01-06 08:48:22</sys_created_on>
+        <sys_id>a0a7abc18356b2104acac396feaad314</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Ahmed</sys_updated_by>
+        <sys_updated_on>2026-01-06 08:48:22</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

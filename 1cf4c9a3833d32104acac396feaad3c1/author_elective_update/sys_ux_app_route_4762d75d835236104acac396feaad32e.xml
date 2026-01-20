@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="technician workspace">9b4099138346b2104acac396feaad33a</app_config>
+        <description/>
+        <extension_point/>
+        <fields>table,sysId</fields>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>Create Issues</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>create-issues</route_type>
+        <screen_type display_value="Create Issues ">4f62d75d835236104acac396feaad329</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-07 01:54:10</sys_created_on>
+        <sys_id>4762d75d835236104acac396feaad32e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create Issues</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_update_name>sys_ux_app_route_4762d75d835236104acac396feaad32e</sys_update_name>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-11 15:30:08</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=4762d75d835236104acac396feaad32e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</application>
+        <file_path/>
+        <instance_id>4d06b993dbd2395005ef17291396195a</instance_id>
+        <instance_name>dev209771</instance_name>
+        <name>sys_ux_app_route_4762d75d835236104acac396feaad32e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="technician workspace">9b4099138346b2104acac396feaad33a</app_config><description/><extension_point/><fields>table,sysId</fields><icon/><interoperable>false</interoperable><name>Create Issues</name><optional_parameters/><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>create-issues</route_type><screen_type display_value="Create Issues ">4f62d75d835236104acac396feaad329</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>Sameh</sys_created_by><sys_created_on>2026-01-07 01:54:10</sys_created_on><sys_id>4762d75d835236104acac396feaad32e</sys_id><sys_mod_count>3</sys_mod_count><sys_name>Create Issues</sys_name><sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package><sys_policy/><sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope><sys_update_name>sys_ux_app_route_4762d75d835236104acac396feaad32e</sys_update_name><sys_updated_by>Sameh</sys_updated_by><sys_updated_on>2026-01-11 15:30:08</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=4762d75d835236104acac396feaad32e"/></record_update>]]></payload>
+        <payload_hash>382983282</payload_hash>
+        <record_name>Create Issues</record_name>
+        <reverted_from/>
+        <source>e918a127837172104acac396feaad311</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-11 15:30:09</sys_created_on>
+        <sys_id>72837a3e83d232104acac396feaad367</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19badadd42d0000001</sys_recorded_at>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-11 15:30:09</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>32837a3e0fd232100cfafea25d228266</update_guid>
+        <update_guid_history>32837a3e0fd232100cfafea25d228266:382983282,e672b6bac7d232106417a67f03188865:692480205,e4213ef6ddd23210a9a7d84dac6c225a:1257226322,c36213dd575236107c59fe491be8e3c0:1645855575</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Sameh</sys_created_by>
+        <sys_created_on>2026-01-11 15:54:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>3dfa1dad723d41eb9904a24cd75c0c41</sys_id>
+        <sys_metadata>4762d75d835236104acac396feaad32e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Issues</sys_name>
+        <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+        <sys_scope_delete display_value="">924c0ad459574d888e1a48db986a4690</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_4762d75d835236104acac396feaad32e</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_4762d75d835236104acac396feaad32e">72837a3e83d232104acac396feaad367</sys_update_version>
+        <sys_updated_by>Sameh</sys_updated_by>
+        <sys_updated_on>2026-01-11 15:54:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

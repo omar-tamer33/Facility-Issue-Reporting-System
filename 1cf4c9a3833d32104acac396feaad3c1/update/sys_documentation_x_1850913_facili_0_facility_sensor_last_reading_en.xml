@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="last_reading" label="Last Reading" language="en" table="x_1850913_facili_0_facility_sensor">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>last_reading</element>
+            <help/>
+            <hint/>
+            <label>Last Reading</label>
+            <language>en</language>
+            <name>x_1850913_facili_0_facility_sensor</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Omar</sys_created_by>
+            <sys_created_on>2025-12-19 20:51:43</sys_created_on>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_name>Last Reading</sys_name>
+            <sys_package display_value="Facility Issue Reporting System " source="x_1850913_facili_0">1cf4c9a3833d32104acac396feaad3c1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Facility Issue Reporting System ">1cf4c9a3833d32104acac396feaad3c1</sys_scope>
+            <sys_update_name>sys_documentation_x_1850913_facili_0_facility_sensor_last_reading_en</sys_update_name>
+            <sys_updated_by>Ahmed</sys_updated_by>
+            <sys_updated_on>2026-01-07 07:30:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
